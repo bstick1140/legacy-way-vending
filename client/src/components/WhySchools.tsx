@@ -82,12 +82,7 @@ export default function WhySchools() {
             <p className="font-body text-[oklch(0.40_0.01_285)] text-lg leading-relaxed">
               As a school principal, you're responsible for student wellness, budget management, and facility operations. Our free healthy vending program addresses all three — without adding a single item to your to-do list.
             </p>
-            <div className="mt-6 p-4 bg-[oklch(0.28_0.09_155/0.06)] rounded-xl border border-[oklch(0.28_0.09_155/0.15)]">
-              <p className="font-body text-[oklch(0.28_0.09_155)] text-sm font-medium italic">
-                "We replaced our old junk food machine with a Free Healthy Vending machine. Students love the options, parents are happy, and the whole process was effortless for our staff."
-              </p>
-              <p className="font-body text-[oklch(0.45_0.01_285)] text-xs mt-2">— Middle School Principal, Greenville County</p>
-            </div>
+
           </div>
         </div>
 

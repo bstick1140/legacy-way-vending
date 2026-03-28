@@ -157,15 +157,7 @@ export default function MachineFeatures() {
               />
               {/* Overlay gradient */}
               <div className="absolute inset-0 bg-gradient-to-t from-[oklch(0.18_0.09_155/0.6)] to-transparent" />
-              {/* Caption */}
-              <div className="absolute bottom-0 left-0 right-0 p-6">
-                <p className="font-display text-white text-xl font-bold leading-tight">
-                  "Students love the healthy options — and parents love knowing their kids are eating better."
-                </p>
-                <p className="font-body text-[oklch(0.80_0.02_155)] text-sm mt-2">
-                  — School Principal, Upstate South Carolina
-                </p>
-              </div>
+
             </div>
 
             {/* Floating stat */}
