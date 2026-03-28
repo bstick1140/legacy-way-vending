@@ -64,7 +64,7 @@ export default function WhySchools() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-20 lg:py-28 bg-[oklch(0.93_0.04_155)]">
+    <section ref={sectionRef} className="py-20 lg:py-28 bg-[oklch(0.95_0.018_85)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
@@ -93,7 +93,7 @@ export default function WhySchools() {
             return (
               <div
                 key={i}
-                className="why-item bg-white rounded-xl p-6 border border-[oklch(0.84_0.06_155)] hover:border-[oklch(0.28_0.09_155/0.5)] hover:shadow-lg transition-all duration-300"
+                className="why-item bg-white rounded-xl p-6 border border-[oklch(0.90_0.018_85)] hover:border-[oklch(0.28_0.09_155/0.3)] hover:shadow-md transition-all duration-300"
                 style={{
                   opacity: 0,
                   transform: "translateY(25px)",

@@ -63,7 +63,7 @@ export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="py-20 lg:py-28 bg-white">
+    <section id="faq" className="py-20 lg:py-28 bg-[oklch(0.98_0.012_85)]">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="text-center mb-14">
@@ -86,8 +86,8 @@ export default function FAQSection() {
               key={i}
               className={`border rounded-xl overflow-hidden transition-all duration-200 ${
                 openIndex === i
-                  ? "border-[oklch(0.28_0.09_155/0.5)] shadow-md bg-[oklch(0.97_0.02_155)]"
-                  : "border-[oklch(0.84_0.06_155)] hover:border-[oklch(0.28_0.09_155/0.35)] bg-white"
+                  ? "border-[oklch(0.28_0.09_155/0.4)] shadow-sm bg-white"
+                  : "border-[oklch(0.90_0.018_85)] hover:border-[oklch(0.28_0.09_155/0.25)] bg-white"
               }`}
             >
               <button
@@ -109,7 +109,7 @@ export default function FAQSection() {
                 }`}
               >
                 <div className="px-6 pb-5">
-                  <div className="h-px bg-[oklch(0.84_0.06_155)] mb-4" />
+                  <div className="h-px bg-[oklch(0.90_0.018_85)] mb-4" />
                   <p className="font-body text-[oklch(0.40_0.01_285)] text-sm sm:text-base leading-relaxed">
                     {faq.answer}
                   </p>
