@@ -9,7 +9,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { GraduationCap, BookOpen, CheckCircle2, ShieldCheck, Leaf } from "lucide-react";
 
 const HS_IMAGE =
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663487738921/FWBzfm3EpAjHnNF5scF6S5/planogram-hs-v2-JK36gjR4XZSFrEHWiMPKsE.webp";
+  "https://d2xsxph8kpxj0f.cloudfront.net/310519663487738921/FWBzfm3EpAjHnNF5scF6S5/planogram-hs-v3-Yt9PJWbpUtta325pRbWWBA.webp";
 const MS_IMAGE =
   "https://d2xsxph8kpxj0f.cloudfront.net/310519663487738921/FWBzfm3EpAjHnNF5scF6S5/planogram-ms-v3-TibNvsiY24DHKrErreDhY4.webp";
 
@@ -51,7 +51,7 @@ const tabs = [
         items: [
           "Poland Spring Water",
           "Nurri Water",
-          "Fairlife Protein Shakes (Chocolate & Vanilla)",
+          "Fairlife Nutrition Plan Protein Shakes (Chocolate & Vanilla)",
           "Num Protein Shakes",
           "Vita Coco Coconut Water",
           "Dole Juices",
