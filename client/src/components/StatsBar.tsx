@@ -8,7 +8,7 @@ import { useEffect, useRef, useState } from "react";
 const stats = [
   { value: 300, suffix: "+", label: "Daily Visitors Required", description: "Minimum to qualify" },
   { value: 2, suffix: "x", label: "Outperforms Junk Machines", description: "Revenue performance" },
-  { value: 4, suffix: "-6 wks", label: "To Installation", description: "Fast turnaround" },
+  { value: 9, suffix: " wks", label: "To Installation", description: "From approval to install" },
   { value: 100, suffix: "%", label: "Free for Schools", description: "Zero cost program" },
 ];
 

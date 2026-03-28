@@ -30,7 +30,7 @@ const faqs = [
   {
     question: "How quickly can we get a machine installed?",
     answer:
-      "We build each machine brand-new for your specific location. In most cases, installation takes place within 4 to 6 weeks of approval — and sometimes even sooner.",
+      "We build each machine brand-new for your specific location. From the time of approval, installation typically takes up to 9 weeks — we'll keep you updated every step of the way.",
   },
   {
     question: "What happens if a product doesn't dispense properly?",

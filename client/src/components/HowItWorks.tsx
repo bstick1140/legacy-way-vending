@@ -19,7 +19,7 @@ const steps = [
     icon: Truck,
     title: "We Install at No Cost",
     description:
-      "Our team delivers, installs, and sets up your brand-new state-of-the-art machine — completely free. No equipment fees, no installation charges, no contracts.",
+      "Our team delivers, installs, and sets up your brand-new state-of-the-art machine — completely free. No equipment fees, no installation charges, no contracts. Allow up to 9 weeks from approval to installation.",
   },
   {
     number: "03",
