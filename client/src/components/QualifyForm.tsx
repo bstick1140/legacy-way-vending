@@ -364,7 +364,7 @@ export default function QualifyForm() {
                       value={formData.facilityName}
                       onChange={(e) => setFormData({ ...formData, facilityName: e.target.value })}
                       className="w-full border border-[oklch(0.85_0.01_90)] rounded-lg px-4 py-2.5 font-body text-[oklch(0.25_0.005_285)] text-sm focus:outline-none focus:ring-2 focus:ring-[oklch(0.28_0.09_155/0.3)] focus:border-[oklch(0.28_0.09_155)] transition-all"
-                      placeholder="Greenville Middle School"
+                      placeholder="School or Facility Name"
                     />
                   </div>
 
