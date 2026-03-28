@@ -8,7 +8,7 @@ import { ArrowRight, CheckCircle2, Phone } from "lucide-react";
 import { useEffect, useRef } from "react";
 
 const HERO_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663487738921/FWBzfm3EpAjHnNF5scF6S5/hero-bg-pattern-eXBF9zS5wBmrM2umqx87AH.webp";
-const MACHINE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663487738921/FWBzfm3EpAjHnNF5scF6S5/hero-vending-machine-nJnTZbPKX6CWTj3xGcyHVm.webp";
+const MACHINE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663487738921/FWBzfm3EpAjHnNF5scF6S5/legacy-machine-original_56c042d9.png";
 
 export default function HeroSection() {
   const machineRef = useRef<HTMLDivElement>(null);
@@ -115,7 +115,7 @@ export default function HeroSection() {
               <img
                 src={MACHINE_IMG}
                 alt="State-of-the-art healthy vending machine for schools"
-                className="relative z-10 w-full max-w-sm lg:max-w-md xl:max-w-lg animate-float drop-shadow-2xl"
+                className="relative z-10 w-full max-w-sm lg:max-w-md xl:max-w-lg animate-float" style={{ filter: 'drop-shadow(0 30px 60px oklch(0.10 0.09 155 / 0.7)) drop-shadow(0 0 40px oklch(0.75 0.17 75 / 0.15))' }}
                 loading="eager"
               />
               {/* Floating badge */}
