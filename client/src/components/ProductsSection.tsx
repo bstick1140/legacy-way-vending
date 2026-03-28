@@ -134,12 +134,12 @@ export default function ProductsSection() {
             USDA Smart Snacks Compliant
           </div>
           <h2 className="font-display text-[oklch(0.18_0.005_285)] text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-4">
-            Snacks Students{" "}
-            <em className="text-[oklch(0.75_0.17_75)] not-italic">Actually Want</em>
+            Sample Menu —{" "}
+            <em className="text-[oklch(0.75_0.17_75)] not-italic">By School Type</em>
           </h2>
           <p className="font-body text-[oklch(0.45_0.01_285)] text-lg leading-relaxed">
-            Select your school type below to see the exact product menu for your machine — curated
-            specifically for each grade level.
+            Select your school type below to preview a representative product menu. Every item meets
+            USDA Smart Snacks in Schools standards — curated specifically for each grade level.
           </p>
         </div>
 
@@ -190,6 +190,16 @@ export default function ProductsSection() {
               <ActiveIcon className="w-4 h-4 text-[oklch(0.28_0.09_155)]" />
               {active.tagline}
             </p>
+
+            {/* Sample menu disclaimer banner */}
+            <div className="flex items-center justify-center gap-2.5 bg-[oklch(0.75_0.17_75/0.12)] border border-[oklch(0.75_0.17_75/0.35)] rounded-xl px-5 py-3 mb-6 max-w-2xl mx-auto">
+              <svg className="w-4 h-4 text-[oklch(0.55_0.12_75)] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <p className="text-sm text-[oklch(0.40_0.08_75)] font-medium">
+                <strong>Sample menu only.</strong> Actual product selection may vary based on availability and school preferences.
+              </p>
+            </div>
 
             {/* Planogram image */}
             <div className="rounded-2xl overflow-hidden shadow-2xl shadow-[oklch(0.28_0.09_155/0.15)] mb-10 border border-[oklch(0.90_0.01_90)]">
@@ -245,8 +255,11 @@ export default function ProductsSection() {
 
         {/* Bottom CTA */}
         <div className="text-center mt-14">
+          <p className="text-[oklch(0.55_0.01_285)] text-xs italic mb-2">
+            * Sample menus shown above. Actual product selection may vary based on availability, regional distribution, and school preferences.
+          </p>
           <p className="text-[oklch(0.45_0.01_285)] mb-5 text-base">
-            Full menus available for all school types. More variety at lower prices than any standard vending company.
+            More variety at lower prices than any standard vending company — and always 100% USDA Smart Snacks compliant.
           </p>
           <a href="#qualify" className="btn-amber inline-flex items-center gap-2 text-base">
             Check If Your School Qualifies
