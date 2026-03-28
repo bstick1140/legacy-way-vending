@@ -1,10 +1,11 @@
 /* ============================================================
    LEGACY WAY VENDING — DESIGN SYSTEM
-   Philosophy: Bold Organic Modernism
-   Primary: Deep Forest Green (#1B4332)
-   Accent: Warm Amber (#F59E0B)
-   Background: Off-white Cream (#FAFAF7)
-   Text: Charcoal (#1C1C1E)
+   Philosophy: Bold Organic Modernism — Option C: Bright & Bold
+   Primary: Deep Forest Green (#1B4332) — headings, nav, accents
+   Accent: Bright Amber (#F59E0B) — CTAs, highlights
+   Background: Light Sage Green — section backgrounds
+   Cards: Pure White — elevated card surfaces
+   Text: Dark Charcoal — readable body text
    Display Font: Playfair Display (bold, editorial)
    Body Font: DM Sans (clean, modern)
    ============================================================ */
@@ -52,50 +53,53 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 
-  /* Brand colors as theme tokens */
-  --color-brand-green: oklch(0.28 0.09 155);
-  --color-brand-green-light: oklch(0.38 0.09 155);
-  --color-brand-green-dark: oklch(0.20 0.09 155);
-  --color-brand-amber: oklch(0.75 0.17 75);
-  --color-brand-amber-dark: oklch(0.65 0.17 75);
-  --color-brand-cream: oklch(0.99 0.005 90);
-  --color-brand-charcoal: oklch(0.18 0.005 285);
+  /* Brand colors as theme tokens — Option C: Bright & Bold */
+  --color-brand-green: oklch(0.28 0.09 155);       /* dark forest green — headings */
+  --color-brand-green-light: oklch(0.42 0.10 155); /* medium green — accents */
+  --color-brand-green-dark: oklch(0.20 0.09 155);  /* deepest green — hover */
+  --color-brand-sage: oklch(0.93 0.04 155);        /* light sage — section bg */
+  --color-brand-sage-mid: oklch(0.88 0.06 155);    /* mid sage — alt sections */
+  --color-brand-amber: oklch(0.78 0.18 75);        /* bright amber — CTAs */
+  --color-brand-amber-dark: oklch(0.68 0.18 75);   /* amber hover */
+  --color-brand-cream: oklch(1 0 0);               /* pure white — cards */
+  --color-brand-charcoal: oklch(0.20 0.005 285);   /* dark charcoal — text */
 }
 
 :root {
   --radius: 0.5rem;
-  --background: oklch(0.99 0.005 90);
-  --foreground: oklch(0.18 0.005 285);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.18 0.005 285);
+  /* Option C: light sage green page background, white cards */
+  --background: oklch(0.93 0.04 155);              /* light sage green */
+  --foreground: oklch(0.20 0.005 285);             /* dark charcoal */
+  --card: oklch(1 0 0);                            /* pure white */
+  --card-foreground: oklch(0.20 0.005 285);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.18 0.005 285);
-  --primary: oklch(0.28 0.09 155);
-  --primary-foreground: oklch(0.99 0.005 90);
-  --secondary: oklch(0.95 0.01 90);
+  --popover-foreground: oklch(0.20 0.005 285);
+  --primary: oklch(0.28 0.09 155);                 /* dark forest green */
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.88 0.06 155);               /* mid sage */
   --secondary-foreground: oklch(0.28 0.09 155);
-  --muted: oklch(0.96 0.005 90);
-  --muted-foreground: oklch(0.50 0.01 285);
-  --accent: oklch(0.75 0.17 75);
+  --muted: oklch(0.90 0.04 155);                   /* muted sage */
+  --muted-foreground: oklch(0.45 0.01 285);
+  --accent: oklch(0.78 0.18 75);                   /* bright amber */
   --accent-foreground: oklch(0.18 0.005 285);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.90 0.01 90);
-  --input: oklch(0.90 0.01 90);
+  --border: oklch(0.84 0.06 155);                  /* sage border */
+  --input: oklch(0.88 0.04 155);
   --ring: oklch(0.28 0.09 155);
   --chart-1: oklch(0.28 0.09 155);
-  --chart-2: oklch(0.75 0.17 75);
-  --chart-3: oklch(0.38 0.09 155);
-  --chart-4: oklch(0.65 0.17 75);
-  --chart-5: oklch(0.50 0.09 155);
+  --chart-2: oklch(0.78 0.18 75);
+  --chart-3: oklch(0.42 0.10 155);
+  --chart-4: oklch(0.68 0.18 75);
+  --chart-5: oklch(0.55 0.09 155);
   --sidebar: oklch(0.28 0.09 155);
-  --sidebar-foreground: oklch(0.99 0.005 90);
-  --sidebar-primary: oklch(0.75 0.17 75);
+  --sidebar-foreground: oklch(1 0 0);
+  --sidebar-primary: oklch(0.78 0.18 75);
   --sidebar-primary-foreground: oklch(0.18 0.005 285);
-  --sidebar-accent: oklch(0.38 0.09 155);
-  --sidebar-accent-foreground: oklch(0.99 0.005 90);
+  --sidebar-accent: oklch(0.42 0.10 155);
+  --sidebar-accent-foreground: oklch(1 0 0);
   --sidebar-border: oklch(0.38 0.09 155);
-  --sidebar-ring: oklch(0.75 0.17 75);
+  --sidebar-ring: oklch(0.78 0.18 75);
 }
 
 @layer base {

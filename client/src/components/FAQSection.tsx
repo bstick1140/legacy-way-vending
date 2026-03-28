@@ -86,8 +86,8 @@ export default function FAQSection() {
               key={i}
               className={`border rounded-xl overflow-hidden transition-all duration-200 ${
                 openIndex === i
-                  ? "border-[oklch(0.28_0.09_155/0.4)] shadow-sm"
-                  : "border-[oklch(0.90_0.01_90)] hover:border-[oklch(0.28_0.09_155/0.25)]"
+                  ? "border-[oklch(0.28_0.09_155/0.5)] shadow-md bg-[oklch(0.97_0.02_155)]"
+                  : "border-[oklch(0.84_0.06_155)] hover:border-[oklch(0.28_0.09_155/0.35)] bg-white"
               }`}
             >
               <button
@@ -109,7 +109,7 @@ export default function FAQSection() {
                 }`}
               >
                 <div className="px-6 pb-5">
-                  <div className="h-px bg-[oklch(0.90_0.01_90)] mb-4" />
+                  <div className="h-px bg-[oklch(0.84_0.06_155)] mb-4" />
                   <p className="font-body text-[oklch(0.40_0.01_285)] text-sm sm:text-base leading-relaxed">
                     {faq.answer}
                   </p>

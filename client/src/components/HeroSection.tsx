@@ -1,13 +1,12 @@
 /* ============================================================
-   HERO SECTION — Bold Organic Modernism
-   Full-bleed green bg, editorial headline, machine image right
-   Dark background → white text
+   HERO SECTION — Option C: Bright & Bold
+   Bright sage green bg, dark green headings, amber CTAs
+   Light background → dark text (high contrast, energetic)
    ============================================================ */
 
 import { ArrowRight, CheckCircle2, Phone } from "lucide-react";
 import { useEffect, useRef } from "react";
 
-const HERO_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663487738921/FWBzfm3EpAjHnNF5scF6S5/hero-bg-pattern-eXBF9zS5wBmrM2umqx87AH.webp";
 const MACHINE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663487738921/FWBzfm3EpAjHnNF5scF6S5/legacy-machine-original_56c042d9.png";
 
 export default function HeroSection() {
@@ -25,18 +24,19 @@ export default function HeroSection() {
   return (
     <section
       className="relative min-h-screen flex items-center overflow-hidden pt-20"
-      style={{
-        backgroundImage: `url(${HERO_BG})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
+      style={{ background: "linear-gradient(135deg, oklch(0.88 0.07 155) 0%, oklch(0.93 0.05 155) 50%, oklch(0.90 0.06 155) 100%)" }}
     >
-      {/* Dark overlay for text readability */}
-      <div className="absolute inset-0 bg-[oklch(0.18_0.09_155/0.75)]" />
+      {/* Subtle leaf pattern overlay */}
+      <div className="absolute inset-0 opacity-5"
+        style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40 10 Q55 25 55 40 Q55 55 40 70 Q25 55 25 40 Q25 25 40 10Z' fill='%231B4332'/%3E%3C/svg%3E")`,
+          backgroundSize: "80px 80px",
+        }}
+      />
 
-      {/* Diagonal bottom divider */}
+      {/* Diagonal bottom divider — transitions to white */}
       <div
-        className="absolute bottom-0 left-0 right-0 h-24 bg-[oklch(0.99_0.005_90)]"
+        className="absolute bottom-0 left-0 right-0 h-24 bg-white"
         style={{ clipPath: "polygon(0 60%, 100% 0, 100% 100%, 0 100%)" }}
       />
 
@@ -45,21 +45,21 @@ export default function HeroSection() {
           {/* Left: Text Content */}
           <div className="space-y-8">
             {/* Badge */}
-            <div className="badge-pill bg-[oklch(0.75_0.17_75/0.2)] text-[oklch(0.75_0.17_75)] border border-[oklch(0.75_0.17_75/0.4)]">
+            <div className="badge-pill bg-[oklch(0.28_0.09_155/0.12)] text-[oklch(0.28_0.09_155)] border border-[oklch(0.28_0.09_155/0.3)]">
               Certified Free Healthy Vending Partner
             </div>
 
             {/* Headline */}
             <div className="space-y-3">
-              <h1 className="font-display text-white text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.05]">
+              <h1 className="font-display text-[oklch(0.20_0.09_155)] text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.05]">
                 Free Healthy
                 <br />
-                <span className="text-[oklch(0.75_0.17_75)] italic">Vending Machines</span>
+                <span className="text-[oklch(0.78_0.18_75)] italic">Vending Machines</span>
                 <br />
                 for Your School
               </h1>
-              <p className="font-body text-[oklch(0.85_0.02_155)] text-lg sm:text-xl leading-relaxed max-w-lg">
-                Upgrade your school's vending with a state-of-the-art, USDA Smart Snacks compliant machine — at <strong className="text-white">absolutely no cost</strong> to you.
+              <p className="font-body text-[oklch(0.30_0.05_155)] text-lg sm:text-xl leading-relaxed max-w-lg">
+                Upgrade your school's vending with a state-of-the-art, USDA Smart Snacks compliant machine — at <strong className="text-[oklch(0.20_0.09_155)]">absolutely no cost</strong> to you.
               </p>
             </div>
 
@@ -72,8 +72,8 @@ export default function HeroSection() {
                 "Healthier students, happier parents, better school culture",
               ].map((item) => (
                 <div key={item} className="flex items-center gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-[oklch(0.75_0.17_75)] flex-shrink-0" />
-                  <span className="font-body text-[oklch(0.90_0.02_155)] text-sm sm:text-base">{item}</span>
+                  <CheckCircle2 className="w-5 h-5 text-[oklch(0.28_0.09_155)] flex-shrink-0" />
+                  <span className="font-body text-[oklch(0.25_0.05_155)] text-sm sm:text-base font-medium">{item}</span>
                 </div>
               ))}
             </div>
@@ -86,7 +86,7 @@ export default function HeroSection() {
               </a>
               <a
                 href="tel:8643819290"
-                className="flex items-center justify-center gap-2 text-white border border-white/30 hover:border-white/60 rounded-md py-4 px-6 font-body font-semibold text-base transition-all hover:bg-white/10"
+                className="flex items-center justify-center gap-2 text-[oklch(0.28_0.09_155)] border-2 border-[oklch(0.28_0.09_155/0.4)] hover:border-[oklch(0.28_0.09_155)] rounded-md py-4 px-6 font-body font-semibold text-base transition-all hover:bg-[oklch(0.28_0.09_155/0.08)]"
               >
                 <Phone className="w-5 h-5" />
                 864-381-9290
@@ -94,8 +94,8 @@ export default function HeroSection() {
             </div>
 
             {/* Location note */}
-            <p className="font-body text-[oklch(0.70_0.02_155)] text-sm">
-              Proudly serving <strong className="text-[oklch(0.85_0.02_155)]">Upstate South Carolina</strong> — Greenville, Spartanburg, Anderson & surrounding areas
+            <p className="font-body text-[oklch(0.38_0.06_155)] text-sm">
+              Proudly serving <strong className="text-[oklch(0.25_0.08_155)]">Upstate South Carolina</strong> — Greenville, Spartanburg, Anderson & surrounding areas
             </p>
           </div>
 
@@ -111,15 +111,16 @@ export default function HeroSection() {
           >
             <div className="relative">
               {/* Glow effect behind machine */}
-              <div className="absolute inset-0 bg-[oklch(0.75_0.17_75/0.15)] rounded-full blur-3xl scale-75" />
+              <div className="absolute inset-0 bg-[oklch(0.78_0.18_75/0.20)] rounded-full blur-3xl scale-75" />
               <img
                 src={MACHINE_IMG}
                 alt="State-of-the-art healthy vending machine for schools"
-                className="relative z-10 w-full max-w-sm lg:max-w-md xl:max-w-lg animate-float" style={{ filter: 'drop-shadow(0 30px 60px oklch(0.10 0.09 155 / 0.7)) drop-shadow(0 0 40px oklch(0.75 0.17 75 / 0.15))' }}
+                className="relative z-10 w-full max-w-sm lg:max-w-md xl:max-w-lg animate-float"
+                style={{ filter: 'drop-shadow(0 30px 60px oklch(0.20 0.09 155 / 0.35)) drop-shadow(0 0 40px oklch(0.78 0.18 75 / 0.20))' }}
                 loading="eager"
               />
               {/* Floating badge */}
-              <div className="absolute top-8 -left-4 bg-[oklch(0.75_0.17_75)] text-[oklch(0.18_0.005_285)] rounded-lg px-4 py-2 shadow-lg z-20">
+              <div className="absolute top-8 -left-4 bg-[oklch(0.78_0.18_75)] text-[oklch(0.18_0.005_285)] rounded-lg px-4 py-2 shadow-lg z-20">
                 <div className="font-mono-brand text-xs font-bold uppercase tracking-wide">100% FREE</div>
                 <div className="font-body text-xs font-semibold">For Qualified Schools</div>
               </div>

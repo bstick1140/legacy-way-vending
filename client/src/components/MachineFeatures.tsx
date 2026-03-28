@@ -88,7 +88,7 @@ export default function MachineFeatures() {
     <section
       id="features"
       ref={sectionRef}
-      className="bg-[oklch(0.28_0.09_155)] py-20 lg:py-28 relative overflow-hidden"
+      className="bg-[oklch(0.88_0.06_155)] py-20 lg:py-28 relative overflow-hidden"
     >
       {/* Subtle leaf pattern overlay */}
       <div
@@ -103,15 +103,15 @@ export default function MachineFeatures() {
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Left: Header + Feature grid */}
           <div>
-            <div className="badge-pill bg-[oklch(0.75_0.17_75/0.2)] text-[oklch(0.75_0.17_75)] border border-[oklch(0.75_0.17_75/0.4)] mb-6">
+            <div className="badge-pill bg-[oklch(0.28_0.09_155/0.10)] text-[oklch(0.28_0.09_155)] border border-[oklch(0.28_0.09_155/0.25)] mb-6">
               State-of-the-Art Equipment
             </div>
-            <h2 className="font-display text-white text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-6">
+            <h2 className="font-display text-[oklch(0.20_0.09_155)] text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-6">
               A Machine Built for
               <br />
-              <span className="text-[oklch(0.75_0.17_75)] italic">Modern Schools</span>
+              <span className="text-[oklch(0.78_0.18_75)] italic">Modern Schools</span>
             </h2>
-            <p className="font-body text-[oklch(0.80_0.02_155)] text-lg leading-relaxed mb-10">
+            <p className="font-body text-[oklch(0.30_0.05_155)] text-lg leading-relaxed mb-10">
               Every machine is brand-new, built specifically for your location, and packed with technology that makes it the most advanced vending solution available.
             </p>
 
@@ -129,14 +129,14 @@ export default function MachineFeatures() {
                       transition: "opacity 0.5s ease-out, transform 0.5s ease-out",
                     }}
                   >
-                    <div className="bg-[oklch(0.38_0.09_155/0.5)] hover:bg-[oklch(0.38_0.09_155/0.8)] rounded-lg p-4 transition-all duration-300 border border-[oklch(0.50_0.09_155/0.3)] hover:border-[oklch(0.75_0.17_75/0.4)] h-full">
+                    <div className="bg-white hover:bg-[oklch(0.97_0.02_155)] rounded-lg p-4 transition-all duration-300 border border-[oklch(0.84_0.06_155)] hover:border-[oklch(0.28_0.09_155/0.4)] hover:shadow-md h-full">
                       <div className="flex items-start gap-3">
-                        <div className="w-8 h-8 bg-[oklch(0.75_0.17_75/0.2)] rounded-md flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <Icon className="w-4 h-4 text-[oklch(0.75_0.17_75)]" />
+                        <div className="w-8 h-8 bg-[oklch(0.28_0.09_155/0.10)] rounded-md flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <Icon className="w-4 h-4 text-[oklch(0.28_0.09_155)]" />
                         </div>
                         <div>
-                          <h3 className="font-body font-bold text-white text-sm mb-1">{feature.title}</h3>
-                          <p className="font-body text-[oklch(0.70_0.02_155)] text-xs leading-relaxed">{feature.description}</p>
+                          <h3 className="font-body font-bold text-[oklch(0.20_0.09_155)] text-sm mb-1">{feature.title}</h3>
+                          <p className="font-body text-[oklch(0.40_0.05_155)] text-xs leading-relaxed">{feature.description}</p>
                         </div>
                       </div>
                     </div>

@@ -125,7 +125,7 @@ export default function ProductsSection() {
   const ActiveIcon = active.icon;
 
   return (
-    <section id="products" className="py-20 lg:py-28 bg-[oklch(0.99_0.005_90)]">
+    <section id="products" className="py-20 lg:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Section header */}
@@ -145,7 +145,7 @@ export default function ProductsSection() {
 
         {/* Tab switcher */}
         <div className="flex justify-center mb-10">
-          <div className="inline-flex bg-[oklch(0.93_0.01_90)] rounded-xl p-1.5 gap-1 shadow-inner">
+          <div className="inline-flex bg-[oklch(0.88_0.06_155)] rounded-xl p-1.5 gap-1 shadow-inner">
             {tabs.map((tab) => {
               const Icon = tab.icon;
               const isActive = activeTab === tab.id;
@@ -156,7 +156,7 @@ export default function ProductsSection() {
                   className={`flex items-center gap-2.5 px-6 py-3 rounded-lg font-body font-semibold text-sm transition-all duration-200 ${
                     isActive
                       ? "bg-[oklch(0.28_0.09_155)] text-white shadow-lg"
-                      : "text-[oklch(0.45_0.01_285)] hover:text-[oklch(0.28_0.09_155)] hover:bg-white"
+                      : "text-[oklch(0.30_0.06_155)] hover:text-[oklch(0.28_0.09_155)] hover:bg-white"
                   }`}
                 >
                   <Icon className="w-4 h-4" />
@@ -216,7 +216,7 @@ export default function ProductsSection() {
               {active.categories.map((cat) => (
                 <div
                   key={cat.name}
-                  className="bg-white rounded-xl border border-[oklch(0.90_0.01_90)] p-6 shadow-sm hover:shadow-md transition-shadow"
+                  className="bg-white rounded-xl border border-[oklch(0.84_0.06_155)] p-6 shadow-sm hover:shadow-md transition-shadow"
                 >
                   <span className={`inline-block text-xs font-semibold px-3 py-1 rounded-full mb-4 ${cat.colorClass}`}>
                     {cat.name}

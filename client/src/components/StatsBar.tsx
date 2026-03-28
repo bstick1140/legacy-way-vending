@@ -53,18 +53,18 @@ export default function StatsBar() {
   }, []);
 
   return (
-    <section ref={ref} className="bg-white py-12 border-b border-[oklch(0.90_0.01_90)]">
+    <section ref={ref} className="bg-[oklch(0.28_0.09_155)] py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-4">
           {stats.map((stat, i) => (
             <div key={i} className="text-center group">
-              <div className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-[oklch(0.75_0.17_75)] leading-none mb-1">
+              <div className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-[oklch(0.78_0.18_75)] leading-none mb-1">
                 <CountUp target={stat.value} suffix={stat.suffix} active={active} />
               </div>
-              <div className="font-body font-semibold text-[oklch(0.28_0.09_155)] text-sm sm:text-base mt-1">
+              <div className="font-body font-semibold text-white text-sm sm:text-base mt-1">
                 {stat.label}
               </div>
-              <div className="font-body text-[oklch(0.55_0.01_285)] text-xs mt-0.5">
+              <div className="font-body text-[oklch(0.80_0.04_155)] text-xs mt-0.5">
                 {stat.description}
               </div>
             </div>

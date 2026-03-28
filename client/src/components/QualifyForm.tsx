@@ -129,7 +129,7 @@ export default function QualifyForm() {
   return (
     <section
       id="qualify"
-      className="py-20 lg:py-28 bg-[oklch(0.22_0.09_155)] relative overflow-hidden"
+      className="py-20 lg:py-28 bg-[oklch(0.28_0.09_155)] relative overflow-hidden"
     >
       {/* Background texture */}
       <div className="absolute inset-0 opacity-10"
@@ -141,7 +141,7 @@ export default function QualifyForm() {
       <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="text-center mb-12">
-          <div className="badge-pill bg-[oklch(0.75_0.17_75/0.2)] text-[oklch(0.75_0.17_75)] border border-[oklch(0.75_0.17_75/0.4)] mb-4 mx-auto">
+            <div className="badge-pill bg-[oklch(0.78_0.18_75/0.25)] text-[oklch(0.78_0.18_75)] border border-[oklch(0.78_0.18_75/0.5)] mb-4 mx-auto">
             Free Qualification Survey
           </div>
           <h2 className="font-display text-white text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-4">

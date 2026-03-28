@@ -65,7 +65,7 @@ export default function HowItWorks() {
     <section
       id="how-it-works"
       ref={sectionRef}
-      className="py-20 lg:py-28 bg-[oklch(0.99_0.005_90)]"
+      className="py-20 lg:py-28 bg-white"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
@@ -103,7 +103,7 @@ export default function HowItWorks() {
                 )}
 
                 {/* Card */}
-                <div className="bg-white rounded-xl p-6 shadow-sm border border-[oklch(0.90_0.01_90)] hover:shadow-md hover:border-[oklch(0.28_0.09_155/0.3)] transition-all duration-300 h-full">
+                <div className="bg-white rounded-xl p-6 shadow-md border border-[oklch(0.84_0.06_155)] hover:shadow-lg hover:border-[oklch(0.28_0.09_155/0.5)] transition-all duration-300 h-full">
                   {/* Number + Icon */}
                   <div className="flex items-start justify-between mb-4">
                     <div className="w-12 h-12 bg-[oklch(0.28_0.09_155)] rounded-lg flex items-center justify-center flex-shrink-0">
