@@ -11,7 +11,7 @@ import { GraduationCap, BookOpen, CheckCircle2, ShieldCheck, Leaf } from "lucide
 const HS_IMAGE =
   "https://d2xsxph8kpxj0f.cloudfront.net/310519663487738921/FWBzfm3EpAjHnNF5scF6S5/planogram-hs-v2-JK36gjR4XZSFrEHWiMPKsE.webp";
 const MS_IMAGE =
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663487738921/FWBzfm3EpAjHnNF5scF6S5/planogram-ms-v2-HBfwSJesXmrgh2YM2xcG7P.webp";
+  "https://d2xsxph8kpxj0f.cloudfront.net/310519663487738921/FWBzfm3EpAjHnNF5scF6S5/planogram-ms-v3-TibNvsiY24DHKrErreDhY4.webp";
 
 const tabs = [
   {
@@ -106,7 +106,7 @@ const tabs = [
           "Dole Apple Juice",
           "Dole Orange Juice",
           "IZZE Sparkling Juices (Berry, Peach, Apple, Orange)",
-          "Chocolate Milk",
+          "Fairlife Nutrition Plan Protein Shake (Chocolate)",
         ],
       },
     ],
