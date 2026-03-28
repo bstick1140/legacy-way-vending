@@ -38,9 +38,9 @@ const faqs = [
       "Refund complaints are a thing of the past with our SureVend™ Guaranteed Product Delivery technology. Our infrared sensors detect if a product doesn't drop, and the machine automatically gives the coil an extra push. If it still doesn't vend, the student receives a full refund — no complaints to you.",
   },
   {
-    question: "How does our school earn revenue?",
+    question: "What makes this different from a standard vending contract?",
     answer:
-      "Your school receives a commission on every sale made from the machine. It's completely passive — we handle all the operations, and you receive a regular check. Our healthy vending program outperforms traditional junk food machines 2-to-1 in revenue.",
+      "Unlike traditional vending contracts that lock you in for years with outdated machines and junk food, our program is completely free, requires no contract, and gives you a state-of-the-art machine stocked with USDA Smart Snacks compliant products. We handle all installation, restocking, and maintenance — you simply enjoy the benefits.",
   },
   {
     question: "What if we're not satisfied with the service?",

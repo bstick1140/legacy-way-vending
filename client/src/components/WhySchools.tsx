@@ -24,8 +24,8 @@ const benefits = [
   },
   {
     icon: DollarSign,
-    title: "New Revenue Stream",
-    description: "Your school earns a commission on every sale. Passive income that can fund programs, supplies, or extracurricular activities.",
+    title: "Zero Cost to Your School",
+    description: "No equipment fees, no installation charges, no maintenance costs, and no contracts. The program is completely free for qualified schools.",
   },
   {
     icon: Users,
@@ -84,7 +84,7 @@ export default function WhySchools() {
             </p>
             <div className="mt-6 p-4 bg-[oklch(0.28_0.09_155/0.06)] rounded-xl border border-[oklch(0.28_0.09_155/0.15)]">
               <p className="font-body text-[oklch(0.28_0.09_155)] text-sm font-medium italic">
-                "We replaced our old junk food machine with a Free Healthy Vending machine. Students love the options, parents are happy, and we're earning more revenue than before."
+                "We replaced our old junk food machine with a Free Healthy Vending machine. Students love the options, parents are happy, and the whole process was effortless for our staff."
               </p>
               <p className="font-body text-[oklch(0.45_0.01_285)] text-xs mt-2">— Middle School Principal, Greenville County</p>
             </div>

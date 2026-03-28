@@ -31,9 +31,9 @@ const steps = [
   {
     number: "04",
     icon: TrendingUp,
-    title: "Your School Earns Revenue",
+    title: "Enjoy the Benefits",
     description:
-      "Your school receives a commission on every sale — passive income with zero effort. Healthy students, happy parents, and a new revenue stream for your budget.",
+      "Sit back while we handle everything. Healthier students, happier parents, and a modern vending experience your school can be proud of — at zero cost to you.",
   },
 ];
 

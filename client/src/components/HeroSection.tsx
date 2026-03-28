@@ -69,7 +69,7 @@ export default function HeroSection() {
                 "No cost, no contract, no hassle",
                 "USDA Smart Snacks in Schools compliant",
                 "We install, stock & maintain everything",
-                "Your school earns revenue — zero effort",
+                "Healthier students, happier parents, better school culture",
               ].map((item) => (
                 <div key={item} className="flex items-center gap-3">
                   <CheckCircle2 className="w-5 h-5 text-[oklch(0.75_0.17_75)] flex-shrink-0" />

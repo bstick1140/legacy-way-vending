@@ -54,7 +54,7 @@ const features = [
   {
     icon: BarChart3,
     title: "Outperforms 2-to-1",
-    description: "Our healthy vending program generates 2x the revenue of traditional junk food machines. Healthier AND more profitable.",
+    description: "Our healthy vending program outsells traditional junk food machines 2-to-1. Students choose healthier options when they’re available.",
   },
 ];
 
@@ -160,7 +160,7 @@ export default function MachineFeatures() {
               {/* Caption */}
               <div className="absolute bottom-0 left-0 right-0 p-6">
                 <p className="font-display text-white text-xl font-bold leading-tight">
-                  "Students love the healthy options — and our school loves the revenue."
+                  "Students love the healthy options — and parents love knowing their kids are eating better."
                 </p>
                 <p className="font-body text-[oklch(0.80_0.02_155)] text-sm mt-2">
                   — School Principal, Upstate South Carolina
@@ -171,7 +171,7 @@ export default function MachineFeatures() {
             {/* Floating stat */}
             <div className="absolute -top-4 -right-4 bg-[oklch(0.75_0.17_75)] rounded-xl p-4 shadow-xl">
               <div className="font-display text-[oklch(0.18_0.005_285)] text-3xl font-bold leading-none">2×</div>
-              <div className="font-body text-[oklch(0.25_0.005_285)] text-xs font-semibold mt-0.5">More Revenue</div>
+              <div className="font-body text-[oklch(0.25_0.005_285)] text-xs font-semibold mt-0.5">More Sales</div>
               <div className="font-body text-[oklch(0.35_0.005_285)] text-xs">vs. junk machines</div>
             </div>
           </div>
