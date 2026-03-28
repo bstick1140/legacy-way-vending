@@ -1,25 +1,36 @@
-import { Button } from "@/components/ui/button";
-import { Loader2 } from "lucide-react";
-import { Streamdown } from 'streamdown';
+/* ============================================================
+   HOME PAGE — Legacy Way Vending
+   Assembles all sections in order for the full landing page
+   ============================================================ */
 
-/**
- * All content in this page are only for example, replace with your own feature implementation
- * When building pages, remember your instructions in Frontend Best Practices, Design Guide and Common Pitfalls
- */
+import Navbar from "@/components/Navbar";
+import HeroSection from "@/components/HeroSection";
+import StatsBar from "@/components/StatsBar";
+import HowItWorks from "@/components/HowItWorks";
+import MachineFeatures from "@/components/MachineFeatures";
+import WhySchools from "@/components/WhySchools";
+import ProductsSection from "@/components/ProductsSection";
+import QualifyForm from "@/components/QualifyForm";
+import FAQSection from "@/components/FAQSection";
+import Footer from "@/components/Footer";
+import StickyCallout from "@/components/StickyCallout";
+
 export default function Home() {
-  // If theme is switchable in App.tsx, we can implement theme toggling like this:
-  // const { theme, toggleTheme } = useTheme();
-
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen bg-[oklch(0.99_0.005_90)]">
+      <Navbar />
       <main>
-        {/* Example: lucide-react for icons */}
-        <Loader2 className="animate-spin" />
-        Example Page
-        {/* Example: Streamdown for markdown rendering */}
-        <Streamdown>Any **markdown** content</Streamdown>
-        <Button variant="default">Example Button</Button>
+        <HeroSection />
+        <StatsBar />
+        <HowItWorks />
+        <MachineFeatures />
+        <WhySchools />
+        <ProductsSection />
+        <QualifyForm />
+        <FAQSection />
       </main>
+      <Footer />
+      <StickyCallout />
     </div>
   );
 }

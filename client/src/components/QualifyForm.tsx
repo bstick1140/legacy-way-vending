@@ -1,0 +1,437 @@
+/* ============================================================
+   QUALIFY FORM — Bold Organic Modernism
+   Multi-step survey like Free Healthy Vending, dark green bg
+   Progress bar in amber, congratulations modal on qualify
+   ============================================================ */
+
+import { useState } from "react";
+import { CheckCircle2, ArrowRight, X, Phone, Mail } from "lucide-react";
+
+type Step = {
+  id: string;
+  question: string;
+  options: { label: string; value: string; disqualify?: boolean }[];
+};
+
+const steps: Step[] = [
+  {
+    id: "manages_facility",
+    question: "Do you own or manage a school or commercial facility?",
+    options: [
+      { label: "Yes — I manage a school or facility", value: "yes" },
+      { label: "No — I do not manage a facility", value: "no", disqualify: true },
+    ],
+  },
+  {
+    id: "daily_visitors",
+    question: "How many students and staff are in your facility daily?",
+    options: [
+      { label: "Fewer than 100 per day", value: "under_100", disqualify: true },
+      { label: "100 – 299 per day", value: "100_299", disqualify: true },
+      { label: "300 – 599 per day", value: "300_599" },
+      { label: "600 – 999 per day", value: "600_999" },
+      { label: "1,000+ per day", value: "1000_plus" },
+    ],
+  },
+  {
+    id: "has_vending",
+    question: "Does your facility currently have a vending machine?",
+    options: [
+      { label: "Yes — we have an existing machine", value: "yes" },
+      { label: "No — we don't have one yet", value: "no" },
+    ],
+  },
+  {
+    id: "interest",
+    question: "What best describes your interest?",
+    options: [
+      { label: "I want a FREE Healthy Vending Machine for my school!", value: "want_free" },
+      { label: "I'm interested in owning vending machines as a business", value: "own_business" },
+    ],
+  },
+];
+
+type FormData = {
+  firstName: string;
+  lastName: string;
+  email: string;
+  phone: string;
+  facilityName: string;
+  facilityType: string;
+};
+
+export default function QualifyForm() {
+  const [currentStep, setCurrentStep] = useState(0);
+  const [answers, setAnswers] = useState<Record<string, string>>({});
+  const [disqualified, setDisqualified] = useState(false);
+  const [qualified, setQualified] = useState(false);
+  const [showContactForm, setShowContactForm] = useState(false);
+  const [formData, setFormData] = useState<FormData>({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    facilityName: "",
+    facilityType: "Middle School",
+  });
+  const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+
+  const totalSteps = steps.length;
+  const progress = ((currentStep) / totalSteps) * 100;
+
+  const handleOptionSelect = (stepId: string, value: string, disqualify?: boolean) => {
+    const newAnswers = { ...answers, [stepId]: value };
+    setAnswers(newAnswers);
+
+    if (disqualify) {
+      setTimeout(() => setDisqualified(true), 300);
+      return;
+    }
+
+    if (currentStep < totalSteps - 1) {
+      setTimeout(() => setCurrentStep(currentStep + 1), 300);
+    } else {
+      // Last step answered — qualified!
+      setTimeout(() => {
+        setQualified(true);
+        setShowContactForm(true);
+      }, 300);
+    }
+  };
+
+  const handleFormSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setSubmitting(true);
+    // Simulate form submission
+    await new Promise((resolve) => setTimeout(resolve, 1500));
+    setSubmitting(false);
+    setSubmitted(true);
+  };
+
+  const resetForm = () => {
+    setCurrentStep(0);
+    setAnswers({});
+    setDisqualified(false);
+    setQualified(false);
+    setShowContactForm(false);
+    setSubmitted(false);
+    setFormData({
+      firstName: "",
+      lastName: "",
+      email: "",
+      phone: "",
+      facilityName: "",
+      facilityType: "Middle School",
+    });
+  };
+
+  return (
+    <section
+      id="qualify"
+      className="py-20 lg:py-28 bg-[oklch(0.22_0.09_155)] relative overflow-hidden"
+    >
+      {/* Background texture */}
+      <div className="absolute inset-0 opacity-10"
+        style={{
+          backgroundImage: `radial-gradient(circle at 20% 50%, oklch(0.75_0.17_75/0.3) 0%, transparent 50%), radial-gradient(circle at 80% 20%, oklch(0.38_0.09_155) 0%, transparent 50%)`,
+        }}
+      />
+
+      <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section header */}
+        <div className="text-center mb-12">
+          <div className="badge-pill bg-[oklch(0.75_0.17_75/0.2)] text-[oklch(0.75_0.17_75)] border border-[oklch(0.75_0.17_75/0.4)] mb-4 mx-auto">
+            Free Qualification Survey
+          </div>
+          <h2 className="font-display text-white text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-4">
+            Does Your School
+            <br />
+            <span className="text-[oklch(0.75_0.17_75)] italic">Qualify for Free Vending?</span>
+          </h2>
+          <p className="font-body text-[oklch(0.75_0.02_155)] text-lg">
+            Answer 4 quick questions to find out if your school qualifies for a free, state-of-the-art healthy vending machine.
+          </p>
+        </div>
+
+        {/* Form card */}
+        <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
+          {/* Progress bar */}
+          {!disqualified && !submitted && (
+            <div className="progress-bar rounded-none">
+              <div
+                className="progress-bar-fill"
+                style={{ width: `${qualified ? 100 : progress}%` }}
+              />
+            </div>
+          )}
+
+          <div className="p-8 sm:p-10">
+            {/* DISQUALIFIED STATE */}
+            {disqualified && (
+              <div className="text-center py-6 space-y-4">
+                <div className="w-16 h-16 bg-[oklch(0.95_0.01_90)] rounded-full flex items-center justify-center mx-auto">
+                  <X className="w-8 h-8 text-[oklch(0.55_0.01_285)]" />
+                </div>
+                <h3 className="font-display text-[oklch(0.18_0.005_285)] text-2xl font-bold">
+                  Not Quite a Match
+                </h3>
+                <p className="font-body text-[oklch(0.45_0.01_285)] leading-relaxed max-w-md mx-auto">
+                  Unfortunately, your facility doesn't meet the minimum requirements for the free vending program (300+ daily visitors). However, we'd love to explore other options with you!
+                </p>
+                <div className="flex flex-col sm:flex-row gap-3 justify-center pt-2">
+                  <a href="tel:8643819290" className="btn-green py-3 px-6 justify-center">
+                    <Phone className="w-4 h-4" />
+                    Call Us: 864-381-9290
+                  </a>
+                  <button onClick={resetForm} className="font-body text-[oklch(0.45_0.01_285)] underline text-sm py-3">
+                    Start Over
+                  </button>
+                </div>
+              </div>
+            )}
+
+            {/* SUBMITTED STATE */}
+            {submitted && (
+              <div className="text-center py-6 space-y-4">
+                <div className="w-16 h-16 bg-[oklch(0.28_0.09_155)] rounded-full flex items-center justify-center mx-auto">
+                  <CheckCircle2 className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="font-display text-[oklch(0.18_0.005_285)] text-2xl font-bold">
+                  Application Received!
+                </h3>
+                <p className="font-body text-[oklch(0.45_0.01_285)] leading-relaxed max-w-md mx-auto">
+                  Thank you, <strong>{formData.firstName}</strong>! We'll review your application for <strong>{formData.facilityName}</strong> and contact you within 1 business day to schedule your free consultation.
+                </p>
+                <div className="bg-[oklch(0.28_0.09_155/0.06)] rounded-lg p-4 max-w-sm mx-auto">
+                  <p className="font-body text-[oklch(0.28_0.09_155)] text-sm font-medium">
+                    Questions? Call us directly:
+                  </p>
+                  <a href="tel:8643819290" className="font-display text-[oklch(0.28_0.09_155)] text-xl font-bold">
+                    864-381-9290
+                  </a>
+                </div>
+              </div>
+            )}
+
+            {/* SURVEY STEPS */}
+            {!disqualified && !submitted && !showContactForm && (
+              <div className="space-y-6">
+                {/* Step indicator */}
+                <div className="flex items-center justify-between mb-2">
+                  <span className="font-mono-brand text-xs text-[oklch(0.55_0.01_285)] uppercase tracking-wider">
+                    Step {currentStep + 1} of {totalSteps}
+                  </span>
+                  <div className="flex gap-1.5">
+                    {steps.map((_, i) => (
+                      <div
+                        key={i}
+                        className={`h-1.5 rounded-full transition-all duration-300 ${
+                          i <= currentStep
+                            ? "bg-[oklch(0.28_0.09_155)] w-6"
+                            : "bg-[oklch(0.90_0.01_90)] w-3"
+                        }`}
+                      />
+                    ))}
+                  </div>
+                </div>
+
+                {/* Question */}
+                <div>
+                  <h3 className="font-display text-[oklch(0.18_0.005_285)] text-xl sm:text-2xl font-bold leading-snug">
+                    {steps[currentStep].question}
+                  </h3>
+                </div>
+
+                {/* Options */}
+                <div className="space-y-3">
+                  {steps[currentStep].options.map((option) => (
+                    <button
+                      key={option.value}
+                      onClick={() =>
+                        handleOptionSelect(
+                          steps[currentStep].id,
+                          option.value,
+                          option.disqualify
+                        )
+                      }
+                      className={`form-step-option w-full text-left ${
+                        answers[steps[currentStep].id] === option.value ? "selected" : ""
+                      }`}
+                    >
+                      <div
+                        className={`w-5 h-5 rounded-full border-2 flex-shrink-0 flex items-center justify-center transition-all ${
+                          answers[steps[currentStep].id] === option.value
+                            ? "border-[oklch(0.28_0.09_155)] bg-[oklch(0.28_0.09_155)]"
+                            : "border-[oklch(0.75_0.01_285)]"
+                        }`}
+                      >
+                        {answers[steps[currentStep].id] === option.value && (
+                          <div className="w-2 h-2 rounded-full bg-white" />
+                        )}
+                      </div>
+                      <span className="font-body text-[oklch(0.25_0.005_285)] font-medium text-sm sm:text-base">
+                        {option.label}
+                      </span>
+                      <ArrowRight className="w-4 h-4 text-[oklch(0.28_0.09_155)] ml-auto opacity-0 group-hover:opacity-100 transition-opacity" />
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* CONTACT FORM (after qualification) */}
+            {showContactForm && !submitted && (
+              <div className="space-y-6">
+                {/* Congratulations header */}
+                <div className="text-center pb-2">
+                  <div className="w-14 h-14 bg-[oklch(0.75_0.17_75)] rounded-full flex items-center justify-center mx-auto mb-3">
+                    <CheckCircle2 className="w-7 h-7 text-[oklch(0.18_0.005_285)]" />
+                  </div>
+                  <h3 className="font-display text-[oklch(0.18_0.005_285)] text-2xl font-bold mb-2">
+                    Congratulations! Your School Pre-Qualifies!
+                  </h3>
+                  <p className="font-body text-[oklch(0.45_0.01_285)] text-sm">
+                    Please leave your contact details so we can schedule a free consultation call.
+                  </p>
+                </div>
+
+                <form onSubmit={handleFormSubmit} className="space-y-4">
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    <div>
+                      <label className="font-body text-[oklch(0.35_0.005_285)] text-sm font-semibold block mb-1.5">
+                        First Name *
+                      </label>
+                      <input
+                        type="text"
+                        required
+                        value={formData.firstName}
+                        onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
+                        className="w-full border border-[oklch(0.85_0.01_90)] rounded-lg px-4 py-2.5 font-body text-[oklch(0.25_0.005_285)] text-sm focus:outline-none focus:ring-2 focus:ring-[oklch(0.28_0.09_155/0.3)] focus:border-[oklch(0.28_0.09_155)] transition-all"
+                        placeholder="Jane"
+                      />
+                    </div>
+                    <div>
+                      <label className="font-body text-[oklch(0.35_0.005_285)] text-sm font-semibold block mb-1.5">
+                        Last Name *
+                      </label>
+                      <input
+                        type="text"
+                        required
+                        value={formData.lastName}
+                        onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
+                        className="w-full border border-[oklch(0.85_0.01_90)] rounded-lg px-4 py-2.5 font-body text-[oklch(0.25_0.005_285)] text-sm focus:outline-none focus:ring-2 focus:ring-[oklch(0.28_0.09_155/0.3)] focus:border-[oklch(0.28_0.09_155)] transition-all"
+                        placeholder="Smith"
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="font-body text-[oklch(0.35_0.005_285)] text-sm font-semibold block mb-1.5">
+                      Email Address *
+                    </label>
+                    <input
+                      type="email"
+                      required
+                      value={formData.email}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      className="w-full border border-[oklch(0.85_0.01_90)] rounded-lg px-4 py-2.5 font-body text-[oklch(0.25_0.005_285)] text-sm focus:outline-none focus:ring-2 focus:ring-[oklch(0.28_0.09_155/0.3)] focus:border-[oklch(0.28_0.09_155)] transition-all"
+                      placeholder="principal@school.edu"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="font-body text-[oklch(0.35_0.005_285)] text-sm font-semibold block mb-1.5">
+                      Mobile Phone Number *
+                    </label>
+                    <input
+                      type="tel"
+                      required
+                      value={formData.phone}
+                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                      className="w-full border border-[oklch(0.85_0.01_90)] rounded-lg px-4 py-2.5 font-body text-[oklch(0.25_0.005_285)] text-sm focus:outline-none focus:ring-2 focus:ring-[oklch(0.28_0.09_155/0.3)] focus:border-[oklch(0.28_0.09_155)] transition-all"
+                      placeholder="(864) 555-0100"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="font-body text-[oklch(0.35_0.005_285)] text-sm font-semibold block mb-1.5">
+                      School / Facility Name *
+                    </label>
+                    <input
+                      type="text"
+                      required
+                      value={formData.facilityName}
+                      onChange={(e) => setFormData({ ...formData, facilityName: e.target.value })}
+                      className="w-full border border-[oklch(0.85_0.01_90)] rounded-lg px-4 py-2.5 font-body text-[oklch(0.25_0.005_285)] text-sm focus:outline-none focus:ring-2 focus:ring-[oklch(0.28_0.09_155/0.3)] focus:border-[oklch(0.28_0.09_155)] transition-all"
+                      placeholder="Greenville Middle School"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="font-body text-[oklch(0.35_0.005_285)] text-sm font-semibold block mb-1.5">
+                      Facility Type
+                    </label>
+                    <select
+                      value={formData.facilityType}
+                      onChange={(e) => setFormData({ ...formData, facilityType: e.target.value })}
+                      className="w-full border border-[oklch(0.85_0.01_90)] rounded-lg px-4 py-2.5 font-body text-[oklch(0.25_0.005_285)] text-sm focus:outline-none focus:ring-2 focus:ring-[oklch(0.28_0.09_155/0.3)] focus:border-[oklch(0.28_0.09_155)] transition-all bg-white"
+                    >
+                      <option value="Middle School">Middle School</option>
+                      <option value="High School">High School</option>
+                      <option value="Elementary School">Elementary School</option>
+                      <option value="YMCA / Community Center">YMCA / Community Center</option>
+                      <option value="Office Building">Office Building</option>
+                      <option value="Hospital / Clinic">Hospital / Clinic</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+
+                  <button
+                    type="submit"
+                    disabled={submitting}
+                    className="btn-amber w-full justify-center py-4 text-base mt-2"
+                  >
+                    {submitting ? (
+                      <>
+                        <div className="w-5 h-5 border-2 border-[oklch(0.18_0.005_285)/0.3] border-t-[oklch(0.18_0.005_285)] rounded-full animate-spin" />
+                        Submitting...
+                      </>
+                    ) : (
+                      <>
+                        <Mail className="w-5 h-5" />
+                        Submit My Application
+                      </>
+                    )}
+                  </button>
+
+                  <p className="font-body text-[oklch(0.55_0.01_285)] text-xs text-center">
+                    By submitting, you agree to be contacted by Legacy Way Vending. We respect your privacy and will never share your information.
+                  </p>
+                </form>
+              </div>
+            )}
+          </div>
+        </div>
+
+        {/* Below form trust signals */}
+        {!submitted && (
+          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-6 text-[oklch(0.70_0.02_155)]">
+            <div className="flex items-center gap-2 text-sm font-body">
+              <CheckCircle2 className="w-4 h-4 text-[oklch(0.75_0.17_75)]" />
+              No cost, ever
+            </div>
+            <div className="flex items-center gap-2 text-sm font-body">
+              <CheckCircle2 className="w-4 h-4 text-[oklch(0.75_0.17_75)]" />
+              No contracts required
+            </div>
+            <div className="flex items-center gap-2 text-sm font-body">
+              <CheckCircle2 className="w-4 h-4 text-[oklch(0.75_0.17_75)]" />
+              Response within 1 business day
+            </div>
+          </div>
+        )}
+      </div>
+    </section>
+  );
+}
