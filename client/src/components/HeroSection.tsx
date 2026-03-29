@@ -45,34 +45,34 @@ export default function HeroSection() {
           {/* Left: Text Content */}
           <div className="space-y-8">
             {/* Badge */}
-            <div className="badge-pill bg-[oklch(0.28_0.09_155/0.10)] text-[oklch(0.28_0.09_155)] border border-[oklch(0.28_0.09_155/0.25)]">
+            <div className="badge-pill bg-[oklch(0.58_0.16_145/0.10)] text-[oklch(0.58_0.16_145)] border border-[oklch(0.58_0.16_145/0.25)]">
               Certified Free Healthy Vending Partner
             </div>
 
             {/* Headline */}
             <div className="space-y-3">
-              <h1 className="font-display text-[oklch(0.22_0.09_155)] text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.05]">
+              <h1 className="font-display text-[oklch(0.42_0.16_145)] text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.05]">
                 Free Healthy
                 <br />
-                <span className="text-[oklch(0.72_0.16_72)] italic">Vending Machines</span>
+                <span className="text-[oklch(0.80_0.18_95)] italic">Vending Machines</span>
                 <br />
                 for Your School
               </h1>
               <p className="font-body text-[oklch(0.35_0.008_60)] text-lg sm:text-xl leading-relaxed max-w-lg">
-                Upgrade your school's vending with a state-of-the-art, USDA Smart Snacks compliant machine — at <strong className="text-[oklch(0.22_0.09_155)]">absolutely no cost</strong> to you.
+                Upgrade your school's vending with a state-of-the-art, USDA Smart Snacks compliant machine — at <strong className="text-[oklch(0.42_0.16_145)]">absolutely no cost</strong> to you.
               </p>
             </div>
 
             {/* Trust signals */}
             <div className="space-y-2.5">
               {[
-                "No cost, no contract, no hassle",
+                "No cost, no hassle",
                 "USDA Smart Snacks in Schools compliant",
                 "We install, stock & maintain everything",
                 "Healthier students, happier parents, better school culture",
               ].map((item) => (
                 <div key={item} className="flex items-center gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-[oklch(0.28_0.09_155)] flex-shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-[oklch(0.58_0.16_145)] flex-shrink-0" />
                   <span className="font-body text-[oklch(0.30_0.008_60)] text-sm sm:text-base font-medium">{item}</span>
                 </div>
               ))}
@@ -86,7 +86,7 @@ export default function HeroSection() {
               </a>
               <a
                 href="tel:8643819290"
-                className="flex items-center justify-center gap-2 text-[oklch(0.28_0.09_155)] border-2 border-[oklch(0.28_0.09_155/0.35)] hover:border-[oklch(0.28_0.09_155/0.7)] rounded-md py-4 px-6 font-body font-semibold text-base transition-all hover:bg-[oklch(0.28_0.09_155/0.06)]"
+                className="flex items-center justify-center gap-2 text-[oklch(0.58_0.16_145)] border-2 border-[oklch(0.58_0.16_145/0.35)] hover:border-[oklch(0.58_0.16_145/0.7)] rounded-md py-4 px-6 font-body font-semibold text-base transition-all hover:bg-[oklch(0.58_0.16_145/0.06)]"
               >
                 <Phone className="w-5 h-5" />
                 864-381-9290
@@ -95,7 +95,7 @@ export default function HeroSection() {
 
             {/* Location note */}
             <p className="font-body text-[oklch(0.45_0.008_60)] text-sm">
-              Proudly serving <strong className="text-[oklch(0.28_0.09_155)]">Upstate South Carolina</strong> — Greenville, Spartanburg, Anderson & surrounding areas
+              Proudly serving <strong className="text-[oklch(0.58_0.16_145)]">Upstate South Carolina</strong> — Spartanburg, Greenville & surrounding areas
             </p>
           </div>
 
@@ -111,24 +111,24 @@ export default function HeroSection() {
           >
             <div className="relative">
               {/* Warm glow behind machine */}
-              <div className="absolute inset-0 bg-[oklch(0.72_0.16_72/0.15)] rounded-full blur-3xl scale-75" />
+              <div className="absolute inset-0 bg-[oklch(0.80_0.18_95/0.15)] rounded-full blur-3xl scale-75" />
               <img
                 src={MACHINE_IMG}
                 alt="State-of-the-art healthy vending machine for schools"
                 className="relative z-10 w-full max-w-sm lg:max-w-md xl:max-w-lg animate-float"
-                style={{ filter: 'drop-shadow(0 30px 60px oklch(0.22 0.09 155 / 0.25)) drop-shadow(0 0 40px oklch(0.72 0.16 72 / 0.18))' }}
+                style={{ filter: 'drop-shadow(0 30px 60px oklch(0.42 0.16 145 / 0.25)) drop-shadow(0 0 40px oklch(0.80 0.18 95 / 0.18))' }}
                 loading="eager"
               />
               {/* Floating badge */}
-              <div className="absolute top-8 -left-4 bg-[oklch(0.72_0.16_72)] text-white rounded-lg px-4 py-2 shadow-lg z-20">
+              <div className="absolute top-8 -left-4 bg-[oklch(0.84_0.20_95)] text-[oklch(0.12_0.005_285)] rounded-lg px-4 py-2 shadow-lg z-20">
                 <div className="font-mono-brand text-xs font-bold uppercase tracking-wide">100% FREE</div>
                 <div className="font-body text-xs font-semibold">For Qualified Schools</div>
               </div>
               {/* USDA badge */}
-              <div className="absolute bottom-16 -right-2 bg-white rounded-lg px-3 py-2 shadow-lg z-20 text-center border border-[oklch(0.90_0.018_85)]">
-                <div className="font-mono-brand text-xs font-bold text-[oklch(0.28_0.09_155)] uppercase tracking-wide">USDA</div>
-                <div className="font-body text-xs text-[oklch(0.38_0.08_155)] font-medium">Smart Snacks</div>
-                <div className="font-body text-xs text-[oklch(0.38_0.08_155)]">Compliant</div>
+              <div className="absolute bottom-16 -right-2 bg-white rounded-lg px-3 py-2 shadow-lg z-20 text-center border border-[oklch(0.90_0.04_145)]">
+                <div className="font-mono-brand text-xs font-bold text-[oklch(0.58_0.16_145)] uppercase tracking-wide">USDA</div>
+                <div className="font-body text-xs text-[oklch(0.70_0.14_145)] font-medium">Smart Snacks</div>
+                <div className="font-body text-xs text-[oklch(0.70_0.14_145)]">Compliant</div>
               </div>
             </div>
           </div>

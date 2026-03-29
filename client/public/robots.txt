@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://legacywayvending.com/sitemap.xml
+Sitemap: https://www.legacywayvending.com/sitemap.xml

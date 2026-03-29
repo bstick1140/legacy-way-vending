@@ -10,7 +10,7 @@ const faqs = [
   {
     question: "How much does the program cost for our school?",
     answer:
-      "Nothing — it's completely free for qualified locations. There are no equipment fees, no installation charges, no maintenance costs, and no contracts. The program is 100% free for schools that meet the qualification criteria.",
+      "Nothing — it's completely free for qualified locations. There are no equipment fees, no installation charges, and no maintenance costs. The program is 100% free for schools that meet the qualification criteria.",
   },
   {
     question: "What are the requirements to qualify?",
@@ -20,7 +20,7 @@ const faqs = [
   {
     question: "Are the products USDA Smart Snacks in Schools compliant?",
     answer:
-      "Absolutely. We have full menus for High Schools, Middle Schools, and Elementary Schools — all 100% USDA Smart Snacks in Schools compliant. We offer far more product variety than standard vending companies, and our buying power keeps prices affordable for every student.",
+      "Absolutely. We have full menus for High Schools and Middle Schools — all 100% USDA Smart Snacks in Schools compliant. We offer far more product variety than standard vending companies, and our buying power keeps prices affordable for every student.",
   },
   {
     question: "What if we already have a drink contract with another company?",
@@ -30,7 +30,7 @@ const faqs = [
   {
     question: "How quickly can we get a machine installed?",
     answer:
-      "We build each machine brand-new for your specific location. From the time of approval, installation typically takes up to 9 weeks — we'll keep you updated every step of the way.",
+      "We build each machine brand-new for your specific location. From the time of approval, installation is typically completed within approximately 9 weeks — though actual timing may vary based on your location and machine configuration. We'll keep you updated every step of the way.",
   },
   {
     question: "What happens if a product doesn't dispense properly?",
@@ -38,9 +38,9 @@ const faqs = [
       "Refund complaints are a thing of the past with our SureVend™ Guaranteed Product Delivery technology. Our infrared sensors detect if a product doesn't drop, and the machine automatically gives the coil an extra push. If it still doesn't vend, the student receives a full refund — no complaints to you.",
   },
   {
-    question: "What makes this different from a standard vending contract?",
+    question: "What makes this program different from a standard vending arrangement?",
     answer:
-      "Unlike traditional vending contracts that lock you in for years with outdated machines and junk food, our program is completely free, requires no contract, and gives you a state-of-the-art machine stocked with USDA Smart Snacks compliant products. We handle all installation, restocking, and maintenance — you simply enjoy the benefits.",
+      "Unlike traditional vending arrangements that often come with outdated machines and junk food, our program is completely free and gives you a state-of-the-art machine stocked with USDA Smart Snacks compliant products. We handle all installation, restocking, and maintenance — you simply enjoy the benefits.",
   },
   {
     question: "What if we're not satisfied with the service?",
@@ -63,18 +63,18 @@ export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="py-20 lg:py-28 bg-[oklch(0.98_0.012_85)]">
+    <section id="faq" className="py-20 lg:py-28 bg-[oklch(0.99_0.005_145)]">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="text-center mb-14">
-          <div className="badge-pill bg-[oklch(0.28_0.09_155/0.08)] text-[oklch(0.28_0.09_155)] border border-[oklch(0.28_0.09_155/0.2)] mb-4 mx-auto">
+          <div className="badge-pill bg-[oklch(0.58_0.16_145/0.08)] text-[oklch(0.58_0.16_145)] border border-[oklch(0.58_0.16_145/0.2)] mb-4 mx-auto">
             Common Questions
           </div>
           <h2 className="font-display text-[oklch(0.18_0.005_285)] text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-4">
             Frequently Asked
-            <span className="text-[oklch(0.28_0.09_155)] italic"> Questions</span>
+            <span className="text-[oklch(0.58_0.16_145)] italic"> Questions</span>
           </h2>
-          <p className="font-body text-[oklch(0.45_0.01_285)] text-lg">
+          <p className="font-body text-[oklch(0.44_0.04_145)] text-lg">
             Everything school principals need to know about the free healthy vending program.
           </p>
         </div>
@@ -86,8 +86,8 @@ export default function FAQSection() {
               key={i}
               className={`border rounded-xl overflow-hidden transition-all duration-200 ${
                 openIndex === i
-                  ? "border-[oklch(0.28_0.09_155/0.4)] shadow-sm bg-white"
-                  : "border-[oklch(0.90_0.018_85)] hover:border-[oklch(0.28_0.09_155/0.25)] bg-white"
+                  ? "border-[oklch(0.58_0.16_145/0.4)] shadow-sm bg-white"
+                  : "border-[oklch(0.90_0.04_145)] hover:border-[oklch(0.58_0.16_145/0.25)] bg-white"
               }`}
             >
               <button
@@ -98,7 +98,7 @@ export default function FAQSection() {
                   {faq.question}
                 </span>
                 <ChevronDown
-                  className={`w-5 h-5 text-[oklch(0.28_0.09_155)] flex-shrink-0 transition-transform duration-300 ${
+                  className={`w-5 h-5 text-[oklch(0.58_0.16_145)] flex-shrink-0 transition-transform duration-300 ${
                     openIndex === i ? "rotate-180" : ""
                   }`}
                 />
@@ -109,7 +109,7 @@ export default function FAQSection() {
                 }`}
               >
                 <div className="px-6 pb-5">
-                  <div className="h-px bg-[oklch(0.90_0.018_85)] mb-4" />
+                  <div className="h-px bg-[oklch(0.90_0.04_145)] mb-4" />
                   <p className="font-body text-[oklch(0.40_0.01_285)] text-sm sm:text-base leading-relaxed">
                     {faq.answer}
                   </p>
@@ -120,11 +120,11 @@ export default function FAQSection() {
         </div>
 
         {/* CTA below FAQ */}
-        <div className="mt-12 text-center bg-[oklch(0.28_0.09_155/0.05)] rounded-2xl p-8 border border-[oklch(0.28_0.09_155/0.15)]">
+        <div className="mt-12 text-center bg-[oklch(0.58_0.16_145/0.05)] rounded-2xl p-8 border border-[oklch(0.58_0.16_145/0.15)]">
           <h3 className="font-display text-[oklch(0.18_0.005_285)] text-2xl font-bold mb-2">
             Still have questions?
           </h3>
-          <p className="font-body text-[oklch(0.45_0.01_285)] mb-6">
+          <p className="font-body text-[oklch(0.44_0.04_145)] mb-6">
             We'd love to talk through the program with you directly.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

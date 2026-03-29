@@ -15,7 +15,7 @@ import {
   BarChart3,
 } from "lucide-react";
 
-const features = [
+const features: { icon: React.ElementType; title: string; description: string }[] = [
   {
     icon: Zap,
     title: "Energy Star Certified",
@@ -88,7 +88,7 @@ export default function MachineFeatures() {
     <section
       id="features"
       ref={sectionRef}
-      className="bg-[oklch(0.28_0.09_155)] py-20 lg:py-28 relative overflow-hidden"
+      className="bg-[oklch(0.58_0.16_145)] py-20 lg:py-28 relative overflow-hidden"
     >
       {/* Subtle leaf pattern overlay */}
       <div
@@ -103,15 +103,15 @@ export default function MachineFeatures() {
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Left: Header + Feature grid */}
           <div>
-            <div className="badge-pill bg-[oklch(0.72_0.16_72/0.2)] text-[oklch(0.72_0.16_72)] border border-[oklch(0.72_0.16_72/0.4)] mb-6">
+            <div className="badge-pill bg-[oklch(0.80_0.18_95/0.2)] text-[oklch(0.80_0.18_95)] border border-[oklch(0.80_0.18_95/0.4)] mb-6">
               State-of-the-Art Equipment
             </div>
             <h2 className="font-display text-white text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-6">
               A Machine Built for
               <br />
-              <span className="text-[oklch(0.72_0.16_72)] italic">Modern Schools</span>
+              <span className="text-[oklch(0.80_0.18_95)] italic">Modern Schools</span>
             </h2>
-            <p className="font-body text-[oklch(0.82_0.02_85)] text-lg leading-relaxed mb-10">
+            <p className="font-body text-[oklch(0.92_0.04_145)] text-lg leading-relaxed mb-10">
               Every machine is brand-new, built specifically for your location, and packed with technology that makes it the most advanced vending solution available.
             </p>
 
@@ -129,14 +129,14 @@ export default function MachineFeatures() {
                       transition: "opacity 0.5s ease-out, transform 0.5s ease-out",
                     }}
                   >
-                    <div className="bg-[oklch(0.38_0.09_155/0.5)] hover:bg-[oklch(0.38_0.09_155/0.7)] rounded-lg p-4 transition-all duration-300 border border-[oklch(0.50_0.09_155/0.3)] hover:border-[oklch(0.72_0.16_72/0.4)] h-full">
+                    <div className="bg-white hover:bg-[oklch(0.97_0.03_145)] rounded-lg p-4 transition-all duration-300 border border-[oklch(0.88_0.05_145)] hover:border-[oklch(0.58_0.16_145)] shadow-sm hover:shadow-md h-full">
                       <div className="flex items-start gap-3">
-                        <div className="w-8 h-8 bg-[oklch(0.72_0.16_72/0.2)] rounded-md flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <Icon className="w-4 h-4 text-[oklch(0.72_0.16_72)]" />
+                        <div className="w-8 h-8 bg-[oklch(0.58_0.16_145)] rounded-md flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <Icon className="w-4 h-4 text-white" />
                         </div>
                         <div>
-                          <h3 className="font-body font-bold text-white text-sm mb-1">{feature.title}</h3>
-                          <p className="font-body text-[oklch(0.75_0.02_85)] text-xs leading-relaxed">{feature.description}</p>
+                          <h3 className="font-body font-bold text-[oklch(0.32_0.14_145)] text-sm mb-1">{feature.title}</h3>
+                          <p className="font-body text-[oklch(0.38_0.06_145)] text-xs leading-relaxed">{feature.description}</p>
                         </div>
                       </div>
                     </div>
@@ -156,15 +156,15 @@ export default function MachineFeatures() {
                 loading="lazy"
               />
               {/* Overlay gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[oklch(0.18_0.09_155/0.6)] to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[oklch(0.42_0.16_145/0.6)] to-transparent" />
 
             </div>
 
             {/* Floating stat */}
-            <div className="absolute -top-4 -right-4 bg-[oklch(0.75_0.17_75)] rounded-xl p-4 shadow-xl">
+            <div className="absolute -top-4 -right-4 bg-[oklch(0.80_0.18_95)] rounded-xl p-4 shadow-xl">
               <div className="font-display text-[oklch(0.18_0.005_285)] text-3xl font-bold leading-none">2×</div>
-              <div className="font-body text-[oklch(0.25_0.005_285)] text-xs font-semibold mt-0.5">More Sales</div>
-              <div className="font-body text-[oklch(0.35_0.005_285)] text-xs">vs. junk machines</div>
+              <div className="font-body text-[oklch(0.18_0.005_285)] text-xs font-semibold mt-0.5">More Sales</div>
+              <div className="font-body text-[oklch(0.28_0.005_285)] text-xs">vs. junk machines</div>
             </div>
           </div>
         </div>

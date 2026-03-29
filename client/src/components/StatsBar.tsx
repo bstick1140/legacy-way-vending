@@ -6,9 +6,9 @@
 import { useEffect, useRef, useState } from "react";
 
 const stats = [
-  { value: 300, suffix: "+", label: "Daily Visitors Required", description: "Minimum to qualify" },
-  { value: 2, suffix: "x", label: "Outperforms Junk Machines", description: "Revenue performance" },
-  { value: 9, suffix: " wks", label: "To Installation", description: "From approval to install" },
+  { value: 300, suffix: "+", label: "Daily Foot Traffic", description: "Minimum to qualify" },
+  { value: 2, suffix: "x", label: "Outperforms Junk Machines", description: "Healthier options chosen" },
+  { value: 9, suffix: " wks", label: "Est. To Installation", description: "Typical time, approval to install" },
   { value: 100, suffix: "%", label: "Free for Schools", description: "Zero cost program" },
 ];
 
@@ -53,18 +53,18 @@ export default function StatsBar() {
   }, []);
 
   return (
-    <section ref={ref} className="bg-[oklch(0.28_0.09_155)] py-12">
+    <section ref={ref} className="bg-[oklch(0.58_0.16_145)] py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-4">
           {stats.map((stat, i) => (
             <div key={i} className="text-center group">
-              <div className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-[oklch(0.78_0.18_75)] leading-none mb-1">
+              <div className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-[oklch(0.80_0.18_95)] leading-none mb-1">
                 <CountUp target={stat.value} suffix={stat.suffix} active={active} />
               </div>
               <div className="font-body font-semibold text-white text-sm sm:text-base mt-1">
                 {stat.label}
               </div>
-              <div className="font-body text-[oklch(0.80_0.04_155)] text-xs mt-0.5">
+              <div className="font-body text-[oklch(0.92_0.04_145)] text-xs mt-0.5">
                 {stat.description}
               </div>
             </div>

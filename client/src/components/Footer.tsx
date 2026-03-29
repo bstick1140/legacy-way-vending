@@ -9,32 +9,32 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[oklch(0.18_0.09_155)] text-white">
+    <footer className="bg-[oklch(0.42_0.16_145)] text-white">
       {/* Main footer content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand column */}
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center gap-2">
-              <div className="w-9 h-9 bg-[oklch(0.75_0.17_75)] rounded-full flex items-center justify-center">
+              <div className="w-9 h-9 bg-[oklch(0.80_0.18_95)] rounded-full flex items-center justify-center">
                 <Leaf className="w-4 h-4 text-[oklch(0.18_0.005_285)]" />
               </div>
               <div>
                 <div className="font-display font-bold text-white text-xl leading-tight">Legacy Way Vending</div>
-                <div className="font-body text-[oklch(0.75_0.17_75)] text-xs font-medium tracking-widest uppercase">Smart Snacks That Fuel Your Day</div>
+                <div className="font-body text-[oklch(0.80_0.18_95)] text-xs font-medium tracking-widest uppercase">Smart Snacks That Fuel Your Day</div>
               </div>
             </div>
-            <p className="font-body text-[oklch(0.70_0.02_155)] text-sm leading-relaxed max-w-sm">
+            <p className="font-body text-white/80 text-sm leading-relaxed max-w-sm">
               Your local certified Free Healthy Vending partner, proudly serving schools and businesses across Upstate South Carolina. We provide state-of-the-art healthy vending machines at absolutely no cost to qualified locations.
             </p>
             <div className="space-y-2">
-              <a href="tel:8643819290" className="flex items-center gap-2 text-[oklch(0.75_0.17_75)] hover:text-white transition-colors text-sm font-medium">
+              <a href="tel:8643819290" className="flex items-center gap-2 text-[oklch(0.80_0.18_95)] hover:text-white transition-colors text-sm font-medium">
                 <Phone className="w-4 h-4" />
                 864-381-9290
               </a>
-              <div className="flex items-center gap-2 text-[oklch(0.70_0.02_155)] text-sm">
+              <div className="flex items-center gap-2 text-white/80 text-sm">
                 <MapPin className="w-4 h-4 flex-shrink-0" />
-                Upstate South Carolina — Greenville, Spartanburg, Anderson & surrounding areas
+                Upstate South Carolina — Spartanburg, Greenville & surrounding areas
               </div>
             </div>
           </div>
@@ -53,7 +53,7 @@ export default function Footer() {
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="font-body text-[oklch(0.70_0.02_155)] hover:text-white transition-colors text-sm"
+                    className="font-body text-white/80 hover:text-white transition-colors text-sm"
                   >
                     {link.label}
                   </a>
@@ -75,7 +75,7 @@ export default function Footer() {
                 "Office Buildings",
                 "Community Centers",
               ].map((loc) => (
-                <li key={loc} className="font-body text-[oklch(0.70_0.02_155)] text-sm">
+                <li key={loc} className="font-body text-white/80 text-sm">
                   {loc}
                 </li>
               ))}
@@ -85,18 +85,18 @@ export default function Footer() {
       </div>
 
       {/* Partner badge + bottom bar */}
-      <div className="border-t border-[oklch(0.28_0.09_155)] bg-[oklch(0.15_0.09_155)]">
+      <div className="border-t border-[oklch(0.58_0.16_145)] bg-[oklch(0.28_0.16_145)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="font-body text-[oklch(0.55_0.01_285)] text-xs text-center sm:text-left">
+          <p className="font-body text-[oklch(0.50_0.05_145)] text-xs text-center sm:text-left">
             © {currentYear} Legacy Way Vending. All rights reserved.
           </p>
           <div className="flex items-center gap-2">
-            <span className="font-body text-[oklch(0.55_0.01_285)] text-xs">Certified Partner of</span>
+            <span className="font-body text-[oklch(0.50_0.05_145)] text-xs">Certified Partner of</span>
             <a
               href="https://www.freehealthyvending.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1 text-[oklch(0.75_0.17_75)] hover:text-white transition-colors text-xs font-semibold font-body"
+              className="flex items-center gap-1 text-[oklch(0.80_0.18_95)] hover:text-white transition-colors text-xs font-semibold font-body"
             >
               Free Healthy Vending
               <ExternalLink className="w-3 h-3" />

@@ -25,7 +25,7 @@ const benefits = [
   {
     icon: DollarSign,
     title: "Zero Cost to Your School",
-    description: "No equipment fees, no installation charges, no maintenance costs, and no contracts. The program is completely free for qualified schools.",
+    description: "No equipment fees, no installation charges, and no maintenance costs. The program is completely free for qualified schools.",
   },
   {
     icon: Users,
@@ -64,18 +64,18 @@ export default function WhySchools() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-20 lg:py-28 bg-[oklch(0.95_0.018_85)]">
+    <section ref={sectionRef} className="py-20 lg:py-28 bg-[oklch(0.96_0.04_145)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           <div>
-            <div className="badge-pill bg-[oklch(0.28_0.09_155/0.08)] text-[oklch(0.28_0.09_155)] border border-[oklch(0.28_0.09_155/0.2)] mb-4">
+            <div className="badge-pill bg-[oklch(0.58_0.16_145/0.08)] text-[oklch(0.58_0.16_145)] border border-[oklch(0.58_0.16_145/0.2)] mb-4">
               For School Principals
             </div>
             <h2 className="font-display text-[oklch(0.18_0.005_285)] text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
               Why Principals
               <br />
-              <span className="text-[oklch(0.28_0.09_155)] italic">Choose Legacy Way</span>
+              <span className="text-[oklch(0.58_0.16_145)] italic">Choose Legacy Way</span>
             </h2>
           </div>
           <div>
@@ -93,20 +93,20 @@ export default function WhySchools() {
             return (
               <div
                 key={i}
-                className="why-item bg-white rounded-xl p-6 border border-[oklch(0.90_0.018_85)] hover:border-[oklch(0.28_0.09_155/0.3)] hover:shadow-md transition-all duration-300"
+                className="why-item bg-white rounded-xl p-6 border border-[oklch(0.90_0.04_145)] hover:border-[oklch(0.58_0.16_145/0.3)] hover:shadow-md transition-all duration-300"
                 style={{
                   opacity: 0,
                   transform: "translateY(25px)",
                   transition: "opacity 0.6s ease-out, transform 0.6s ease-out",
                 }}
               >
-                <div className="w-11 h-11 bg-[oklch(0.28_0.09_155/0.08)] rounded-lg flex items-center justify-center mb-4">
-                  <Icon className="w-5 h-5 text-[oklch(0.28_0.09_155)]" />
+                <div className="w-11 h-11 bg-[oklch(0.58_0.16_145/0.08)] rounded-lg flex items-center justify-center mb-4">
+                  <Icon className="w-5 h-5 text-[oklch(0.58_0.16_145)]" />
                 </div>
                 <h3 className="font-display text-[oklch(0.18_0.005_285)] text-lg font-bold mb-2">
                   {benefit.title}
                 </h3>
-                <p className="font-body text-[oklch(0.45_0.01_285)] text-sm leading-relaxed">
+                <p className="font-body text-[oklch(0.44_0.04_145)] text-sm leading-relaxed">
                   {benefit.description}
                 </p>
               </div>

@@ -30,16 +30,16 @@ export default function StickyCallout() {
         visible ? "translate-y-0" : "translate-y-full"
       }`}
     >
-      <div className="bg-[oklch(0.28_0.09_155)] border-t-2 border-[oklch(0.75_0.17_75)] shadow-2xl">
+      <div className="bg-[oklch(0.58_0.16_145)] border-t-2 border-[oklch(0.80_0.18_95)] shadow-2xl">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between gap-4">
           <div className="flex items-center gap-4 flex-1 min-w-0">
-            <div className="hidden sm:flex w-2 h-2 bg-[oklch(0.75_0.17_75)] rounded-full animate-pulse-amber flex-shrink-0" />
+            <div className="hidden sm:flex w-2 h-2 bg-[oklch(0.80_0.18_95)] rounded-full animate-pulse-amber flex-shrink-0" />
             <p className="font-body text-white text-sm font-medium truncate">
-              <span className="text-[oklch(0.75_0.17_75)] font-bold">FREE</span> healthy vending machines for schools with 300+ students — no cost, ever.
+              <span className="text-[oklch(0.80_0.18_95)] font-bold">FREE</span> healthy vending machines for schools with 300+ students — no cost, ever.
             </p>
           </div>
           <div className="flex items-center gap-3 flex-shrink-0">
-            <a href="tel:8643819290" className="hidden sm:flex items-center gap-1.5 text-[oklch(0.75_0.17_75)] hover:text-white transition-colors text-sm font-semibold">
+            <a href="tel:8643819290" className="hidden sm:flex items-center gap-1.5 text-[oklch(0.80_0.18_95)] hover:text-white transition-colors text-sm font-semibold">
               <Phone className="w-4 h-4" />
               864-381-9290
             </a>
