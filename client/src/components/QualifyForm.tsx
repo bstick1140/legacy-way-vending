@@ -50,6 +50,7 @@ type FormData = {
   phone: string;
   facilityName: string;
   facilityType: string;
+  state: string;
   comments: string;
 };
 
@@ -66,6 +67,7 @@ export default function QualifyForm() {
     phone: "",
     facilityName: "",
     facilityType: "Middle School",
+    state: "South Carolina",
     comments: "",
   });
   const [submitted, setSubmitted] = useState(false);
@@ -137,7 +139,8 @@ export default function QualifyForm() {
     const commentsSection = formData.comments.trim()
       ? `\n\n=== COMMENTS ===\n\n${formData.comments.trim()}`
       : "";
-    const message = `=== QUALIFICATION SURVEY ANSWERS ===\n\n${surveyLines}\n\n=== CONTACT DETAILS ===\n\nName: ${formData.firstName} ${formData.lastName}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nFacility: ${formData.facilityName}\nFacility Type: ${formData.facilityType}${commentsSection}`;
+    const outOfState = formData.state !== "South Carolina";
+    const message = `=== QUALIFICATION SURVEY ANSWERS ===\n\n${surveyLines}\n\n=== CONTACT DETAILS ===\n\nName: ${formData.firstName} ${formData.lastName}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nFacility: ${formData.facilityName}\nFacility Type: ${formData.facilityType}\nState: ${formData.state}${outOfState ? " *** OUT OF SERVICE AREA — REFERRAL NEEDED ***" : ""}${commentsSection}`;
 
     try {
       const res = await fetch("https://api.web3forms.com/submit", {
@@ -179,6 +182,7 @@ export default function QualifyForm() {
       phone: "",
       facilityName: "",
       facilityType: "Middle School",
+      state: "South Carolina",
       comments: "",
     });
   };
@@ -255,11 +259,17 @@ export default function QualifyForm() {
                   <CheckCircle2 className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="font-display text-[oklch(0.18_0.005_285)] text-2xl font-bold">
-                  Application Received!
+                  Request Received!
                 </h3>
-                <p className="font-body text-[oklch(0.44_0.04_145)] leading-relaxed max-w-md mx-auto">
-                  Thank you, <strong>{formData.firstName}</strong>! We'll review your application for <strong>{formData.facilityName}</strong> and contact you within 1 business day to schedule your free consultation.
-                </p>
+                {formData.state === "South Carolina" ? (
+                  <p className="font-body text-[oklch(0.44_0.04_145)] leading-relaxed max-w-md mx-auto">
+                    Thank you, <strong>{formData.firstName}</strong>! We'll review your application for <strong>{formData.facilityName}</strong> and contact you within 1 business day to schedule your free consultation.
+                  </p>
+                ) : (
+                  <p className="font-body text-[oklch(0.44_0.04_145)] leading-relaxed max-w-md mx-auto">
+                    Thank you, <strong>{formData.firstName}</strong>! Legacy Way Vending currently serves Spartanburg and Greenville counties in South Carolina. We will review your request for <strong>{formData.facilityName}</strong> and connect you with a Free Healthy Vending representative in <strong>{formData.state}</strong> within 1 business day.
+                  </p>
+                )}
                 <div className="bg-[oklch(0.58_0.16_145/0.06)] rounded-lg p-4 max-w-sm mx-auto">
                   <p className="font-body text-[oklch(0.58_0.16_145)] text-sm font-medium">
                     Questions? Call us directly:
@@ -440,6 +450,22 @@ export default function QualifyForm() {
                       <option value="Office Building">Office Building</option>
                       <option value="Hospital / Clinic">Hospital / Clinic</option>
                       <option value="Other">Other</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label className="font-body text-[oklch(0.28_0.005_285)] text-sm font-semibold block mb-1.5">
+                      State *
+                    </label>
+                    <select
+                      required
+                      value={formData.state}
+                      onChange={(e) => setFormData({ ...formData, state: e.target.value })}
+                      className="w-full border border-[oklch(0.85_0.04_145)] rounded-lg px-4 py-2.5 font-body text-[oklch(0.18_0.005_285)] text-sm focus:outline-none focus:ring-2 focus:ring-[oklch(0.58_0.16_145/0.3)] focus:border-[oklch(0.58_0.16_145)] transition-all bg-white"
+                    >
+                      {["Alabama","Alaska","Arizona","Arkansas","California","Colorado","Connecticut","Delaware","Florida","Georgia","Hawaii","Idaho","Illinois","Indiana","Iowa","Kansas","Kentucky","Louisiana","Maine","Maryland","Massachusetts","Michigan","Minnesota","Mississippi","Missouri","Montana","Nebraska","Nevada","New Hampshire","New Jersey","New Mexico","New York","North Carolina","North Dakota","Ohio","Oklahoma","Oregon","Pennsylvania","Rhode Island","South Carolina","South Dakota","Tennessee","Texas","Utah","Vermont","Virginia","Washington","West Virginia","Wisconsin","Wyoming"].map((s) => (
+                        <option key={s} value={s}>{s}</option>
+                      ))}
                     </select>
                   </div>
 
