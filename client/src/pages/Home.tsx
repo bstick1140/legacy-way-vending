@@ -11,6 +11,7 @@ import MachineFeatures from "@/components/MachineFeatures";
 import WhySchools from "@/components/WhySchools";
 import ProductsSection from "@/components/ProductsSection";
 import PaymentMethods from "@/components/PaymentMethods";
+import ServiceArea from "@/components/ServiceArea";
 import QualifyForm from "@/components/QualifyForm";
 import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
@@ -27,6 +28,7 @@ export default function Home() {
         <MachineFeatures />
         <PaymentMethods />
         <WhySchools />
+        <ServiceArea />
         <ProductsSection />
         <QualifyForm />
         <FAQSection />

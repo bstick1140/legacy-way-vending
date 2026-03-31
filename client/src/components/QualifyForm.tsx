@@ -456,6 +456,13 @@ export default function QualifyForm() {
                     />
                   </div>
 
+                  {/* Service area note */}
+                  <div className="bg-[oklch(0.58_0.16_145/0.06)] border border-[oklch(0.58_0.16_145/0.20)] rounded-lg px-4 py-3 text-center">
+                    <p className="font-body text-[oklch(0.44_0.04_145)] text-xs leading-relaxed">
+                      <strong className="text-[oklch(0.42_0.16_145)]">We currently serve Spartanburg and Greenville counties, SC.</strong> Outside our area? Submit your request anyway and we will connect you with a Free Healthy Vending representative near you.
+                    </p>
+                  </div>
+
                   <button
                     type="submit"
                     disabled={submitting}

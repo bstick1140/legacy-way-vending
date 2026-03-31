@@ -51,12 +51,12 @@ export default function HeroSection() {
 
             {/* Headline */}
             <div className="space-y-3">
-              <h1 className="font-display text-[oklch(0.42_0.16_145)] text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.05]">
+                <h1 className="font-display text-[oklch(0.42_0.16_145)] text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.05]">
                 Free Healthy
                 <br />
                 <span className="text-[oklch(0.80_0.18_95)] italic">Vending Machines</span>
                 <br />
-                for Your School
+                for Upstate SC Schools
               </h1>
               <p className="font-body text-[oklch(0.35_0.008_60)] text-lg sm:text-xl leading-relaxed max-w-lg">
                 Upgrade your school's vending with a state-of-the-art, USDA Smart Snacks compliant machine — at <strong className="text-[oklch(0.42_0.16_145)]">absolutely no cost</strong> to you.
