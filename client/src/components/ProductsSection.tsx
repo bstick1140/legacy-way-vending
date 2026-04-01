@@ -1,46 +1,43 @@
 /* ============================================================
    PRODUCTS SECTION — Bold Organic Modernism
-   Uses only product categories publicly shown on freehealthyvending.com
-   Three price tiers with FHV product spread images
-   No yogurt, no protein shakes, no meal replacements
+   Three price tiers using product photos from FHV public site.
+   Site design: green/amber palette, Playfair headings.
+   No yogurt, no protein shakes, no meal replacements.
    ============================================================ */
 
 import { CheckCircle2, ShieldCheck, Leaf } from "lucide-react";
 
-const TIER1_IMAGE =
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663487738921/FWBzfm3EpAjHnNF5scF6S5/fhv-tier1-chips-juices_a6c68e60.webp";
-const TIER3_IMAGE =
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663487738921/FWBzfm3EpAjHnNF5scF6S5/fhv-tier3-energy-jerky_1d042fdf.webp";
-const SPREAD_IMAGE =
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663487738921/FWBzfm3EpAjHnNF5scF6S5/fhv-product-spread-hero_f5832e3d.webp";
+const TIER1_PHOTO =
+  "https://d2xsxph8kpxj0f.cloudfront.net/310519663487738921/FWBzfm3EpAjHnNF5scF6S5/fhv-tier1-photo_34180e20.png";
+const TIER2_PHOTO =
+  "https://d2xsxph8kpxj0f.cloudfront.net/310519663487738921/FWBzfm3EpAjHnNF5scF6S5/fhv-tier2-photo_7b55f5b9.png";
+const TIER3_PHOTO =
+  "https://d2xsxph8kpxj0f.cloudfront.net/310519663487738921/FWBzfm3EpAjHnNF5scF6S5/fhv-tier3-photo_b1a63753.png";
 
 const tiers = [
   {
-    id: "tier1",
     label: "Chips, Popcorn, Juices & Sodas",
     price: "$1.00 – $1.75",
-    image: TIER1_IMAGE,
-    imageAlt: "Healthy chips, popcorn, juices, and sodas available in the vending machine",
-    colorClass: "bg-amber-100 text-amber-900",
-    borderClass: "border-amber-200",
+    photo: TIER1_PHOTO,
+    alt: "Healthy chips, popcorn, juices, and sodas",
+    colorClass: "bg-amber-50 border-amber-200",
+    badgeClass: "bg-amber-100 text-amber-900",
   },
   {
-    id: "tier2",
     label: "Protein or Fruit Bars & Teas",
     price: "$2.00 – $2.50",
-    image: null,
-    imageAlt: null,
-    colorClass: "bg-green-100 text-green-900",
-    borderClass: "border-green-200",
+    photo: TIER2_PHOTO,
+    alt: "Protein bars, fruit bars, and teas",
+    colorClass: "bg-green-50 border-green-200",
+    badgeClass: "bg-green-100 text-green-900",
   },
   {
-    id: "tier3",
     label: "Energy Drinks, Cold Brews & Jerky",
     price: "$2.25 – $3.50",
-    image: TIER3_IMAGE,
-    imageAlt: "Healthy energy drinks, cold brews, and jerky available in the vending machine",
-    colorClass: "bg-sky-100 text-sky-900",
-    borderClass: "border-sky-200",
+    photo: TIER3_PHOTO,
+    alt: "Energy drinks, cold brews, and jerky",
+    colorClass: "bg-sky-50 border-sky-200",
+    badgeClass: "bg-sky-100 text-sky-900",
   },
 ];
 
@@ -65,48 +62,35 @@ export default function ProductsSection() {
             <em className="text-[oklch(0.80_0.18_95)] not-italic">Great Taste</em>
           </h2>
           <p className="font-body text-[oklch(0.44_0.04_145)] text-lg leading-relaxed">
-            Our machines stock healthy, organic, and better-for-you products at prices your students
+            Our machines stock healthy, organic, and better-for-you products at prices students
             can afford. Every item meets USDA Smart Snacks in Schools standards.
           </p>
         </div>
 
-        {/* Product spread image */}
-        <div className="flex justify-center mb-12">
-          <img
-            src={SPREAD_IMAGE}
-            alt="Full range of healthy vending products available from Free Healthy Vending"
-            className="max-w-lg w-full object-contain drop-shadow-xl"
-            loading="lazy"
-          />
-        </div>
-
-        {/* Three price tiers */}
+        {/* Three tier cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
           {tiers.map((tier) => (
             <div
-              key={tier.id}
-              className={`bg-white rounded-2xl border ${tier.borderClass} overflow-hidden shadow-sm hover:shadow-md transition-shadow`}
+              key={tier.label}
+              className={`rounded-2xl border overflow-hidden shadow-sm hover:shadow-md transition-shadow ${tier.colorClass}`}
             >
-              {tier.image && (
+              {/* Product photo */}
+              <div className="bg-white flex items-center justify-center p-4 h-44">
                 <img
-                  src={tier.image}
-                  alt={tier.imageAlt ?? ""}
-                  className="w-full h-40 object-cover object-center"
+                  src={tier.photo}
+                  alt={tier.alt}
+                  className="h-full w-full object-contain"
                   loading="lazy"
                 />
-              )}
-              {!tier.image && (
-                <div className="w-full h-40 bg-gradient-to-br from-green-50 to-emerald-100 flex items-center justify-center">
-                  <Leaf className="w-12 h-12 text-[oklch(0.58_0.16_145/0.4)]" />
-                </div>
-              )}
+              </div>
+              {/* Label + price */}
               <div className="p-5">
-                <span className={`inline-block text-xs font-semibold px-3 py-1 rounded-full mb-3 ${tier.colorClass}`}>
-                  {tier.price}
-                </span>
-                <p className="font-body font-semibold text-[oklch(0.28_0.10_145)] text-base leading-snug">
+                <p className="font-display font-bold text-[oklch(0.28_0.10_145)] text-base leading-snug mb-3">
                   {tier.label}
                 </p>
+                <span className={`inline-block text-sm font-bold px-3 py-1 rounded-full ${tier.badgeClass}`}>
+                  {tier.price}
+                </span>
               </div>
             </div>
           ))}

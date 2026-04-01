@@ -1,38 +1,37 @@
 /* ============================================================
    HOSPITAL PRODUCTS — Legacy Way Vending
-   Healthy packaged snacks and beverages only.
-   No fresh items, protein shakes, or meal replacements.
+   Three price tiers using product photos from FHV public site.
+   Site design: green/amber palette.
+   No yogurt, no protein shakes, no meal replacements.
    ============================================================ */
 
 import { Leaf, CheckCircle } from "lucide-react";
 
-const categories = [
+const TIER1_PHOTO =
+  "https://d2xsxph8kpxj0f.cloudfront.net/310519663487738921/FWBzfm3EpAjHnNF5scF6S5/fhv-tier1-photo_34180e20.png";
+const TIER2_PHOTO =
+  "https://d2xsxph8kpxj0f.cloudfront.net/310519663487738921/FWBzfm3EpAjHnNF5scF6S5/fhv-tier2-photo_7b55f5b9.png";
+const TIER3_PHOTO =
+  "https://d2xsxph8kpxj0f.cloudfront.net/310519663487738921/FWBzfm3EpAjHnNF5scF6S5/fhv-tier3-photo_b1a63753.png";
+
+const tiers = [
   {
-    name: "Chips & Popcorn",
-    items: [
-      "Healthy chip varieties",
-      "Popcorn options",
-      "Better-for-you crunchy snacks",
-    ],
+    name: "Chips, Popcorn, Juices & Sodas",
     price: "$1.00 – $1.75",
+    photo: TIER1_PHOTO,
+    alt: "Healthy chips, popcorn, juices, and sodas",
   },
   {
     name: "Protein or Fruit Bars & Teas",
-    items: [
-      "Protein bars",
-      "Fruit and granola bars",
-      "Teas and better-for-you beverages",
-    ],
     price: "$2.00 – $2.50",
+    photo: TIER2_PHOTO,
+    alt: "Protein bars, fruit bars, and teas",
   },
   {
     name: "Energy Drinks, Cold Brews & Jerky",
-    items: [
-      "Healthy energy drinks",
-      "Cold brew coffee",
-      "Jerky and protein snacks",
-    ],
     price: "$2.25 – $3.50",
+    photo: TIER3_PHOTO,
+    alt: "Energy drinks, cold brews, and jerky",
   },
 ];
 
@@ -67,25 +66,28 @@ export default function HospitalProducts() {
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8 mb-12">
-          {/* Product categories */}
+          {/* Product tier cards */}
           <div className="lg:col-span-2 grid sm:grid-cols-3 gap-6">
-            {categories.map((cat) => (
-              <div key={cat.name} className="bg-[oklch(0.99_0.005_145)] border border-[oklch(0.92_0.04_145)] rounded-2xl p-5">
-                <div className="flex items-start justify-between gap-2 mb-3 pb-2 border-b border-[oklch(0.92_0.04_145)]">
-                  <h3 className="font-display font-bold text-[oklch(0.28_0.10_145)] text-base leading-snug">
-                    {cat.name}
-                  </h3>
-                  <span className="font-body text-xs font-semibold text-[oklch(0.58_0.16_145)] bg-[oklch(0.96_0.04_145)] px-2 py-0.5 rounded-full whitespace-nowrap flex-shrink-0">
-                    {(cat as any).price}
+            {tiers.map((tier) => (
+              <div key={tier.name} className="bg-[oklch(0.99_0.005_145)] border border-[oklch(0.92_0.04_145)] rounded-2xl overflow-hidden">
+                {/* Product photo */}
+                <div className="bg-white flex items-center justify-center p-3 h-36">
+                  <img
+                    src={tier.photo}
+                    alt={tier.alt}
+                    className="h-full w-full object-contain"
+                    loading="lazy"
+                  />
+                </div>
+                {/* Label + price */}
+                <div className="p-4">
+                  <p className="font-display font-bold text-[oklch(0.28_0.10_145)] text-sm leading-snug mb-2">
+                    {tier.name}
+                  </p>
+                  <span className="font-body text-xs font-semibold text-[oklch(0.58_0.16_145)] bg-[oklch(0.96_0.04_145)] px-2 py-0.5 rounded-full">
+                    {tier.price}
                   </span>
                 </div>
-                <ul className="space-y-1.5">
-                  {cat.items.map((item) => (
-                    <li key={item} className="font-body text-[oklch(0.45_0.008_60)] text-xs leading-relaxed">
-                      {item}
-                    </li>
-                  ))}
-                </ul>
               </div>
             ))}
           </div>
