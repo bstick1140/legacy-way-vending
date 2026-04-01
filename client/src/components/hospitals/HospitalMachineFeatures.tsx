@@ -47,7 +47,7 @@ const features = [
 
 export default function HospitalMachineFeatures() {
   return (
-    <section className="py-20 bg-[oklch(0.97_0.008_145)]">
+    <section id="hospital-features" className="py-20 bg-[oklch(0.97_0.008_145)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-14">

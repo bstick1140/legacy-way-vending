@@ -1,14 +1,31 @@
 /* ============================================================
    NAVBAR — Option B: Warm & Inviting
    Warm cream/white background, deep green logo/links, golden amber CTA
+   Page-aware: shows correct section links for Home vs Hospitals page
    ============================================================ */
 
 import { useState, useEffect } from "react";
 import { Menu, X, Phone, Leaf } from "lucide-react";
+import { useLocation } from "wouter";
+
+const homeNavLinks = [
+  { label: "How It Works", href: "#how-it-works" },
+  { label: "Machine Features", href: "#features" },
+  { label: "Products", href: "#products" },
+  { label: "FAQ", href: "#faq" },
+];
+
+const hospitalsNavLinks = [
+  { label: "Why It Works", href: "#hospital-why" },
+  { label: "Machine Features", href: "#hospital-features" },
+  { label: "Products", href: "#hospital-products" },
+  { label: "FAQ", href: "#hospital-faq" },
+];
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [location] = useLocation();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -16,12 +33,9 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navLinks = [
-    { label: "How It Works", href: "#how-it-works" },
-    { label: "Machine Features", href: "#features" },
-    { label: "Products", href: "#products" },
-    { label: "FAQ", href: "#faq" },
-  ];
+  const isHospitals = location === "/hospitals";
+  const navLinks = isHospitals ? hospitalsNavLinks : homeNavLinks;
+  const qualifyHref = isHospitals ? "#hospital-qualify" : "#qualify";
 
   return (
     <nav
@@ -34,7 +48,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2 group">
+          <a href="/" className="flex items-center gap-2 group">
             <div className="w-8 h-8 bg-[oklch(0.58_0.16_145)] rounded-full flex items-center justify-center flex-shrink-0">
               <Leaf className="w-4 h-4 text-white" />
             </div>
@@ -66,8 +80,8 @@ export default function Navbar() {
               <Phone className="w-4 h-4" />
               864-381-9290
             </a>
-            <a href="#qualify" className="btn-amber text-sm py-2.5 px-5">
-              See If You Qualify
+            <a href={qualifyHref} className="btn-amber text-sm py-2.5 px-5">
+              {isHospitals ? "Request a Machine" : "See If You Qualify"}
             </a>
           </div>
 
@@ -108,11 +122,11 @@ export default function Navbar() {
               864-381-9290
             </a>
             <a
-              href="#qualify"
+              href={qualifyHref}
               onClick={() => setIsOpen(false)}
               className="btn-amber w-full justify-center text-sm py-2.5"
             >
-              See If You Qualify
+              {isHospitals ? "Request a Machine" : "See If You Qualify"}
             </a>
           </div>
         </div>
