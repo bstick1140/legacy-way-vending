@@ -43,11 +43,6 @@ const faqs = [
       "Unlike traditional vending arrangements that often come with outdated machines and junk food, our program is completely free and gives you a state-of-the-art machine stocked with USDA Smart Snacks compliant products. We handle all installation, restocking, and maintenance — you simply enjoy the benefits.",
   },
   {
-    question: "Can the machine handle perishable items like yogurt?",
-    answer:
-      "Yes! Our machines feature a Health & Safety Lock that automatically locks the machine if a perishable product is spoiled, preventing any liability for your school. This allows us to offer yogurts, smoothies, and other fresh items that students love.",
-  },
-  {
     question: "Is the machine ADA compliant?",
     answer:
       "Yes, 100% ADA compliant. All payment and product selection components are positioned between 15\" and 48\", meeting all Americans with Disabilities Act requirements.",

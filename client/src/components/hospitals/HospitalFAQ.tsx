@@ -4,7 +4,7 @@
    managers, and food services directors.
    ============================================================ */
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ChevronDown } from "lucide-react";
 
 const faqs = [
@@ -52,6 +52,30 @@ const faqs = [
 
 export default function HospitalFAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  useEffect(() => {
+    const id = "hospital-faq-schema";
+    if (!document.getElementById(id)) {
+      const schema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": faqs.map((faq) => ({
+          "@type": "Question",
+          "name": faq.question,
+          "acceptedAnswer": { "@type": "Answer", "text": faq.answer },
+        })),
+      };
+      const script = document.createElement("script");
+      script.id = id;
+      script.type = "application/ld+json";
+      script.text = JSON.stringify(schema);
+      document.head.appendChild(script);
+    }
+    return () => {
+      const el = document.getElementById(id);
+      if (el) el.remove();
+    };
+  }, []);
 
   return (
     <section id="hospital-faq" className="py-20 bg-white">

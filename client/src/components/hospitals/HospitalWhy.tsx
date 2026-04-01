@@ -61,8 +61,8 @@ export default function HospitalWhy() {
             <br />
             <span className="text-[oklch(0.58_0.16_145)]">Choose Legacy Way Vending</span>
           </h2>
-          <p className="font-body text-[oklch(0.45_0.008_60)] text-lg max-w-2xl mx-auto leading-relaxed">
-            Free Healthy Vending services are used successfully in hospitals across the country. Here's why facilities directors and operations managers choose this program.
+            <p className="font-body text-[oklch(0.45_0.008_60)] text-lg max-w-2xl mx-auto leading-relaxed">
+            Free Healthy Vending services are used successfully in hospitals and medical facilities across the country, including facilities in Spartanburg and Greenville counties, SC. Here is why facilities directors and operations managers choose this program.
           </p>
         </div>
 
