@@ -89,14 +89,16 @@ export default function HospitalHero() {
                   For Qualified Facilities
                 </div>
                 <img
-                  src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=500&fit=crop&q=80"
-                  alt="Healthy vending machine for hospitals"
-                  className="w-full h-80 object-cover rounded-xl"
+                  src="https://d2xsxph8kpxj0f.cloudfront.net/310519663487738921/FWBzfm3EpAjHnNF5scF6S5/vitruvian-man-upperbody-6CVbrJhrT2QLs7z3cEJm9M.webp"
+                  alt="Da Vinci Vitruvian Man — human health and wellness"
+                  className="w-full h-80 object-cover object-top rounded-xl"
+                  style={{ objectPosition: '50% 15%' }}
                 />
-                <div className="absolute bottom-8 right-4 bg-white/95 backdrop-blur-sm rounded-xl p-3 shadow-lg text-center">
-                  <div className="font-body text-[oklch(0.58_0.16_145)] text-xs font-bold uppercase tracking-wide">Used in</div>
-                  <div className="font-display font-bold text-[oklch(0.28_0.10_145)] text-lg">Hospitals</div>
-                  <div className="font-body text-[oklch(0.58_0.16_145)] text-xs">Nationwide</div>
+                {/* Da Vinci parchment-style badge */}
+                <div className="absolute bottom-8 right-4 rounded-xl p-3 shadow-lg text-center border" style={{ background: 'oklch(0.97 0.03 85)', borderColor: 'oklch(0.78 0.10 75)' }}>
+                  <div className="font-body text-xs font-bold uppercase tracking-widest" style={{ color: 'oklch(0.42 0.12 60)', fontStyle: 'italic' }}>Used in Medical</div>
+                  <div className="font-display font-bold text-lg" style={{ color: 'oklch(0.28 0.10 145)' }}>Facilities</div>
+                  <div className="font-body text-xs font-semibold" style={{ color: 'oklch(0.52 0.14 75)' }}>Nationwide</div>
                 </div>
               </div>
 
