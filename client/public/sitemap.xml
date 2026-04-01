@@ -3,13 +3,21 @@
   <url>
     <loc>https://www.legacywayvending.com/</loc>
     <lastmod>2026-04-01</lastmod>
+<<<<<<< Updated upstream
     <changefreq>monthly</changefreq>
+=======
+    <changefreq>weekly</changefreq>
+>>>>>>> Stashed changes
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.legacywayvending.com/hospitals</loc>
     <lastmod>2026-04-01</lastmod>
+<<<<<<< Updated upstream
     <changefreq>monthly</changefreq>
+=======
+    <changefreq>weekly</changefreq>
+>>>>>>> Stashed changes
     <priority>0.9</priority>
   </url>
 </urlset>
