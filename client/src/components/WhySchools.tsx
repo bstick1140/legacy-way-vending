@@ -34,8 +34,8 @@ const benefits = [
   },
   {
     icon: Star,
-    title: "1st Class Service",
-    description: "If you're ever unsatisfied with our service, we remove the machine — no questions asked. Your satisfaction is guaranteed.",
+    title: "Dedicated Service",
+    description: "Our team handles all restocking, maintenance, and support. You get a reliable partner committed to keeping your machine running at its best.",
   },
 ];
 

@@ -48,11 +48,6 @@ const faqs = [
     answer:
       "Each machine is built brand-new for your specific location. From the time of approval, installation is typically completed within approximately 9 weeks. We'll keep you updated every step of the way.",
   },
-  {
-    question: "What if our facility is not satisfied with the service?",
-    answer:
-      "Our program is backed by a 1st Class Service Guarantee. If you're not receiving exceptional service, we will remove the machine from your facility with no questions asked. We stand behind our commitment to quality.",
-  },
 ];
 
 export default function HospitalFAQ() {
