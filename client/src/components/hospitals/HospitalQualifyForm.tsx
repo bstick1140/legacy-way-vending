@@ -227,7 +227,7 @@ export default function HospitalQualifyForm() {
             <span className="text-[oklch(0.80_0.18_95)] italic">Qualify for Free Vending?</span>
           </h2>
           <p className="font-body text-white/90 text-lg">
-            Answer 3 quick questions to find out if your medical facility qualifies for a free, state-of-the-art healthy vending machine.
+            Answer 3 quick questions to find out if your hospital or clinic in Spartanburg County or Greenville County, SC qualifies for a free, state-of-the-art healthy vending machine.
           </p>
         </div>
 

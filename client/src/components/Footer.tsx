@@ -4,9 +4,28 @@
    ============================================================ */
 
 import { Phone, Mail, MapPin, Leaf, ExternalLink } from "lucide-react";
+import { useLocation } from "wouter";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const [location] = useLocation();
+  const isHospitals = location === "/hospitals";
+
+  const quickLinks = isHospitals
+    ? [
+        { label: "Why It Works", href: "#hospital-why" },
+        { label: "Machine Features", href: "#hospital-features" },
+        { label: "Our Products", href: "#hospital-products" },
+        { label: "FAQ", href: "#hospital-faq" },
+        { label: "Request a Machine", href: "#hospital-qualify" },
+      ]
+    : [
+        { label: "How It Works", href: "#how-it-works" },
+        { label: "Machine Features", href: "#features" },
+        { label: "Our Products", href: "#products" },
+        { label: "FAQ", href: "#faq" },
+        { label: "Check Qualification", href: "#qualify" },
+      ];
 
   return (
     <footer className="bg-[oklch(0.42_0.16_145)] text-white">
@@ -43,13 +62,7 @@ export default function Footer() {
           <div>
             <h4 className="font-body font-bold text-white text-sm uppercase tracking-widest mb-4">Quick Links</h4>
             <ul className="space-y-2.5">
-              {[
-                { label: "How It Works", href: "#how-it-works" },
-                { label: "Machine Features", href: "#features" },
-                { label: "Our Products", href: "#products" },
-                { label: "FAQ", href: "#faq" },
-                { label: "Check Qualification", href: "#qualify" },
-              ].map((link) => (
+              {quickLinks.map((link) => (
                 <li key={link.label}>
                   <a
                     href={link.href}
@@ -67,16 +80,17 @@ export default function Footer() {
             <h4 className="font-body font-bold text-white text-sm uppercase tracking-widest mb-4">We Serve</h4>
             <ul className="space-y-2.5">
               {[
-                "Middle Schools",
-                "High Schools",
-                "YMCA Facilities",
-                "Hospitals & Clinics",
-                "Manufacturing Facilities",
-                "Office Buildings",
-                "Community Centers",
+                { label: "Middle Schools", href: null },
+                { label: "High Schools", href: null },
+                { label: "Hospitals & Clinics", href: "/hospitals" },
+                { label: "YMCA Facilities", href: null },
+                { label: "Manufacturing Facilities", href: null },
+                { label: "Office Buildings", href: null },
               ].map((loc) => (
-                <li key={loc} className="font-body text-white/80 text-sm">
-                  {loc}
+                <li key={loc.label} className="font-body text-white/80 text-sm">
+                  {loc.href ? (
+                    <a href={loc.href} className="hover:text-white transition-colors">{loc.label}</a>
+                  ) : loc.label}
                 </li>
               ))}
             </ul>

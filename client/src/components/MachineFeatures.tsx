@@ -43,8 +43,8 @@ const features: { icon: React.ElementType; title: string; description: string }[
   },
   {
     icon: Thermometer,
-    title: "Perishable-Ready",
-    description: "Health & Safety Lock auto-locks if a product is spoiled, enabling yogurts, smoothies, and fresh items.",
+    title: "Health & Safety Lock",
+    description: "Auto-locks the machine if a product reaches an unsafe temperature, protecting your students and eliminating liability.",
   },
   {
     icon: Award,
