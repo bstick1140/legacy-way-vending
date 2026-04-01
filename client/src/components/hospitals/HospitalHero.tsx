@@ -1,0 +1,114 @@
+/* ============================================================
+   HOSPITAL HERO — Legacy Way Vending
+   Warm & Inviting design. Targets facilities directors,
+   operations managers, and food services directors.
+   ============================================================ */
+
+import { Phone, ArrowRight, Heart, Shield, Star } from "lucide-react";
+
+export default function HospitalHero() {
+  return (
+    <section className="relative pt-24 pb-16 lg:pt-32 lg:pb-24 bg-[oklch(0.99_0.005_145)] overflow-hidden">
+      {/* Subtle background pattern */}
+      <div className="absolute inset-0 opacity-[0.04]" style={{
+        backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23166534' fill-opacity='1'%3E%3Cpath d='M30 30c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10zm10 0c0 5.5 4.5 10 10 10s10-4.5 10-10-4.5-10-10-10-10 4.5-10 10z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+      }} />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left: Copy */}
+          <div className="space-y-6">
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 bg-[oklch(0.96_0.04_145)] border border-[oklch(0.88_0.08_145)] rounded-full px-4 py-1.5">
+              <Heart className="w-3.5 h-3.5 text-[oklch(0.58_0.16_145)]" />
+              <span className="font-body text-[oklch(0.42_0.12_145)] text-xs font-semibold uppercase tracking-widest">
+                Healthy Vending for Medical Facilities
+              </span>
+            </div>
+
+            {/* Headline */}
+            <h1 className="font-display font-bold text-[oklch(0.28_0.10_145)] text-4xl sm:text-5xl lg:text-6xl leading-[1.1]">
+              Healthier Snacks
+              <br />
+              <span className="text-[oklch(0.80_0.18_95)] italic">for Your Staff</span>
+              <br />
+              and Patients
+            </h1>
+
+            <p className="font-body text-[oklch(0.38_0.008_60)] text-lg leading-relaxed max-w-lg">
+              Provide your hospital staff, visitors, and patients with great-tasting, healthy snack options — at <strong className="text-[oklch(0.42_0.16_145)]">absolutely no cost</strong> to your facility. We handle everything.
+            </p>
+
+            {/* Trust signals */}
+            <div className="space-y-2.5">
+              {[
+                { icon: Shield, text: "No cost to your facility — ever" },
+                { icon: Heart, text: "Healthy, organic, and better-for-you products" },
+                { icon: Star, text: "Great taste — not the bland health food you've seen before" },
+              ].map(({ icon: Icon, text }) => (
+                <div key={text} className="flex items-center gap-3">
+                  <div className="w-5 h-5 rounded-full bg-[oklch(0.96_0.04_145)] flex items-center justify-center flex-shrink-0">
+                    <Icon className="w-3 h-3 text-[oklch(0.58_0.16_145)]" />
+                  </div>
+                  <span className="font-body text-[oklch(0.38_0.008_60)] text-sm">{text}</span>
+                </div>
+              ))}
+            </div>
+
+            {/* CTAs */}
+            <div className="flex flex-wrap gap-3 pt-2">
+              <a
+                href="#hospital-qualify"
+                className="btn-amber flex items-center gap-2 text-sm py-3 px-6"
+              >
+                Request a Machine
+                <ArrowRight className="w-4 h-4" />
+              </a>
+              <a
+                href="tel:8643819290"
+                className="flex items-center gap-2 border border-[oklch(0.58_0.16_145)] text-[oklch(0.58_0.16_145)] hover:bg-[oklch(0.96_0.04_145)] transition-colors rounded-lg px-5 py-3 text-sm font-medium font-body"
+              >
+                <Phone className="w-4 h-4" />
+                864-381-9290
+              </a>
+            </div>
+
+            <p className="font-body text-[oklch(0.55_0.008_60)] text-xs">
+              Serving Spartanburg and Greenville counties, SC. Response within 1 business day.
+            </p>
+          </div>
+
+          {/* Right: Machine image + stat cards */}
+          <div className="relative flex justify-center lg:justify-end">
+            <div className="relative">
+              {/* Machine image */}
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-[oklch(0.18_0.005_285/0.15)] bg-white p-4 max-w-sm">
+                <div className="absolute top-4 left-4 z-10 bg-[oklch(0.80_0.18_95)] text-[oklch(0.18_0.005_285)] text-xs font-bold font-body px-3 py-1.5 rounded-full">
+                  100% FREE
+                  <br />
+                  For Qualified Facilities
+                </div>
+                <img
+                  src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=500&fit=crop&q=80"
+                  alt="Healthy vending machine for hospitals"
+                  className="w-full h-80 object-cover rounded-xl"
+                />
+                <div className="absolute bottom-8 right-4 bg-white/95 backdrop-blur-sm rounded-xl p-3 shadow-lg text-center">
+                  <div className="font-body text-[oklch(0.58_0.16_145)] text-xs font-bold uppercase tracking-wide">Used in</div>
+                  <div className="font-display font-bold text-[oklch(0.28_0.10_145)] text-lg">Hospitals</div>
+                  <div className="font-body text-[oklch(0.58_0.16_145)] text-xs">Nationwide</div>
+                </div>
+              </div>
+
+              {/* Floating stat */}
+              <div className="absolute -left-6 top-1/3 bg-white rounded-xl shadow-xl p-4 border border-[oklch(0.92_0.04_145)]">
+                <div className="font-display font-bold text-[oklch(0.58_0.16_145)] text-2xl">24/7</div>
+                <div className="font-body text-[oklch(0.55_0.008_60)] text-xs leading-tight">Healthy snacks<br />always available</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
