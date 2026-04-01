@@ -22,7 +22,7 @@ export default function HospitalHero() {
             <div className="inline-flex items-center gap-2 bg-[oklch(0.96_0.04_145)] border border-[oklch(0.88_0.08_145)] rounded-full px-4 py-1.5">
               <Heart className="w-3.5 h-3.5 text-[oklch(0.58_0.16_145)]" />
               <span className="font-body text-[oklch(0.42_0.12_145)] text-xs font-semibold uppercase tracking-widest">
-                Healthy Vending for Medical Facilities
+                Free Healthy Vending for Hospitals &amp; Clinics in Upstate SC
               </span>
             </div>
 
@@ -74,7 +74,7 @@ export default function HospitalHero() {
             </div>
 
             <p className="font-body text-[oklch(0.55_0.008_60)] text-xs">
-              Serving Spartanburg and Greenville counties, SC. Response within 1 business day.
+              Serving hospitals, clinics, and medical facilities in Spartanburg County and Greenville County, SC. Response within 1 business day.
             </p>
           </div>
 
