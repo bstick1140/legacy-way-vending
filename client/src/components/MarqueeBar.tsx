@@ -83,10 +83,10 @@ export default function MarqueeBar() {
   };
 
   return (
-    <div className="bg-[oklch(0.28_0.10_145)] border-b border-[oklch(0.35_0.10_145)] sticky top-16 lg:top-20 z-40 overflow-hidden">
+    <div className="bg-white border-b border-gray-200 sticky top-16 lg:top-20 z-40 overflow-hidden">
       {/* Fade edges */}
-      <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-[oklch(0.28_0.10_145)] to-transparent z-10 pointer-events-none" />
-      <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-[oklch(0.28_0.10_145)] to-transparent z-10 pointer-events-none" />
+      <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
+      <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
 
       {/* Scrolling track */}
       <div
@@ -107,10 +107,10 @@ export default function MarqueeBar() {
               <div
                 className={`w-12 h-12 rounded-2xl flex items-center justify-center text-2xl mb-2 transition-all duration-200 ${
                   active
-                    ? "bg-[oklch(0.80_0.18_95)]"
+                    ? "bg-[oklch(0.58_0.16_145)]"
                     : market.comingSoon
-                    ? "bg-white/5"
-                    : "bg-white/10 group-hover:bg-white/20"
+                    ? "bg-gray-100"
+                    : "bg-gray-100 group-hover:bg-[oklch(0.92_0.08_145)]"
                 }`}
               >
                 {market.emoji}
@@ -119,10 +119,10 @@ export default function MarqueeBar() {
               <span
                 className={`font-body font-bold text-xs whitespace-nowrap leading-tight text-center block ${
                   active
-                    ? "text-[oklch(0.80_0.18_95)]"
+                    ? "text-[oklch(0.28_0.10_145)]"
                     : market.comingSoon
-                    ? "text-white/35"
-                    : "text-white/80 group-hover:text-white"
+                    ? "text-gray-300"
+                    : "text-gray-700 group-hover:text-[oklch(0.28_0.10_145)]"
                 }`}
               >
                 {market.label}
@@ -131,10 +131,10 @@ export default function MarqueeBar() {
               <span
                 className={`font-body text-[0.6rem] whitespace-nowrap text-center block mt-0.5 ${
                   active
-                    ? "text-[oklch(0.80_0.18_95)]/70"
+                    ? "text-[oklch(0.28_0.10_145)]/70"
                     : market.comingSoon
-                    ? "text-white/20"
-                    : "text-white/40"
+                    ? "text-gray-300"
+                    : "text-gray-400"
                 }`}
               >
                 {market.comingSoon ? "Coming Soon" : market.sublabel}
