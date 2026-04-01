@@ -358,7 +358,7 @@ export default function HospitalQualifyForm() {
                     <input
                       type="text"
                       required
-                      placeholder="Spartanburg Regional Medical Center"
+                      placeholder="Hospital or Facility Name"
                       value={formData.facilityName}
                       onChange={(e) => setFormData({ ...formData, facilityName: e.target.value })}
                       className="w-full border border-[oklch(0.88_0.04_145)] rounded-lg px-3 py-2.5 font-body text-sm text-[oklch(0.28_0.10_145)] focus:outline-none focus:border-[oklch(0.58_0.16_145)] focus:ring-1 focus:ring-[oklch(0.58_0.16_145)]"
