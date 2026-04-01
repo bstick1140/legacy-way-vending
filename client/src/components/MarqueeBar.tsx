@@ -10,10 +10,7 @@ import {
   GraduationCap,
   Stethoscope,
   Dumbbell,
-  Building2,
   Factory,
-  Briefcase,
-  Users,
 } from "lucide-react";
 import { useLocation } from "wouter";
 import { toast } from "sonner";
@@ -46,27 +43,15 @@ const markets: Market[] = [
     href: "/hospitals",
   },
   {
-    label: "YMCA Facilities",
-    sublabel: "Recreation Centers",
+    label: "YMCA & Community Centers",
+    sublabel: "Recreation & Public Spaces",
     icon: Dumbbell,
     comingSoon: true,
   },
   {
-    label: "Office Buildings",
-    sublabel: "Corporate Spaces",
-    icon: Briefcase,
-    comingSoon: true,
-  },
-  {
-    label: "Manufacturing",
-    sublabel: "Plant & Warehouse",
+    label: "Offices & Manufacturing",
+    sublabel: "Corporate & Industrial",
     icon: Factory,
-    comingSoon: true,
-  },
-  {
-    label: "Community Centers",
-    sublabel: "Public Spaces",
-    icon: Users,
     comingSoon: true,
   },
 ];
@@ -101,7 +86,7 @@ export default function MarqueeBar() {
       <div
         className="flex items-center"
         style={{
-          animation: "marquee-scroll 38s linear infinite",
+          animation: "marquee-scroll 32s linear infinite",
           width: "max-content",
         }}
         onMouseEnter={(e) => (e.currentTarget.style.animationPlayState = "paused")}

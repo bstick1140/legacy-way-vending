@@ -2,6 +2,7 @@
    NAVBAR — Option B: Warm & Inviting
    Warm cream/white background, deep green logo/links, golden amber CTA
    Page-aware: shows correct section links for Home vs Hospitals page
+   Active market links (Schools, Medical Facilities) always visible
    ============================================================ */
 
 import { useState, useEffect } from "react";
@@ -48,7 +49,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <a href="/" className="flex items-center gap-2 group">
+          <a href="/" className="flex items-center gap-2 group flex-shrink-0">
             <div className="w-8 h-8 bg-[oklch(0.58_0.16_145)] rounded-full flex items-center justify-center flex-shrink-0">
               <Leaf className="w-4 h-4 text-white" />
             </div>
@@ -58,13 +59,39 @@ export default function Navbar() {
             </div>
           </a>
 
-          {/* Desktop Nav */}
-          <div className="hidden lg:flex items-center gap-8">
+          {/* Desktop Nav — market links + page section links */}
+          <div className="hidden lg:flex items-center gap-1">
+            {/* Active market links — always visible */}
+            <a
+              href="/"
+              className={`font-body text-sm font-semibold px-3 py-1.5 rounded-md transition-colors duration-200 ${
+                !isHospitals
+                  ? "text-[oklch(0.58_0.16_145)] bg-[oklch(0.94_0.06_145)]"
+                  : "text-[oklch(0.50_0.008_60)] hover:text-[oklch(0.58_0.16_145)] hover:bg-[oklch(0.96_0.04_145)]"
+              }`}
+            >
+              Schools
+            </a>
+            <a
+              href="/hospitals"
+              className={`font-body text-sm font-semibold px-3 py-1.5 rounded-md transition-colors duration-200 ${
+                isHospitals
+                  ? "text-[oklch(0.58_0.16_145)] bg-[oklch(0.94_0.06_145)]"
+                  : "text-[oklch(0.50_0.008_60)] hover:text-[oklch(0.58_0.16_145)] hover:bg-[oklch(0.96_0.04_145)]"
+              }`}
+            >
+              Medical Facilities
+            </a>
+
+            {/* Divider */}
+            <span className="mx-2 text-gray-200 text-lg leading-none">|</span>
+
+            {/* Page section links */}
             {navLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                className="font-body text-[oklch(0.38_0.008_60)] hover:text-[oklch(0.58_0.16_145)] text-sm font-medium transition-colors duration-200"
+                className="font-body text-[oklch(0.38_0.008_60)] hover:text-[oklch(0.58_0.16_145)] text-sm font-medium px-3 py-1.5 transition-colors duration-200"
               >
                 {link.label}
               </a>
@@ -99,20 +126,45 @@ export default function Navbar() {
       {/* Mobile Menu */}
       <div
         className={`lg:hidden transition-all duration-300 overflow-hidden ${
-          isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          isOpen ? "max-h-[28rem] opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <div className="bg-white px-4 py-4 space-y-3 border-t border-[oklch(0.90_0.04_145)]">
+        <div className="bg-white px-4 py-4 space-y-1 border-t border-[oklch(0.90_0.04_145)]">
+          {/* Market links */}
+          <div className="pb-2 mb-2 border-b border-[oklch(0.90_0.04_145)]">
+            <p className="font-body text-[0.65rem] font-semibold uppercase tracking-widest text-gray-400 mb-2">Markets</p>
+            <a
+              href="/"
+              onClick={() => setIsOpen(false)}
+              className={`block font-body text-sm font-semibold py-1.5 px-2 rounded transition-colors ${
+                !isHospitals ? "text-[oklch(0.58_0.16_145)]" : "text-[oklch(0.38_0.008_60)]"
+              }`}
+            >
+              Schools
+            </a>
+            <a
+              href="/hospitals"
+              onClick={() => setIsOpen(false)}
+              className={`block font-body text-sm font-semibold py-1.5 px-2 rounded transition-colors ${
+                isHospitals ? "text-[oklch(0.58_0.16_145)]" : "text-[oklch(0.38_0.008_60)]"
+              }`}
+            >
+              Medical Facilities
+            </a>
+          </div>
+
+          {/* Section links */}
           {navLinks.map((link) => (
             <a
               key={link.label}
               href={link.href}
               onClick={() => setIsOpen(false)}
-              className="block font-body text-[oklch(0.38_0.008_60)] hover:text-[oklch(0.58_0.16_145)] py-2 text-sm font-medium transition-colors"
+              className="block font-body text-[oklch(0.38_0.008_60)] hover:text-[oklch(0.58_0.16_145)] py-2 px-2 text-sm font-medium transition-colors"
             >
               {link.label}
             </a>
           ))}
+
           <div className="pt-2 space-y-2 border-t border-[oklch(0.90_0.04_145)]">
             <a
               href="tel:8643819290"
