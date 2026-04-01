@@ -33,7 +33,7 @@ const markets: Market[] = [
   {
     label: "Hospitals & Clinics",
     sublabel: "Medical Facilities",
-    emoji: "🏥",
+    emoji: "🩺",
     href: "/hospitals",
   },
   {
