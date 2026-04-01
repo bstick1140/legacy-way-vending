@@ -1,8 +1,8 @@
 /* ============================================================
    PRODUCTS SECTION — Bold Organic Modernism
-   Three price tiers using product photos from FHV public site.
+   Three public price tiers from FHV. No brand names.
+   No planogram images. No proprietary product lists.
    Site design: green/amber palette, Playfair headings.
-   No yogurt, no protein shakes, no meal replacements.
    ============================================================ */
 
 import { CheckCircle2, ShieldCheck, Leaf } from "lucide-react";
