@@ -39,7 +39,7 @@ const markets: Market[] = [
   {
     label: "YMCA Facilities",
     sublabel: "Recreation Centers",
-    emoji: "🏋️",
+    emoji: "🏃",
     comingSoon: true,
   },
   {
