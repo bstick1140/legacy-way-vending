@@ -1,129 +1,56 @@
 /* ============================================================
    PRODUCTS SECTION — Bold Organic Modernism
-   Tabbed display: High School vs Middle School planograms
-   Cream background, amber tab accents, Playfair headings
+   Uses only product categories publicly shown on freehealthyvending.com
+   Three price tiers with FHV product spread images
+   No yogurt, no protein shakes, no meal replacements
    ============================================================ */
 
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { GraduationCap, BookOpen, CheckCircle2, ShieldCheck, Leaf } from "lucide-react";
+import { CheckCircle2, ShieldCheck, Leaf } from "lucide-react";
 
-const HS_IMAGE =
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663487738921/FWBzfm3EpAjHnNF5scF6S5/planogram-hs-v3-Yt9PJWbpUtta325pRbWWBA.webp";
-const MS_IMAGE =
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663487738921/FWBzfm3EpAjHnNF5scF6S5/planogram-ms-v3-TibNvsiY24DHKrErreDhY4.webp";
+const TIER1_IMAGE =
+  "https://d2xsxph8kpxj0f.cloudfront.net/310519663487738921/FWBzfm3EpAjHnNF5scF6S5/fhv-tier1-chips-juices_a6c68e60.webp";
+const TIER3_IMAGE =
+  "https://d2xsxph8kpxj0f.cloudfront.net/310519663487738921/FWBzfm3EpAjHnNF5scF6S5/fhv-tier3-energy-jerky_1d042fdf.webp";
+const SPREAD_IMAGE =
+  "https://d2xsxph8kpxj0f.cloudfront.net/310519663487738921/FWBzfm3EpAjHnNF5scF6S5/fhv-product-spread-hero_f5832e3d.webp";
 
-const tabs = [
+const tiers = [
   {
-    id: "hs",
-    label: "High School",
-    icon: GraduationCap,
-    image: HS_IMAGE,
-    imageAlt: "High School vending machine product menu — chips, bars, protein shakes, juices",
-    badge: "Grades 9–12",
-    tagline: "More variety, higher price points — including protein shakes & sparkling juices.",
-    categories: [
-      {
-        name: "Chips & Popcorn",
-        colorClass: "bg-amber-100 text-amber-900",
-        items: [
-          "PopCorners (Kettle Corn, Sea Salt, White Cheddar)",
-          "Lays Kettle Cooked (Original, Jalapeño, BBQ)",
-          "PopChips (Original, BBQ, Hot)",
-          "Smartfood White Cheddar Popcorn",
-        ],
-      },
-      {
-        name: "Bars & Snacks",
-        colorClass: "bg-green-100 text-green-900",
-        items: [
-          "Grains Bar",
-          "Baked Bar",
-          "Granola Bars (multiple varieties)",
-          "Fig Bars & Fig Brownie",
-          "Made Good Granola Bars",
-          "GoGo Squeez & Smoothie Pouches",
-        ],
-      },
-      {
-        name: "Beverages",
-        colorClass: "bg-sky-100 text-sky-900",
-        items: [
-          "Poland Spring Water",
-          "Nurri Water",
-          "Fairlife Nutrition Plan Protein Shakes (Chocolate & Vanilla)",
-          "Num Protein Shakes",
-          "Vita Coco Coconut Water",
-          "Dole Juices",
-          "IZZE Sparkling Juices (Berry, Peach)",
-        ],
-      },
-    ],
-    highlights: [
-      { icon: ShieldCheck, text: "100% USDA Smart Snacks compliant" },
-      { icon: Leaf, text: "No artificial colors or flavors" },
-      { icon: CheckCircle2, text: "Protein options for active students" },
-    ],
-    priceRange: "Starting at $1",
+    id: "tier1",
+    label: "Chips, Popcorn, Juices & Sodas",
+    price: "$1.00 – $1.75",
+    image: TIER1_IMAGE,
+    imageAlt: "Healthy chips, popcorn, juices, and sodas available in the vending machine",
+    colorClass: "bg-amber-100 text-amber-900",
+    borderClass: "border-amber-200",
   },
   {
-    id: "ms",
-    label: "Middle School",
-    icon: BookOpen,
-    image: MS_IMAGE,
-    imageAlt: "Middle School vending machine product menu — chips, bars, juices, no caffeine",
-    badge: "Grades 6–8",
-    tagline: "Caffeine-free beverages only — age-appropriate, parent-approved options.",
-    categories: [
-      {
-        name: "Chips & Popcorn",
-        colorClass: "bg-amber-100 text-amber-900",
-        items: [
-          "PopCorners (Kettle Corn, Sea Salt, White Cheddar)",
-          "Lays Kettle Cooked (Original, Jalapeño, BBQ)",
-          "PopChips (Original, BBQ, Hot)",
-          "Smartfood White Cheddar Popcorn",
-        ],
-      },
-      {
-        name: "Bars & Snacks",
-        colorClass: "bg-green-100 text-green-900",
-        items: [
-          "Grains Bar",
-          "Baked Bar",
-          "Granola Bars (multiple varieties)",
-          "Fig Bars & Fig Brownie",
-          "Made Good Granola Bars",
-          "GoGo Squeez & Smoothie Pouches",
-        ],
-      },
-      {
-        name: "Beverages — Caffeine-Free",
-        colorClass: "bg-purple-100 text-purple-900",
-        items: [
-          "Poland Spring Water",
-          "Nurri Water",
-          "Dole Apple Juice",
-          "Dole Orange Juice",
-          "IZZE Sparkling Juices (Berry, Peach, Apple, Orange)",
-          "Fairlife Nutrition Plan Protein Shake (Chocolate)",
-        ],
-      },
-    ],
-    highlights: [
-      { icon: ShieldCheck, text: "100% USDA Smart Snacks compliant" },
-      { icon: Leaf, text: "Zero caffeine — age-appropriate" },
-      { icon: CheckCircle2, text: "Parent & administrator approved" },
-    ],
-    priceRange: "Starting at $1",
+    id: "tier2",
+    label: "Protein or Fruit Bars & Teas",
+    price: "$2.00 – $2.50",
+    image: null,
+    imageAlt: null,
+    colorClass: "bg-green-100 text-green-900",
+    borderClass: "border-green-200",
+  },
+  {
+    id: "tier3",
+    label: "Energy Drinks, Cold Brews & Jerky",
+    price: "$2.25 – $3.50",
+    image: TIER3_IMAGE,
+    imageAlt: "Healthy energy drinks, cold brews, and jerky available in the vending machine",
+    colorClass: "bg-sky-100 text-sky-900",
+    borderClass: "border-sky-200",
   },
 ];
 
-export default function ProductsSection() {
-  const [activeTab, setActiveTab] = useState<"hs" | "ms">("hs");
-  const active = tabs.find((t) => t.id === activeTab)!;
-  const ActiveIcon = active.icon;
+const highlights = [
+  { icon: ShieldCheck, text: "100% USDA Smart Snacks compliant" },
+  { icon: Leaf, text: "Healthy, organic, and better-for-you options" },
+  { icon: CheckCircle2, text: "More variety than standard vending" },
+];
 
+export default function ProductsSection() {
   return (
     <section id="products" className="py-20 lg:py-28 bg-[oklch(0.96_0.04_145)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -134,132 +61,71 @@ export default function ProductsSection() {
             USDA Smart Snacks Compliant
           </div>
           <h2 className="font-display text-[oklch(0.18_0.005_285)] text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-4">
-            Sample Menu —{" "}
-            <em className="text-[oklch(0.80_0.18_95)] not-italic">By School Type</em>
+            Healthier Snacks &{" "}
+            <em className="text-[oklch(0.80_0.18_95)] not-italic">Great Taste</em>
           </h2>
           <p className="font-body text-[oklch(0.44_0.04_145)] text-lg leading-relaxed">
-            Select your school type below to preview a representative product menu. Every item meets
-            USDA Smart Snacks in Schools standards — curated specifically for each grade level.
+            Our machines stock healthy, organic, and better-for-you products at prices your students
+            can afford. Every item meets USDA Smart Snacks in Schools standards.
           </p>
         </div>
 
-        {/* Tab switcher */}
-        <div className="flex justify-center mb-10">
-          <div className="inline-flex bg-[oklch(0.90_0.04_145)] rounded-xl p-1.5 gap-1 shadow-inner">
-            {tabs.map((tab) => {
-              const Icon = tab.icon;
-              const isActive = activeTab === tab.id;
-              return (
-                <button
-                  key={tab.id}
-                  onClick={() => setActiveTab(tab.id as "hs" | "ms")}
-                  className={`flex items-center gap-2.5 px-6 py-3 rounded-lg font-body font-semibold text-sm transition-all duration-200 ${
-                    isActive
-                      ? "bg-[oklch(0.58_0.16_145)] text-white shadow-lg"
-                      : "text-[oklch(0.38_0.008_60)] hover:text-[oklch(0.58_0.16_145)] hover:bg-white"
-                  }`}
-                >
-                  <Icon className="w-4 h-4" />
-                  {tab.label}
-                  <span
-                    className={`text-xs px-2 py-0.5 rounded-full font-medium ${
-                      isActive
-                        ? "bg-[oklch(0.80_0.18_95)] text-[oklch(0.18_0.005_285)]"
-                        : "bg-[oklch(0.88_0.05_145)] text-[oklch(0.44_0.04_145)]"
-                    }`}
-                  >
-                    {tab.badge}
-                  </span>
-                </button>
-              );
-            })}
-          </div>
+        {/* Product spread image */}
+        <div className="flex justify-center mb-12">
+          <img
+            src={SPREAD_IMAGE}
+            alt="Full range of healthy vending products available from Free Healthy Vending"
+            className="max-w-lg w-full object-contain drop-shadow-xl"
+            loading="lazy"
+          />
         </div>
 
-        {/* Tab content */}
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={activeTab}
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -16 }}
-            transition={{ duration: 0.28, ease: "easeInOut" }}
-          >
-            {/* Tagline */}
-            <p className="text-center text-[oklch(0.44_0.04_145)] mb-8 flex items-center justify-center gap-2 text-sm font-medium">
-              <ActiveIcon className="w-4 h-4 text-[oklch(0.58_0.16_145)]" />
-              {active.tagline}
-            </p>
-
-            {/* Sample menu disclaimer banner */}
-            <div className="flex items-center justify-center gap-2.5 bg-[oklch(0.80_0.18_95/0.12)] border border-[oklch(0.80_0.18_95/0.35)] rounded-xl px-5 py-3 mb-6 max-w-2xl mx-auto">
-              <svg className="w-4 h-4 text-[oklch(0.55_0.12_75)] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-              <p className="text-sm text-[oklch(0.40_0.08_75)] font-medium">
-                <strong>Sample menu only.</strong> Actual product selection may vary based on availability and school preferences.
-              </p>
-            </div>
-
-            {/* Planogram image */}
-            <div className="rounded-2xl overflow-hidden shadow-2xl shadow-[oklch(0.58_0.16_145/0.15)] mb-10 border border-[oklch(0.90_0.04_145)]">
-              <img
-                src={active.image}
-                alt={active.imageAlt}
-                className="w-full object-cover"
-                loading="lazy"
-              />
-            </div>
-
-            {/* Product categories */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-              {active.categories.map((cat) => (
-                <div
-                  key={cat.name}
-                  className="bg-white rounded-xl border border-[oklch(0.90_0.04_145)] p-6 shadow-sm hover:shadow-md transition-shadow"
-                >
-                  <span className={`inline-block text-xs font-semibold px-3 py-1 rounded-full mb-4 ${cat.colorClass}`}>
-                    {cat.name}
-                  </span>
-                  <ul className="space-y-2">
-                    {cat.items.map((item) => (
-                      <li key={item} className="flex items-start gap-2 text-sm text-[oklch(0.35_0.01_285)]">
-                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[oklch(0.58_0.16_145)] flex-shrink-0" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
+        {/* Three price tiers */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+          {tiers.map((tier) => (
+            <div
+              key={tier.id}
+              className={`bg-white rounded-2xl border ${tier.borderClass} overflow-hidden shadow-sm hover:shadow-md transition-shadow`}
+            >
+              {tier.image && (
+                <img
+                  src={tier.image}
+                  alt={tier.imageAlt ?? ""}
+                  className="w-full h-40 object-cover object-center"
+                  loading="lazy"
+                />
+              )}
+              {!tier.image && (
+                <div className="w-full h-40 bg-gradient-to-br from-green-50 to-emerald-100 flex items-center justify-center">
+                  <Leaf className="w-12 h-12 text-[oklch(0.58_0.16_145/0.4)]" />
                 </div>
-              ))}
-            </div>
-
-            {/* Highlights + price bar */}
-            <div className="bg-[oklch(0.58_0.16_145)] rounded-2xl px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-4">
-              <div className="flex flex-wrap justify-center sm:justify-start gap-x-6 gap-y-2">
-                {active.highlights.map(({ icon: Icon, text }) => (
-                  <div key={text} className="flex items-center gap-2 text-white text-sm font-medium">
-                    <Icon className="w-4 h-4 text-[oklch(0.80_0.18_95)]" />
-                    {text}
-                  </div>
-                ))}
-              </div>
-              <div className="flex items-center gap-3 flex-shrink-0">
-                <span className="text-[oklch(0.80_0.18_95)] text-sm font-medium">Price range:</span>
-                <span className="bg-[oklch(0.80_0.18_95)] text-[oklch(0.18_0.005_285)] font-bold text-sm px-4 py-1.5 rounded-full">
-                  {active.priceRange}
+              )}
+              <div className="p-5">
+                <span className={`inline-block text-xs font-semibold px-3 py-1 rounded-full mb-3 ${tier.colorClass}`}>
+                  {tier.price}
                 </span>
+                <p className="font-body font-semibold text-[oklch(0.28_0.10_145)] text-base leading-snug">
+                  {tier.label}
+                </p>
               </div>
             </div>
-          </motion.div>
-        </AnimatePresence>
+          ))}
+        </div>
+
+        {/* Highlights bar */}
+        <div className="bg-[oklch(0.58_0.16_145)] rounded-2xl px-6 py-5 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 mb-10">
+          {highlights.map(({ icon: Icon, text }) => (
+            <div key={text} className="flex items-center gap-2 text-white text-sm font-medium">
+              <Icon className="w-4 h-4 text-[oklch(0.80_0.18_95)]" />
+              {text}
+            </div>
+          ))}
+        </div>
 
         {/* Bottom CTA */}
-        <div className="text-center mt-14">
-          <p className="text-[oklch(0.50_0.05_145)] text-xs italic mb-2">
-            * Sample menus shown above. Actual product selection may vary based on availability, regional distribution, and school preferences.
-          </p>
+        <div className="text-center">
           <p className="text-[oklch(0.44_0.04_145)] mb-5 text-base">
-            More variety at lower prices than any standard vending company — and always 100% USDA Smart Snacks compliant.
+            Our healthy vending program outperforms traditional junk-food machines 2-to-1 — and it costs your school nothing.
           </p>
           <a href="#qualify" className="btn-amber inline-flex items-center gap-2 text-base">
             Check If Your School Qualifies

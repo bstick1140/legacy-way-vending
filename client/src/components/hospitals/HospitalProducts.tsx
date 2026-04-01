@@ -10,32 +10,29 @@ const categories = [
   {
     name: "Chips & Popcorn",
     items: [
-      "PopCorners (Kettle Corn, Sea Salt, White Cheddar)",
-      "Lays Kettle Cooked (Original, Jalapeño, BBQ)",
-      "PopChips (Original, BBQ, Hot)",
-      "Smartfood White Cheddar Popcorn",
+      "Healthy chip varieties",
+      "Popcorn options",
+      "Better-for-you crunchy snacks",
     ],
+    price: "$1.00 – $1.75",
   },
   {
-    name: "Bars & Snacks",
+    name: "Protein or Fruit Bars & Teas",
     items: [
-      "Grains Bar",
-      "Baked Bar",
-      "Granola Bars (multiple varieties)",
-      "Fig Bars & Fig Brownie",
-      "Made Good Granola Bars",
-      "GoGo Squeez & Smoothie Pouches",
+      "Protein bars",
+      "Fruit and granola bars",
+      "Teas and better-for-you beverages",
     ],
+    price: "$2.00 – $2.50",
   },
   {
-    name: "Beverages",
+    name: "Energy Drinks, Cold Brews & Jerky",
     items: [
-      "Poland Spring Water",
-      "Nurri Water",
-      "Vita Coco Coconut Water",
-      "Dole Juices",
-      "IZZE Sparkling Juices (Berry, Peach)",
+      "Healthy energy drinks",
+      "Cold brew coffee",
+      "Jerky and protein snacks",
     ],
+    price: "$2.25 – $3.50",
   },
 ];
 
@@ -74,9 +71,14 @@ export default function HospitalProducts() {
           <div className="lg:col-span-2 grid sm:grid-cols-3 gap-6">
             {categories.map((cat) => (
               <div key={cat.name} className="bg-[oklch(0.99_0.005_145)] border border-[oklch(0.92_0.04_145)] rounded-2xl p-5">
-                <h3 className="font-display font-bold text-[oklch(0.28_0.10_145)] text-base mb-3 pb-2 border-b border-[oklch(0.92_0.04_145)]">
-                  {cat.name}
-                </h3>
+                <div className="flex items-start justify-between gap-2 mb-3 pb-2 border-b border-[oklch(0.92_0.04_145)]">
+                  <h3 className="font-display font-bold text-[oklch(0.28_0.10_145)] text-base leading-snug">
+                    {cat.name}
+                  </h3>
+                  <span className="font-body text-xs font-semibold text-[oklch(0.58_0.16_145)] bg-[oklch(0.96_0.04_145)] px-2 py-0.5 rounded-full whitespace-nowrap flex-shrink-0">
+                    {(cat as any).price}
+                  </span>
+                </div>
                 <ul className="space-y-1.5">
                   {cat.items.map((item) => (
                     <li key={item} className="font-body text-[oklch(0.45_0.008_60)] text-xs leading-relaxed">
