@@ -16,13 +16,13 @@ import QualifyForm from "@/components/QualifyForm";
 import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
 import StickyCallout from "@/components/StickyCallout";
-import MarketsBar from "@/components/MarketsBar";
+import MarqueeBar from "@/components/MarqueeBar";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-[oklch(0.99_0.005_145)]">
       <Navbar />
-      <MarketsBar />
+      <MarqueeBar />
       <main>
         <HeroSection />
         <StatsBar />

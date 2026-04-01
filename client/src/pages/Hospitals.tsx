@@ -16,13 +16,13 @@ import HospitalServiceArea from "@/components/hospitals/HospitalServiceArea";
 import HospitalQualifyForm from "@/components/hospitals/HospitalQualifyForm";
 import HospitalFAQ from "@/components/hospitals/HospitalFAQ";
 import StickyCallout from "@/components/StickyCallout";
-import MarketsBar from "@/components/MarketsBar";
+import MarqueeBar from "@/components/MarqueeBar";
 
 export default function Hospitals() {
   return (
     <div className="min-h-screen bg-[oklch(0.99_0.005_145)]">
       <Navbar />
-      <MarketsBar />
+      <MarqueeBar />
       <main>
         <HospitalHero />
         <HospitalWhy />
