@@ -77,7 +77,7 @@ export default function MarqueeBar() {
   };
 
   return (
-    <div className="bg-white border-b border-gray-100 sticky top-16 lg:top-20 z-40 overflow-hidden shadow-sm">
+    <div className="bg-white border-y border-[oklch(0.82_0.08_145)] sticky top-16 lg:top-20 z-40 overflow-hidden shadow-sm">
       {/* Fade edges */}
       <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
       <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
