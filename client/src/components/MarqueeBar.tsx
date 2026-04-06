@@ -40,7 +40,7 @@ const markets: Market[] = [
     label: "Hospitals & Clinics",
     sublabel: "Medical Facilities",
     icon: Stethoscope,
-    href: "/hospitals",
+    href: "/hospitals/",
   },
   {
     label: "YMCA & Community Centers",
@@ -72,7 +72,7 @@ export default function MarqueeBar() {
   const isActive = (market: Market) => {
     if (!market.href) return false;
     if (market.href === "/" && (location === "/" || location === "")) return true;
-    if (market.href !== "/" && location === market.href) return true;
+    if (market.href !== "/" && location.startsWith(market.href)) return true;
     return false;
   };
 

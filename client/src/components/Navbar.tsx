@@ -34,7 +34,7 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const isHospitals = location === "/hospitals";
+  const isHospitals = location.startsWith("/hospitals");
   const navLinks = isHospitals ? hospitalsNavLinks : homeNavLinks;
   const qualifyHref = isHospitals ? "#hospital-qualify" : "#qualify";
 
@@ -73,7 +73,7 @@ export default function Navbar() {
               Schools
             </a>
             <a
-              href="/hospitals"
+              href="/hospitals/"
               className={`font-body text-sm font-semibold px-3 py-1.5 rounded-md transition-colors duration-200 ${
                 isHospitals
                   ? "text-[oklch(0.58_0.16_145)] bg-[oklch(0.94_0.06_145)]"
@@ -143,7 +143,7 @@ export default function Navbar() {
               Schools
             </a>
             <a
-              href="/hospitals"
+              href="/hospitals/"
               onClick={() => setIsOpen(false)}
               className={`block font-body text-sm font-semibold py-1.5 px-2 rounded transition-colors ${
                 isHospitals ? "text-[oklch(0.58_0.16_145)]" : "text-[oklch(0.38_0.008_60)]"

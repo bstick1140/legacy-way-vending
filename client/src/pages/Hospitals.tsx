@@ -54,7 +54,7 @@ export default function Hospitals() {
   useSEO({
     title: "Free Healthy Vending Machines for Hospitals & Clinics | Legacy Way Vending | Spartanburg & Greenville SC",
     description: "Legacy Way Vending provides FREE healthy vending machines for hospitals, clinics, and medical facilities in Spartanburg and Greenville counties, SC. No cost, no hassle. We install, stock, and maintain. Call 864-381-9290.",
-    canonical: "https://legacywayvending.com/hospitals",
+    canonical: "https://www.legacywayvending.com/hospitals/",
     keywords: "free healthy vending machine hospital, healthy vending machine clinic, no cost vending machine medical facility, hospital staff vending machine Spartanburg SC, healthy vending Greenville SC hospital, free vending machine healthcare facility South Carolina, vending machine for hospital Upstate SC",
   });
 

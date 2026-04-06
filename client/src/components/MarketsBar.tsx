@@ -17,7 +17,7 @@ type Market = {
 
 const markets: Market[] = [
   { label: "Schools", icon: GraduationCap, href: "/" },
-  { label: "Hospitals & Clinics", icon: Heart, href: "/hospitals" },
+  { label: "Hospitals & Clinics", icon: Heart, href: "/hospitals/" },
   { label: "YMCA Facilities", icon: Dumbbell, comingSoon: true },
   { label: "Office Buildings", icon: Briefcase, comingSoon: true },
   { label: "Manufacturing", icon: Factory, comingSoon: true },

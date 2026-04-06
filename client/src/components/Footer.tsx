@@ -9,7 +9,7 @@ import { useLocation } from "wouter";
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   const [location] = useLocation();
-  const isHospitals = location === "/hospitals";
+  const isHospitals = location.startsWith("/hospitals");
 
   const quickLinks = isHospitals
     ? [
@@ -82,7 +82,7 @@ export default function Footer() {
               {[
                 { label: "Middle Schools", href: null },
                 { label: "High Schools", href: null },
-                { label: "Hospitals & Clinics", href: "/hospitals" },
+                { label: "Hospitals & Clinics", href: "/hospitals/" },
                 { label: "YMCA Facilities", href: null },
                 { label: "Manufacturing Facilities", href: null },
                 { label: "Office Buildings", href: null },
