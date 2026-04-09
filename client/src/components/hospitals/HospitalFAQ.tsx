@@ -46,7 +46,7 @@ const faqs = [
   {
     question: "How quickly can we get a machine installed?",
     answer:
-      "Each machine is built brand-new for your specific location. From the time of approval, installation is typically completed within approximately 9 weeks. We'll keep you updated every step of the way.",
+      "Your machine is custom-built in the USA for your location. Most facilities are up and running within 9 weeks of approval. We'll keep you updated every step of the way.",
   },
 ];
 
