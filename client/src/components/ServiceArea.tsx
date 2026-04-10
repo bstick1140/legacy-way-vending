@@ -1,19 +1,23 @@
 /* ============================================================
    SERVICE AREA SECTION — Legacy Way Vending
    Warm cream background, forest green accents
-   Spartanburg & Greenville counties, SC
+   Greenville, Spartanburg & Pickens counties, SC
    ============================================================ */
 
 import { MapPin, ArrowRight } from "lucide-react";
 
 const counties = [
   {
-    name: "Spartanburg County",
-    cities: ["Spartanburg", "Boiling Springs", "Duncan", "Inman", "Landrum", "Chesnee", "Gaffney area"],
+    name: "Greenville County",
+    cities: ["Greenville", "Simpsonville", "Fountain Inn", "Mauldin"],
   },
   {
-    name: "Greenville County",
-    cities: ["Greenville", "Mauldin", "Simpsonville", "Greer", "Taylors", "Fountain Inn", "Travelers Rest"],
+    name: "Spartanburg County",
+    cities: ["Spartanburg", "Chesnee", "Landrum"],
+  },
+  {
+    name: "Pickens County",
+    cities: ["Easley", "Liberty", "Powdersville"],
   },
 ];
 
@@ -37,12 +41,12 @@ export default function ServiceArea() {
             <span className="text-[oklch(0.80_0.18_95)] italic">South Carolina</span>
           </h2>
           <p className="font-body text-[oklch(0.35_0.008_60)] text-lg max-w-2xl mx-auto leading-relaxed">
-            Legacy Way Vending currently places machines in schools and facilities across Spartanburg and Greenville counties. Outside our area? Submit a request and we will connect you with a Free Healthy Vending partner near you.
+            Legacy Way Vending places machines in schools and facilities across Greenville, Spartanburg, and Pickens counties. Outside our area? Submit a request and we will connect you with a Free Healthy Vending partner near you.
           </p>
         </div>
 
         {/* County cards */}
-        <div className="grid sm:grid-cols-2 gap-6 mb-12">
+        <div className="grid sm:grid-cols-3 gap-6 mb-12">
           {counties.map((county) => (
             <div
               key={county.name}
@@ -73,7 +77,7 @@ export default function ServiceArea() {
         {/* Outside area callout */}
         <div className="bg-[oklch(0.58_0.16_145/0.06)] border border-[oklch(0.58_0.16_145/0.20)] rounded-2xl p-8 text-center">
           <p className="font-body text-[oklch(0.35_0.008_60)] text-base leading-relaxed mb-5">
-            <strong className="text-[oklch(0.42_0.16_145)]">School outside Spartanburg or Greenville county?</strong> Submit your request anyway. Legacy Way Vending is a certified Free Healthy Vending partner, and we will connect you with a qualified representative in your area at no cost to you.
+            <strong className="text-[oklch(0.42_0.16_145)]">School outside our service area?</strong> Submit your request anyway. Legacy Way Vending is a certified Free Healthy Vending partner, and we will connect you with a qualified representative in your area at no cost to you.
           </p>
           <a href="#qualify" className="btn-amber inline-flex py-3 px-8">
             Submit a Request

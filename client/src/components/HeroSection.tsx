@@ -95,7 +95,7 @@ export default function HeroSection() {
 
             {/* Location note */}
             <p className="font-body text-[oklch(0.45_0.008_60)] text-sm">
-              Proudly serving <strong className="text-[oklch(0.58_0.16_145)]">Upstate South Carolina</strong> — Spartanburg, Greenville & surrounding areas
+              Proudly serving <strong className="text-[oklch(0.58_0.16_145)]">Upstate South Carolina</strong> — Greenville, Spartanburg, Easley, Simpsonville, Mauldin & surrounding areas
             </p>
           </div>
 
