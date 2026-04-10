@@ -96,7 +96,7 @@ export default function PaymentMethods() {
             Accepted Payments
           </div>
           <h2 className="font-display text-[oklch(0.18_0.005_285)] text-2xl sm:text-3xl font-bold mb-2">
-            Pay Any Way You Like
+            Tap, Swipe, or Pay Your Way.
           </h2>
           <p className="font-body text-[oklch(0.44_0.04_145)] text-base max-w-xl mx-auto">
             Our machines accept all major payment methods — cash, coins, debit/credit cards, Apple Pay, and Google Pay.
