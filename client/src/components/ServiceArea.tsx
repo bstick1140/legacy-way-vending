@@ -9,11 +9,11 @@ import { MapPin, ArrowRight } from "lucide-react";
 const counties = [
   {
     name: "Greenville County",
-    cities: ["Greenville", "Simpsonville", "Fountain Inn", "Mauldin"],
+    cities: ["Greenville", "Simpsonville", "Fountain Inn", "Mauldin", "Greer"],
   },
   {
     name: "Spartanburg County",
-    cities: ["Spartanburg", "Chesnee", "Landrum"],
+    cities: ["Spartanburg", "Chesnee", "Landrum", "Inman"],
   },
   {
     name: "Pickens County",
