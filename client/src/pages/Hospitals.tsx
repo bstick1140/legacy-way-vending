@@ -16,7 +16,7 @@ import HospitalMachineFeatures from "@/components/hospitals/HospitalMachineFeatu
 import HospitalProducts from "@/components/hospitals/HospitalProducts";
 import HospitalServiceArea from "@/components/hospitals/HospitalServiceArea";
 import HospitalQualifyForm from "@/components/hospitals/HospitalQualifyForm";
-import HospitalFAQ from "@/components/hospitals/HospitalFAQ";
+import HospitalFAQ, { hospitalFaqs } from "@/components/hospitals/HospitalFAQ";
 import StickyCallout from "@/components/StickyCallout";
 import MarqueeBar from "@/components/MarqueeBar";
 
@@ -59,18 +59,38 @@ export default function Hospitals() {
   });
 
   useEffect(() => {
-    // Inject hospitals-specific schema
-    const id = "hospital-service-schema";
-    if (!document.getElementById(id)) {
+    // Inject Service schema
+    const serviceId = "hospital-service-schema";
+    if (!document.getElementById(serviceId)) {
       const script = document.createElement("script");
-      script.id = id;
+      script.id = serviceId;
       script.type = "application/ld+json";
       script.text = JSON.stringify(HOSPITAL_SCHEMA);
       document.head.appendChild(script);
     }
+    // Inject single FAQPage schema — consolidated here to prevent duplicates
+    const faqId = "hospital-faq-schema";
+    if (!document.getElementById(faqId)) {
+      const faqSchema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": hospitalFaqs.map((faq) => ({
+          "@type": "Question",
+          "name": faq.question,
+          "acceptedAnswer": { "@type": "Answer", "text": faq.answer },
+        })),
+      };
+      const script = document.createElement("script");
+      script.id = faqId;
+      script.type = "application/ld+json";
+      script.text = JSON.stringify(faqSchema);
+      document.head.appendChild(script);
+    }
     return () => {
-      const el = document.getElementById(id);
-      if (el) el.remove();
+      ["hospital-service-schema", "hospital-faq-schema"].forEach((id) => {
+        const el = document.getElementById(id);
+        if (el) el.remove();
+      });
     };
   }, []);
 

@@ -2,12 +2,14 @@
    HOSPITAL FAQ — Legacy Way Vending
    Addresses questions from facilities directors, operations
    managers, and food services directors.
+   Schema injection removed — FAQPage schema is injected once
+   at the page level in Hospitals.tsx to prevent duplicates.
    ============================================================ */
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 
-const faqs = [
+export const hospitalFaqs = [
   {
     question: "What does this program cost our facility?",
     answer:
@@ -53,30 +55,6 @@ const faqs = [
 export default function HospitalFAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-  useEffect(() => {
-    const id = "hospital-faq-schema";
-    if (!document.getElementById(id)) {
-      const schema = {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": faqs.map((faq) => ({
-          "@type": "Question",
-          "name": faq.question,
-          "acceptedAnswer": { "@type": "Answer", "text": faq.answer },
-        })),
-      };
-      const script = document.createElement("script");
-      script.id = id;
-      script.type = "application/ld+json";
-      script.text = JSON.stringify(schema);
-      document.head.appendChild(script);
-    }
-    return () => {
-      const el = document.getElementById(id);
-      if (el) el.remove();
-    };
-  }, []);
-
   return (
     <section id="hospital-faq" className="py-20 bg-white">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -97,7 +75,7 @@ export default function HospitalFAQ() {
 
         {/* FAQ accordion */}
         <div className="space-y-3">
-          {faqs.map((faq, index) => (
+          {hospitalFaqs.map((faq, index) => (
             <div
               key={index}
               className="border border-[oklch(0.90_0.04_145)] rounded-xl overflow-hidden"
