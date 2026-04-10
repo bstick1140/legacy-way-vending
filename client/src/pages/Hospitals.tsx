@@ -32,12 +32,24 @@ const HOSPITAL_SCHEMA = {
   },
   "serviceType": "Healthy Vending Machine Service",
   "areaServed": [
-    { "@type": "City", "name": "Spartanburg", "sameAs": "https://en.wikipedia.org/wiki/Spartanburg,_South_Carolina" },
     { "@type": "City", "name": "Greenville", "sameAs": "https://en.wikipedia.org/wiki/Greenville,_South_Carolina" },
+    { "@type": "City", "name": "Simpsonville", "sameAs": "https://en.wikipedia.org/wiki/Simpsonville,_South_Carolina" },
+    { "@type": "City", "name": "Fountain Inn", "sameAs": "https://en.wikipedia.org/wiki/Fountain_Inn,_South_Carolina" },
+    { "@type": "City", "name": "Mauldin", "sameAs": "https://en.wikipedia.org/wiki/Mauldin,_South_Carolina" },
+    { "@type": "City", "name": "Greer", "sameAs": "https://en.wikipedia.org/wiki/Greer,_South_Carolina" },
+    { "@type": "City", "name": "Spartanburg", "sameAs": "https://en.wikipedia.org/wiki/Spartanburg,_South_Carolina" },
+    { "@type": "City", "name": "Boiling Springs", "sameAs": "https://en.wikipedia.org/wiki/Boiling_Springs,_South_Carolina" },
+    { "@type": "City", "name": "Chesnee", "sameAs": "https://en.wikipedia.org/wiki/Chesnee,_South_Carolina" },
+    { "@type": "City", "name": "Inman", "sameAs": "https://en.wikipedia.org/wiki/Inman,_South_Carolina" },
+    { "@type": "City", "name": "Landrum", "sameAs": "https://en.wikipedia.org/wiki/Landrum,_South_Carolina" },
+    { "@type": "City", "name": "Easley", "sameAs": "https://en.wikipedia.org/wiki/Easley,_South_Carolina" },
+    { "@type": "City", "name": "Liberty", "sameAs": "https://en.wikipedia.org/wiki/Liberty,_South_Carolina" },
+    { "@type": "City", "name": "Powdersville", "sameAs": "https://en.wikipedia.org/wiki/Powdersville,_South_Carolina" },
+    { "@type": "AdministrativeArea", "name": "Greenville County, South Carolina" },
     { "@type": "AdministrativeArea", "name": "Spartanburg County, South Carolina" },
-    { "@type": "AdministrativeArea", "name": "Greenville County, South Carolina" }
+    { "@type": "AdministrativeArea", "name": "Pickens County, South Carolina" }
   ],
-  "description": "Free healthy vending machine installation, stocking, and maintenance for hospitals, clinics, and medical facilities in Spartanburg and Greenville counties, South Carolina. No cost to your facility.",
+  "description": "Free healthy vending machine installation, stocking, and maintenance for hospitals, clinics, and medical facilities in Greenville, Spartanburg, and Pickens counties, South Carolina. No cost to your facility.",
   "offers": {
     "@type": "Offer",
     "price": "0",
@@ -52,10 +64,10 @@ const HOSPITAL_SCHEMA = {
 
 export default function Hospitals() {
   useSEO({
-    title: "Free Healthy Vending Machines for Hospitals & Clinics | Legacy Way Vending | Spartanburg & Greenville SC",
-    description: "Legacy Way Vending provides FREE healthy vending machines for hospitals, clinics, and medical facilities in Spartanburg and Greenville counties, SC. No cost, no hassle. We install, stock, and maintain. Call 864-381-9290.",
+    title: "Free Healthy Vending Machines for Hospitals & Clinics | Legacy Way Vending | Upstate SC",
+    description: "Legacy Way Vending provides FREE healthy vending machines for hospitals, clinics, and medical facilities in Greenville, Spartanburg, and Pickens counties, SC. No cost, no hassle. We install, stock, and maintain. Call 864-381-9290.",
     canonical: "https://legacywayvending.com/hospitals/",
-    keywords: "free healthy vending machine hospital, healthy vending machine clinic, no cost vending machine medical facility, hospital staff vending machine Spartanburg SC, healthy vending Greenville SC hospital, free vending machine healthcare facility South Carolina, vending machine for hospital Upstate SC",
+    keywords: "free healthy vending machine hospital, healthy vending machine clinic, no cost vending machine medical facility, hospital vending machine Greenville SC, hospital vending machine Spartanburg SC, hospital vending machine Greer SC, hospital vending machine Boiling Springs SC, hospital vending machine Simpsonville SC, hospital vending machine Mauldin SC, hospital vending machine Easley SC, hospital vending machine Inman SC, hospital vending machine Landrum SC, healthy vending Upstate SC hospital, free vending machine healthcare facility South Carolina, vending machine for hospital Upstate SC",
   });
 
   useEffect(() => {
