@@ -13,7 +13,7 @@ const counties = [
   },
   {
     name: "Spartanburg County",
-    cities: ["Spartanburg", "Chesnee", "Landrum", "Inman"],
+    cities: ["Spartanburg", "Boiling Springs", "Chesnee", "Landrum", "Inman"],
   },
   {
     name: "Pickens County",
