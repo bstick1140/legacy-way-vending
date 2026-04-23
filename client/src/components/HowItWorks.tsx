@@ -79,7 +79,7 @@ export default function HowItWorks() {
             <span className="text-[oklch(0.58_0.16_145)]">Program Works</span>
           </h2>
           <p className="font-body text-[oklch(0.44_0.04_145)] text-lg leading-relaxed">
-            Getting a free healthy vending machine for your school in Upstate South Carolina is easier than you think. From qualification to installation, we handle everything for schools in Greenville, Spartanburg, and Pickens counties.
+            Getting a free healthy vending machine for your school in Upstate South Carolina is easier than you think. From qualification to installation, we handle everything for schools in Greenville, Spartanburg, Pickens, and York counties.
           </p>
         </div>
 

@@ -227,7 +227,7 @@ export default function HospitalQualifyForm() {
             <span className="text-[oklch(0.80_0.18_95)] italic">Qualify for Free Vending?</span>
           </h2>
           <p className="font-body text-white/90 text-lg">
-            Answer 3 quick questions to find out if your hospital or clinic in Greenville, Spartanburg, or Pickens County, SC qualifies for a free, state-of-the-art healthy vending machine.
+            Answer 3 quick questions to find out if your hospital or clinic in Greenville, Spartanburg, Pickens, or York County, SC qualifies for a free, state-of-the-art healthy vending machine.
           </p>
         </div>
 
@@ -417,7 +417,7 @@ export default function HospitalQualifyForm() {
 
                   {/* Service area note */}
                   <p className="font-body text-[oklch(0.55_0.008_60)] text-xs text-center">
-                    We currently serve Greenville, Spartanburg, and Pickens counties in South Carolina. Outside our area? Submit anyway and we will connect you with a Free Healthy Vending representative near you.
+                    We currently serve Greenville, Spartanburg, Pickens, and York counties in South Carolina. Outside our area? Submit anyway and we will connect you with a Free Healthy Vending representative near you.
                   </p>
 
                   <button
@@ -447,7 +447,7 @@ export default function HospitalQualifyForm() {
                 </h3>
                 {outOfState ? (
                   <p className="font-body text-[oklch(0.45_0.008_60)] text-base max-w-sm mx-auto">
-                    Legacy Way Vending currently serves Greenville, Spartanburg, and Pickens counties in South Carolina. We will review your request for {formData.facilityName} and connect you with a Free Healthy Vending representative in {formData.state} within 1 business day.
+                    Legacy Way Vending currently serves Greenville, Spartanburg, Pickens, and York counties in South Carolina. We will review your request for {formData.facilityName} and connect you with a Free Healthy Vending representative in {formData.state} within 1 business day.
                   </p>
                 ) : (
                   <p className="font-body text-[oklch(0.45_0.008_60)] text-base max-w-sm mx-auto">

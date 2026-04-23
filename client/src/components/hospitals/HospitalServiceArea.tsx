@@ -22,7 +22,7 @@ export default function HospitalServiceArea() {
             Serving Hospitals &amp; Clinics in Upstate South Carolina
           </h2>
           <p className="font-body text-[oklch(0.45_0.008_60)] text-base max-w-xl mx-auto">
-            Legacy Way Vending serves hospitals, medical clinics, and healthcare facilities across Greenville, Spartanburg, and Pickens counties, SC. Local operators mean faster restocking, faster service calls, and a direct point of contact — not a national call center.
+            Legacy Way Vending serves hospitals, medical clinics, and healthcare facilities across Greenville, Spartanburg, Pickens, and York counties, SC. Local operators mean faster restocking, faster service calls, and a direct point of contact — not a national call center.
           </p>
         </div>
 
