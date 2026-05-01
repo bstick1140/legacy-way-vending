@@ -2,6 +2,7 @@
    SERVICE AREA SECTION — Legacy Way Vending
    Warm cream background, forest green accents
    Greenville, Spartanburg, Pickens, York & Cherokee counties, SC
+   Row layout: county name left column, cities wrap right
    ============================================================ */
 
 import { MapPin, ArrowRight } from "lucide-react";
@@ -36,7 +37,7 @@ export default function ServiceArea() {
       className="py-20 lg:py-28"
       style={{ background: "linear-gradient(180deg, oklch(0.97 0.012 85) 0%, oklch(0.99 0.005 145) 100%)" }}
     >
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-14">
           <div className="badge-pill bg-[oklch(0.58_0.16_145/0.10)] text-[oklch(0.58_0.16_145)] border border-[oklch(0.58_0.16_145/0.25)] mb-4 mx-auto">
@@ -53,26 +54,31 @@ export default function ServiceArea() {
           </p>
         </div>
 
-        {/* County cards */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mb-12">
-          {counties.map((county) => (
+        {/* County rows */}
+        <div className="bg-white rounded-2xl border border-[oklch(0.90_0.04_145)] shadow-sm overflow-hidden mb-12">
+          {counties.map((county, idx) => (
             <div
               key={county.name}
-              className="bg-white rounded-2xl border border-[oklch(0.90_0.04_145)] p-8 shadow-sm hover:shadow-md transition-shadow"
+              className={`flex flex-col sm:flex-row sm:items-start gap-3 px-6 py-5 ${
+                idx < counties.length - 1 ? "border-b border-[oklch(0.93_0.03_145)]" : ""
+              }`}
             >
-              <div className="flex items-center gap-3 mb-5">
-                <div className="w-10 h-10 bg-[oklch(0.58_0.16_145/0.10)] rounded-lg flex items-center justify-center flex-shrink-0">
-                  <MapPin className="w-5 h-5 text-[oklch(0.58_0.16_145)]" />
+              {/* County name */}
+              <div className="flex items-center gap-2.5 sm:w-44 flex-shrink-0 pt-0.5">
+                <div className="w-7 h-7 bg-[oklch(0.58_0.16_145/0.10)] rounded-md flex items-center justify-center flex-shrink-0">
+                  <MapPin className="w-3.5 h-3.5 text-[oklch(0.58_0.16_145)]" />
                 </div>
-                <h3 className="font-display text-[oklch(0.42_0.16_145)] text-xl font-bold">
+                <span className="font-display text-[oklch(0.42_0.16_145)] text-sm font-bold leading-snug">
                   {county.name}
-                </h3>
+                </span>
               </div>
+
+              {/* Cities */}
               <div className="flex flex-wrap gap-2">
                 {county.cities.map((city) => (
                   <span
                     key={city}
-                    className="font-body text-sm text-[oklch(0.35_0.008_60)] bg-[oklch(0.96_0.022_85)] border border-[oklch(0.90_0.04_145)] rounded-full px-3 py-1"
+                    className="font-body text-sm text-[oklch(0.35_0.008_60)] bg-[oklch(0.96_0.022_85)] border border-[oklch(0.90_0.04_145)] rounded-full px-3 py-1 whitespace-nowrap"
                   >
                     {city}
                   </span>
