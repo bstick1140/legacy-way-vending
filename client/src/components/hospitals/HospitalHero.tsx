@@ -4,7 +4,7 @@
    operations managers, and food services directors.
    ============================================================ */
 
-import { Phone, ArrowRight, Heart, Shield, Star } from "lucide-react";
+import { Heart, Shield, Star } from "lucide-react";
 
 export default function HospitalHero() {
   return (
@@ -53,24 +53,6 @@ export default function HospitalHero() {
                   <span className="font-body text-[oklch(0.38_0.008_60)] text-sm">{text}</span>
                 </div>
               ))}
-            </div>
-
-            {/* CTAs */}
-            <div className="flex flex-wrap gap-3 pt-2">
-              <a
-                href="#hospital-qualify"
-                className="btn-amber flex items-center gap-2 text-sm py-3 px-6"
-              >
-                Request a Machine
-                <ArrowRight className="w-4 h-4" />
-              </a>
-              <a
-                href="tel:8643819290"
-                className="flex items-center gap-2 border border-[oklch(0.58_0.16_145)] text-[oklch(0.58_0.16_145)] hover:bg-[oklch(0.96_0.04_145)] transition-colors rounded-lg px-5 py-3 text-sm font-medium font-body"
-              >
-                <Phone className="w-4 h-4" />
-                864-381-9290
-              </a>
             </div>
 
             <p className="font-body text-[oklch(0.55_0.008_60)] text-xs">
