@@ -80,7 +80,7 @@ export default function WhySchools() {
           </div>
           <div>
             <p className="font-body text-[oklch(0.40_0.01_285)] text-lg leading-relaxed">
-              As a school principal in Upstate South Carolina, you're responsible for student wellness, budget management, and facility operations. Our free healthy vending program addresses all three for schools in Spartanburg and Greenville counties — without adding a single item to your to-do list.
+              As a school principal in Upstate South Carolina, you're responsible for student wellness, budget management, and facility operations. Our free healthy vending program addresses all three for schools in Greenville, Spartanburg, Pickens, York, and Cherokee counties — without adding a single item to your to-do list.
             </p>
 
           </div>

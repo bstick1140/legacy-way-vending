@@ -18,7 +18,7 @@ export const hospitalFaqs = [
   {
     question: "What are the requirements to qualify?",
     answer:
-      "Your facility needs a minimum of 300 daily staff, patients, and visitors combined. Most hospitals, medical centers, and larger clinics qualify easily. We serve facilities in Greenville, Spartanburg, Pickens, and York counties in South Carolina.",
+      "Your facility needs a minimum of 300 daily staff, patients, and visitors combined. Most hospitals, medical centers, and larger clinics qualify easily. We serve facilities in Greenville, Spartanburg, Pickens, York, and Cherokee counties in South Carolina.",
   },
   {
     question: "How is this different from the bland health food machines we've seen before?",

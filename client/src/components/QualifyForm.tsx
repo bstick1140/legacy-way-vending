@@ -267,7 +267,7 @@ export default function QualifyForm() {
                   </p>
                 ) : (
                   <p className="font-body text-[oklch(0.44_0.04_145)] leading-relaxed max-w-md mx-auto">
-                    Thank you, <strong>{formData.firstName}</strong>! Legacy Way Vending currently serves Spartanburg and Greenville counties in South Carolina. We will review your request for <strong>{formData.facilityName}</strong> and connect you with a Free Healthy Vending representative in <strong>{formData.state}</strong> within 1 business day.
+                    Thank you, <strong>{formData.firstName}</strong>! Legacy Way Vending currently serves Greenville, Spartanburg, Pickens, York, and Cherokee counties in South Carolina. We will review your request for <strong>{formData.facilityName}</strong> and connect you with a Free Healthy Vending representative in <strong>{formData.state}</strong> within 1 business day.
                   </p>
                 )}
                 <div className="bg-[oklch(0.58_0.16_145/0.06)] rounded-lg p-4 max-w-sm mx-auto">
@@ -485,7 +485,7 @@ export default function QualifyForm() {
                   {/* Service area note */}
                   <div className="bg-[oklch(0.58_0.16_145/0.06)] border border-[oklch(0.58_0.16_145/0.20)] rounded-lg px-4 py-3 text-center">
                     <p className="font-body text-[oklch(0.44_0.04_145)] text-xs leading-relaxed">
-                      <strong className="text-[oklch(0.42_0.16_145)]">We currently serve Spartanburg and Greenville counties, SC.</strong> Outside our area? Submit your request anyway and we will connect you with a Free Healthy Vending representative near you.
+                      <strong className="text-[oklch(0.42_0.16_145)]">We currently serve Greenville, Spartanburg, Pickens, York, and Cherokee counties, SC.</strong> Outside our area? Submit your request anyway and we will connect you with a Free Healthy Vending representative near you.
                     </p>
                   </div>
 

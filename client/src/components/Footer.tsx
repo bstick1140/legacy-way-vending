@@ -53,7 +53,7 @@ export default function Footer() {
               </a>
               <div className="flex items-center gap-2 text-white/80 text-sm">
                 <MapPin className="w-4 h-4 flex-shrink-0" />
-                Upstate South Carolina — Spartanburg, Greenville & surrounding areas
+                Upstate South Carolina — Greenville, Spartanburg, Pickens, York & Cherokee counties
               </div>
             </div>
           </div>
