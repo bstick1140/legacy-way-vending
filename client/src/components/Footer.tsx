@@ -4,7 +4,7 @@
    ============================================================ */
 
 import { Phone, Mail, MapPin, Leaf, ExternalLink } from "lucide-react";
-import { useLocation } from "wouter";
+import { Link, useLocation } from "wouter";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -101,9 +101,20 @@ export default function Footer() {
       {/* Partner badge + bottom bar */}
       <div className="border-t border-[oklch(0.58_0.16_145)] bg-[oklch(0.28_0.16_145)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="font-body text-[oklch(0.50_0.05_145)] text-xs text-center sm:text-left">
-            © {currentYear} Legacy Way Vending. All rights reserved.
-          </p>
+          <div className="flex flex-col sm:flex-row items-center gap-3">
+            <p className="font-body text-[oklch(0.50_0.05_145)] text-xs text-center sm:text-left">
+              © {currentYear} Legacy Way Vending. All rights reserved.
+            </p>
+            <div className="flex items-center gap-3">
+              <Link href="/privacy-policy/" className="font-body text-[oklch(0.50_0.05_145)] hover:text-white transition-colors text-xs">
+                Privacy Policy
+              </Link>
+              <span className="text-[oklch(0.50_0.05_145)] text-xs">·</span>
+              <Link href="/terms-of-service/" className="font-body text-[oklch(0.50_0.05_145)] hover:text-white transition-colors text-xs">
+                Terms of Service
+              </Link>
+            </div>
+          </div>
           <div className="flex items-center gap-2">
             <span className="font-body text-[oklch(0.50_0.05_145)] text-xs">Certified Partner of</span>
             <a
