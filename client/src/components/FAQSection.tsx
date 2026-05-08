@@ -47,6 +47,21 @@ const faqs = [
     answer:
       "Yes, 100% ADA compliant. All payment and product selection components are positioned between 15\" and 48\", meeting all Americans with Disabilities Act requirements.",
   },
+  {
+    question: "Do you serve schools in Cherokee County, SC?",
+    answer:
+      "Yes. Legacy Way Vending now serves schools in Cherokee County, including Gaffney and Blacksburg. Cherokee County schools qualify for the same 100% free healthy vending program available to schools throughout Upstate South Carolina. If your school has 300 or more daily students and staff, submit a qualification request and we will follow up within one business day.",
+  },
+  {
+    question: "Which Cherokee County schools qualify for the free vending program?",
+    answer:
+      "Any public, private, or charter school in Cherokee County with a minimum of 300 daily in-person students and staff qualifies for review. This includes middle schools and high schools in Gaffney and Blacksburg. The program is completely free — no equipment fees, no installation costs, and no maintenance charges.",
+  },
+  {
+    question: "How far do you travel to serve schools in Gaffney and Blacksburg?",
+    answer:
+      "Gaffney and Blacksburg are within our direct service area. We handle all installation, restocking, and maintenance for Cherokee County schools just as we do for schools in Greenville, Spartanburg, Pickens, and York counties. There are no additional fees or travel charges for Cherokee County locations.",
+  },
 ];
 
 export default function FAQSection() {
