@@ -30,7 +30,7 @@ const faqs = [
   {
     question: "How quickly can we get a machine installed?",
     answer:
-      "Your machine is custom-built in the USA 🇺🇸 for your location. Most facilities are up and running within 9 weeks of approval. We'll keep you updated every step of the way.",
+      "Your machine is custom-built in the USA 🇺🇸 for your location. Most facilities are up and running within 6 weeks of approval. We'll keep you updated every step of the way.",
   },
   {
     question: "What happens if a product doesn't dispense properly?",

@@ -19,7 +19,7 @@ const steps = [
     icon: Truck,
     title: "We Install at No Cost",
     description:
-      "Our team delivers, installs, and sets up your brand-new state-of-the-art machine — completely free. No equipment fees, no installation charges. Your machine is custom-built in the USA 🇺🇸 for your location. Most facilities are up and running within 9 weeks of approval.",
+      "Our team delivers, installs, and sets up your brand-new state-of-the-art machine — completely free. No equipment fees, no installation charges. Your machine is custom-built in the USA 🇺🇸 for your location. Most facilities are up and running within 6 weeks of approval.",
   },
   {
     number: "03",
