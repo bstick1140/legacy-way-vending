@@ -18,9 +18,14 @@ const faqs = [
       "Your school needs a minimum of 300 daily in-person students and staff. Most middle and high schools qualify easily. We serve public schools, private schools, and charter schools throughout Upstate South Carolina.",
   },
   {
-    question: "Are the products USDA Smart Snacks in Schools compliant?",
+    question: "Are the products USDA Smart Snacks in Schools (SSIS) compliant?",
     answer:
-      "Absolutely. We have full menus for High Schools and Middle Schools — all 100% USDA Smart Snacks in Schools compliant. We offer far more product variety than standard vending companies, and our buying power keeps prices affordable for every student.",
+      "Yes, 100%. Every product in our machines meets the USDA Smart Snacks in Schools (SSIS) nutritional standards. SSIS sets specific limits on calories, sodium, sugar, and fat for all foods and beverages sold in schools during the school day. We carry full menus for both middle schools and high schools, all certified SSIS compliant. We offer far more product variety than standard vending companies while staying within every SSIS guideline.",
+  },
+  {
+    question: "What is the USDA Smart Snacks in Schools (SSIS) standard and why does it matter?",
+    answer:
+      "USDA Smart Snacks in Schools (SSIS) is a federal nutrition standard that applies to all foods and beverages sold to students during the school day. It sets maximum limits on calories, saturated fat, sodium, and added sugars. Schools that sell non-compliant items risk losing federal nutrition program funding. Every product in our machines is pre-vetted to meet SSIS standards, so your school stays fully compliant without any extra work on your part.",
   },
   {
     question: "What if we already have a drink contract with another company?",

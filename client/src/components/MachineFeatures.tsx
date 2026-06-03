@@ -111,9 +111,19 @@ export default function MachineFeatures() {
               <br />
               <span className="text-[oklch(0.80_0.18_95)] italic">Modern Schools</span>
             </h2>
-            <p className="font-body text-[oklch(0.92_0.04_145)] text-lg leading-relaxed mb-10">
+            <p className="font-body text-[oklch(0.92_0.04_145)] text-lg leading-relaxed mb-6">
               Every machine is brand-new, built specifically for your location, and packed with technology that makes it the most advanced vending solution available.
             </p>
+
+            {/* SSIS compliance callout */}
+            <div className="bg-[oklch(0.42_0.16_145)] border border-[oklch(0.80_0.18_95/0.3)] rounded-xl p-5 mb-10">
+              <h3 className="font-display text-[oklch(0.80_0.18_95)] text-lg font-bold mb-2">
+                100% USDA Smart Snacks in Schools (SSIS) Compliant
+              </h3>
+              <p className="font-body text-[oklch(0.92_0.04_145)] text-sm leading-relaxed">
+                Every product we stock meets the federal USDA Smart Snacks in Schools (SSIS) nutritional standards — mandatory calorie, sodium, sugar, and fat limits for all school-day food sales. Your school stays fully compliant with no extra effort. We carry certified SSIS menus for both middle schools and high schools.
+              </p>
+            </div>
 
             {/* Feature grid */}
             <div className="grid sm:grid-cols-2 gap-4">
