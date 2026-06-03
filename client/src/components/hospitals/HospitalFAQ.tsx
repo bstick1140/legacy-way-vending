@@ -50,6 +50,16 @@ export const hospitalFaqs = [
     answer:
       "Your machine is custom-built in the USA 🇺🇸 for your location. Most facilities are up and running within 6 weeks of approval. We'll keep you updated every step of the way.",
   },
+  {
+    question: "Are the products in your hospital vending machines nutritionist-approved and healthy?",
+    answer:
+      "Yes. Every product we stock is selected for nutritional quality — lower sugar, lower sodium, and better-for-you ingredients. We carry no deep-fried or heavily processed snacks. Our product selection is designed specifically for healthcare environments where staff, patients, and visitors expect better options than a standard vending machine provides.",
+  },
+  {
+    question: "How is your product selection different from standard hospital vending?",
+    answer:
+      "Standard hospital vending machines are often stocked with the same chips, candy, and sugary drinks found anywhere else. Our machines carry better-for-you snacks and beverages — items with real nutritional value, not just marketing labels. Every product goes through a quality review before it enters our machines. Staff and patients notice the difference immediately.",
+  },
 ];
 
 export default function HospitalFAQ() {

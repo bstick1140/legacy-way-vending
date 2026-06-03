@@ -66,6 +66,16 @@ export default function HospitalMachineFeatures() {
           </p>
         </div>
 
+        {/* Healthy product callout */}
+        <div className="bg-[oklch(0.42_0.16_145)] border border-[oklch(0.55_0.16_145/0.4)] rounded-2xl p-6 mb-10">
+          <h3 className="font-display text-white text-xl font-bold mb-2">
+            Nutritionist-Approved Products. Better-for-You Snacks and Beverages.
+          </h3>
+          <p className="font-body text-[oklch(0.92_0.04_145)] text-sm leading-relaxed">
+            Every product in our machines is selected for nutritional quality — lower sugar, lower sodium, and better-for-you ingredients. No deep-fried snacks. No heavily processed junk. Our product selection is designed specifically for healthcare environments where staff, patients, and visitors deserve better than a standard vending machine. We carry a wide variety of healthy snacks and beverages, restocked proactively so the machine is never empty.
+          </p>
+        </div>
+
         {/* Features grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature) => {
