@@ -56,7 +56,7 @@ export default function HospitalHero() {
             </div>
 
             <p className="font-body text-[oklch(0.55_0.008_60)] text-xs">
-              Serving hospitals, clinics, and medical facilities in Greenville, Spartanburg, Pickens, York, and Cherokee counties, SC — Greenville, Spartanburg, Gaffney, Greer, Boiling Springs, Easley & surrounding areas. Response within 1 business day.
+              Serving hospitals, clinics, and medical facilities in Greenville, Spartanburg, Pickens, and Cherokee counties, SC — Greenville, Spartanburg, Gaffney, Greer, Boiling Springs, Easley & surrounding areas. Response within 1 business day.
             </p>
           </div>
 

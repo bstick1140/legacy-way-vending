@@ -53,10 +53,9 @@ const HOSPITAL_SCHEMA = {
     { "@type": "AdministrativeArea", "name": "Greenville County, South Carolina" },
     { "@type": "AdministrativeArea", "name": "Spartanburg County, South Carolina" },
     { "@type": "AdministrativeArea", "name": "Pickens County, South Carolina" },
-    { "@type": "AdministrativeArea", "name": "York County, South Carolina" },
     { "@type": "AdministrativeArea", "name": "Cherokee County, South Carolina" }
   ],
-  "description": "Free healthy vending machine installation, stocking, and maintenance for hospitals, clinics, and medical facilities in Greenville, Spartanburg, Pickens, York, and Cherokee counties, South Carolina. No cost to your facility.",
+  "description": "Free healthy vending machine installation, stocking, and maintenance for hospitals, clinics, and medical facilities in Greenville, Spartanburg, Pickens, and Cherokee counties, South Carolina. No cost to your facility.",
   "offers": {
     "@type": "Offer",
     "price": "0",
@@ -72,7 +71,7 @@ const HOSPITAL_SCHEMA = {
 export default function Hospitals() {
   useSEO({
     title: "Free Healthy Vending Machines for Hospitals & Clinics | Healthy Snacks, No Cost | Legacy Way Vending Upstate SC",
-    description: "Legacy Way Vending provides FREE healthy vending machines for hospitals, clinics, and medical facilities in Greenville, Spartanburg, Pickens, York, and Cherokee counties, SC. Nutritionist-approved, better-for-you snacks and beverages. No cost, no hassle. We install, stock, and maintain. Call 864-381-9290.",
+    description: "Legacy Way Vending provides FREE healthy vending machines for hospitals, clinics, and medical facilities in Greenville, Spartanburg, Pickens, and Cherokee counties, SC. Nutritionist-approved, better-for-you snacks and beverages. No cost, no hassle. We install, stock, and maintain. Call 864-381-9290.",
     canonical: "https://legacywayvending.com/hospitals/",
     keywords: "free healthy vending machine hospital, healthy vending machine clinic, no cost vending machine medical facility, healthy snacks hospital vending, better-for-you vending machine healthcare, nutritionist approved vending machine, hospital vending machine Greenville SC, hospital vending machine Spartanburg SC, hospital vending machine Gaffney SC, hospital vending machine Greer SC, hospital vending machine Boiling Springs SC, hospital vending machine Simpsonville SC, hospital vending machine Mauldin SC, hospital vending machine Easley SC, hospital vending machine Inman SC, hospital vending machine Landrum SC, hospital vending machine Taylors SC, hospital vending machine Travelers Rest SC, healthy vending Upstate SC hospital, free vending machine healthcare facility South Carolina, vending machine for hospital Upstate SC, healthy vending Cherokee County SC",
   });

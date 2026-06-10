@@ -1,7 +1,7 @@
 /* ============================================================
    SERVICE AREA SECTION — Legacy Way Vending
    Warm cream background, forest green accents
-   Greenville, Spartanburg, Pickens, York & Cherokee counties, SC
+   Greenville, Spartanburg, Pickens & Cherokee counties, SC
    Row layout: county name left column, cities wrap right
    ============================================================ */
 
@@ -19,10 +19,6 @@ const counties = [
   {
     name: "Pickens County",
     cities: ["Easley", "Liberty", "Powdersville"],
-  },
-  {
-    name: "York County",
-    cities: ["Rock Hill", "Fort Mill", "Clover", "York"],
   },
   {
     name: "Cherokee County",
@@ -50,7 +46,7 @@ export default function ServiceArea() {
             <span className="text-[oklch(0.80_0.18_95)] italic">South Carolina</span>
           </h2>
           <p className="font-body text-[oklch(0.35_0.008_60)] text-lg max-w-2xl mx-auto leading-relaxed">
-            Legacy Way Vending places machines in schools and facilities across Greenville, Spartanburg, Pickens, York, and Cherokee counties. Outside our area? Submit a request and we will connect you with a Free Healthy Vending partner near you.
+            Legacy Way Vending places machines in schools and facilities across Greenville, Spartanburg, Pickens, and Cherokee counties. Outside our area? Submit a request and we will connect you with a Free Healthy Vending partner near you.
           </p>
         </div>
 
