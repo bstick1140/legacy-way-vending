@@ -86,10 +86,10 @@ export default function Home() {
         <MachineFeatures />
         <PaymentMethods />
         <WhySchools />
-        <ServiceArea />
         <ProductsSection />
         <QualifyForm />
         <FAQSection />
+        <ServiceArea />
       </main>
       <Footer />
       <StickyCallout />
