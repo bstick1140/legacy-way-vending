@@ -38,8 +38,19 @@ const tiers = [
     alt: "Energy drinks, cold brews, and jerky",
     colorClass: "bg-sky-50 border-sky-200",
     badgeClass: "bg-sky-100 text-sky-900",
+    note: "Caffeinated drinks available for high schools only. Not stocked in middle school machines.",
   },
 ];
+
+type Tier = {
+  label: string;
+  price: string;
+  photo: string;
+  alt: string;
+  colorClass: string;
+  badgeClass: string;
+  note?: string;
+};
 
 const highlights = [
   { icon: ShieldCheck, text: "100% USDA Smart Snacks compliant" },
@@ -91,6 +102,11 @@ export default function ProductsSection() {
                 <span className={`inline-block text-sm font-bold px-3 py-1 rounded-full ${tier.badgeClass}`}>
                   {tier.price}
                 </span>
+                {(tier as Tier).note && (
+                  <p className="mt-3 text-xs text-[oklch(0.44_0.04_145)] leading-snug border-t border-sky-200 pt-3">
+                    {(tier as Tier).note}
+                  </p>
+                )}
               </div>
             </div>
           ))}
