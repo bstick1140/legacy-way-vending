@@ -73,9 +73,9 @@ export default function WhySchools() {
               For School Principals
             </div>
             <h2 className="font-display text-[oklch(0.18_0.005_285)] text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
-              Why Principals
+              School Vending Machines
               <br />
-              <span className="text-[oklch(0.58_0.16_145)] italic">Choose Legacy Way</span>
+              <span className="text-[oklch(0.58_0.16_145)] italic">That Cost You Nothing</span>
             </h2>
           </div>
           <div>

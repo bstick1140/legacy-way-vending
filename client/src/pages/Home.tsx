@@ -22,8 +22,8 @@ import MarqueeBar from "@/components/MarqueeBar";
 
 export default function Home() {
   useSEO({
-    title: "Legacy Way Vending | USDA Smart Snacks in Schools (SSIS) Compliant Free Vending Machines — Upstate SC",
-    description: "Legacy Way Vending provides FREE USDA Smart Snacks in Schools (SSIS) compliant vending machines for middle and high schools in Upstate SC. 100% SSIS certified products. No cost, no hassle — we install, stock, and maintain. Call 864-381-9290.",
+    title: "Free School Vending Machines | Healthy Vending Machines for Schools | Legacy Way Vending Upstate SC",
+    description: "Free school vending machines for middle and high schools in Upstate SC. Healthy vending machines for schools — USDA Smart Snacks in Schools (SSIS) compliant. No cost, no hassle. We install, stock, and maintain. Call 864-381-9290.",
     canonical: "https://legacywayvending.com/",
   });
 
@@ -40,6 +40,7 @@ export default function Home() {
             { "@type": "Question", name: "Are the vending machine products USDA Smart Snacks in Schools (SSIS) compliant?", acceptedAnswer: { "@type": "Answer", text: "Yes, 100%. Every product in our machines meets the USDA Smart Snacks in Schools (SSIS) nutritional standards. SSIS sets specific limits on calories, sodium, sugar, and fat for all foods and beverages sold in schools during the school day. We carry full menus for both middle schools and high schools, all certified SSIS compliant. We offer far more product variety than standard vending companies while staying within every SSIS guideline." } },
             { "@type": "Question", name: "What is the USDA Smart Snacks in Schools (SSIS) standard and why does it matter for our school?", acceptedAnswer: { "@type": "Answer", text: "USDA Smart Snacks in Schools (SSIS) is a federal nutrition standard that applies to all foods and beverages sold to students during the school day. It sets maximum limits on calories, saturated fat, sodium, and added sugars. Schools that sell non-compliant items risk losing federal nutrition program funding. Every product in our machines is pre-vetted to meet SSIS standards, so your school stays fully compliant without any extra work on your part." } },
             { "@type": "Question", name: "How quickly can we get a healthy vending machine installed at our school?", acceptedAnswer: { "@type": "Answer", text: "Your machine is custom-built in the USA 🇺🇸 for your location. Most facilities are up and running within 6 weeks of approval." } },
+            { "@type": "Question", name: "What makes your school vending machines different from standard vending?", acceptedAnswer: { "@type": "Answer", text: "Our school vending machines are purpose-built for educational environments. Every product meets USDA Smart Snacks in Schools (SSIS) nutritional standards. The machines are state-of-the-art, cashless, and custom-built in the USA for your location. Standard vending machines carry high-calorie, high-sugar items that do not meet SSIS requirements and can put your school's federal nutrition funding at risk. Our healthy school vending machines eliminate that risk while giving students better options." } },
             { "@type": "Question", name: "Does our school earn revenue from the vending machine?", acceptedAnswer: { "@type": "Answer", text: "Our program is structured so that Legacy Way Vending handles all operations — installation, stocking, and maintenance — at no cost to your school. The machine provides a valuable service to your students and staff with healthy, USDA-compliant snacks and beverages." } },
 
           ],

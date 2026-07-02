@@ -43,6 +43,11 @@ const faqs = [
       "Refund complaints are a thing of the past with our SureVend™ Guaranteed Product Delivery technology. Our infrared sensors detect if a product doesn't drop, and the machine automatically gives the coil an extra push. If it still doesn't vend, the student receives a full refund — no complaints to you.",
   },
   {
+    question: "What makes your school vending machines different from standard vending machines?",
+    answer:
+      "Our school vending machines are purpose-built for educational environments. Every product meets USDA Smart Snacks in Schools (SSIS) nutritional standards. The machines are state-of-the-art, cashless, and custom-built in the USA for your location. Standard vending machines carry high-calorie, high-sugar items that do not meet SSIS requirements and can put your school's federal nutrition funding at risk. Our healthy school vending machines eliminate that risk while giving students better options.",
+  },
+  {
     question: "What makes this program different from a standard vending arrangement?",
     answer:
       "Unlike traditional vending arrangements that often come with outdated machines and junk food, our program is completely free and gives you a state-of-the-art machine stocked with USDA Smart Snacks compliant products. We handle all installation, restocking, and maintenance — you simply enjoy the benefits.",
