@@ -53,6 +53,11 @@ const faqs = [
       "Unlike traditional vending arrangements that often come with outdated machines and junk food, our program is completely free and gives you a state-of-the-art machine stocked with USDA Smart Snacks compliant products. We handle all installation, restocking, and maintenance — you simply enjoy the benefits.",
   },
   {
+    question: "Do you also provide free AI smart coolers for schools?",
+    answer:
+      "Yes. In addition to free healthy vending machines for student areas, we provide free AI smart coolers for teachers' lounges. The cooler is stocked with healthy drinks and snacks, uses AI-powered inventory tracking, and accepts all cashless payment methods. Like the vending machine program, it is completely free for qualified schools — we handle installation, restocking, and maintenance.",
+  },
+  {
     question: "Is the machine ADA compliant?",
     answer:
       "Yes, 100% ADA compliant. All payment and product selection components are positioned between 15\" and 48\", meeting all Americans with Disabilities Act requirements.",

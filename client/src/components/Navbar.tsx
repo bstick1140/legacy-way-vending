@@ -12,6 +12,7 @@ import { useLocation } from "wouter";
 const homeNavLinks = [
   { label: "How It Works", href: "#how-it-works" },
   { label: "Machine Features", href: "#features" },
+  { label: "Smart Coolers", href: "#smart-cooler" },
   { label: "Products", href: "#products" },
   { label: "FAQ", href: "#faq" },
 ];

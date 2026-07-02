@@ -9,7 +9,7 @@ const stats = [
   { value: 300, suffix: "+", label: "Daily Foot Traffic", description: "Minimum to qualify" },
   { value: 2, suffix: "x", label: "Outperforms Junk Machines", description: "Healthier options chosen" },
   { value: 6, suffix: " wks", label: "Est. To Installation", description: "Typical time, approval to install" },
-  { value: 100, suffix: "%", label: "Free for Schools", description: "Zero cost program" },
+  { value: 100, suffix: "%", label: "Free for Schools", description: "Vending machines + AI smart coolers" },
 ];
 
 function CountUp({ target, suffix, active }: { target: number; suffix: string; active: boolean }) {

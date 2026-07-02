@@ -10,6 +10,7 @@ import HeroSection from "@/components/HeroSection";
 import StatsBar from "@/components/StatsBar";
 import HowItWorks from "@/components/HowItWorks";
 import MachineFeatures from "@/components/MachineFeatures";
+import SmartCooler from "@/components/SmartCooler";
 import WhySchools from "@/components/WhySchools";
 import ProductsSection from "@/components/ProductsSection";
 import PaymentMethods from "@/components/PaymentMethods";
@@ -41,6 +42,7 @@ export default function Home() {
             { "@type": "Question", name: "What is the USDA Smart Snacks in Schools (SSIS) standard and why does it matter for our school?", acceptedAnswer: { "@type": "Answer", text: "USDA Smart Snacks in Schools (SSIS) is a federal nutrition standard that applies to all foods and beverages sold to students during the school day. It sets maximum limits on calories, saturated fat, sodium, and added sugars. Schools that sell non-compliant items risk losing federal nutrition program funding. Every product in our machines is pre-vetted to meet SSIS standards, so your school stays fully compliant without any extra work on your part." } },
             { "@type": "Question", name: "How quickly can we get a healthy vending machine installed at our school?", acceptedAnswer: { "@type": "Answer", text: "Your machine is custom-built in the USA 🇺🇸 for your location. Most facilities are up and running within 6 weeks of approval." } },
             { "@type": "Question", name: "What makes your school vending machines different from standard vending?", acceptedAnswer: { "@type": "Answer", text: "Our school vending machines are purpose-built for educational environments. Every product meets USDA Smart Snacks in Schools (SSIS) nutritional standards. The machines are state-of-the-art, cashless, and custom-built in the USA for your location. Standard vending machines carry high-calorie, high-sugar items that do not meet SSIS requirements and can put your school's federal nutrition funding at risk. Our healthy school vending machines eliminate that risk while giving students better options." } },
+            { "@type": "Question", name: "Do you also provide free AI smart coolers for schools?", acceptedAnswer: { "@type": "Answer", text: "Yes. In addition to free healthy vending machines for student areas, we provide free AI smart coolers for teachers' lounges. The cooler is stocked with healthy drinks and snacks, uses AI-powered inventory tracking, and accepts all cashless payment methods. Like the vending machine program, it is completely free for qualified schools — we handle installation, restocking, and maintenance." } },
             { "@type": "Question", name: "Does our school earn revenue from the vending machine?", acceptedAnswer: { "@type": "Answer", text: "Our program is structured so that Legacy Way Vending handles all operations — installation, stocking, and maintenance — at no cost to your school. The machine provides a valuable service to your students and staff with healthy, USDA-compliant snacks and beverages." } },
 
           ],
@@ -83,6 +85,7 @@ export default function Home() {
         <StatsBar />
         <HowItWorks />
         <MachineFeatures />
+        <SmartCooler />
         <PaymentMethods />
         <WhySchools />
         <ProductsSection />
