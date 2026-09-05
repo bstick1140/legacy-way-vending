@@ -8,11 +8,11 @@
 import { CheckCircle2, ShieldCheck, Leaf } from "lucide-react";
 
 const TIER1_PHOTO =
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663487738921/FWBzfm3EpAjHnNF5scF6S5/fhv-tier1-photo_34180e20.png";
+  "/images/fhv-tier1-photo.png";
 const TIER2_PHOTO =
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663487738921/FWBzfm3EpAjHnNF5scF6S5/fhv-tier2-photo_7b55f5b9.png";
+  "/images/fhv-tier2-photo.png";
 const TIER3_PHOTO =
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663487738921/FWBzfm3EpAjHnNF5scF6S5/fhv-tier3-photo_b1a63753.png";
+  "/images/fhv-tier3-photo.png";
 
 const tiers = [
   {

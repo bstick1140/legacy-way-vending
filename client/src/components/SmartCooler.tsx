@@ -7,7 +7,7 @@
 import { useEffect, useRef } from "react";
 import { Cpu, Thermometer, CreditCard, RefreshCw, Coffee, Leaf } from "lucide-react";
 
-const COOLER_IMG = "/manus-storage/ai-smart-cooler_14a4d7e4.jpg";
+const COOLER_IMG = "/images/ai-smart-cooler.jpg";
 
 const features = [
   {

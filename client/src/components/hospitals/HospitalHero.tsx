@@ -71,7 +71,7 @@ export default function HospitalHero() {
                   For Qualified Facilities
                 </div>
                 <img
-                  src="https://d2xsxph8kpxj0f.cloudfront.net/310519663487738921/FWBzfm3EpAjHnNF5scF6S5/vitruvian-man-upperbody-6CVbrJhrT2QLs7z3cEJm9M.webp"
+                  src="/images/vitruvian-man-upperbody.webp"
                   alt="Da Vinci Vitruvian Man — human health and wellness"
                   className="w-full h-80 object-cover object-top rounded-xl"
                   style={{ objectPosition: '50% 15%' }}

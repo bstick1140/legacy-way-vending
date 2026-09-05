@@ -58,7 +58,7 @@ const features: { icon: React.ElementType; title: string; description: string }[
   },
 ];
 
-const STUDENTS_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663487738921/FWBzfm3EpAjHnNF5scF6S5/school-students-snacks-HS7bqsU7ZhXJLWhZZHSS4D.webp";
+const STUDENTS_IMG = "/images/school-students-snacks.webp";
 
 export default function MachineFeatures() {
   const sectionRef = useRef<HTMLDivElement>(null);

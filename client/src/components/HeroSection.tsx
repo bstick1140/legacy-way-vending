@@ -7,7 +7,7 @@
 import { ArrowRight, CheckCircle2, Phone } from "lucide-react";
 import { useEffect, useRef } from "react";
 
-const MACHINE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663487738921/FWBzfm3EpAjHnNF5scF6S5/legacy-machine-original_56c042d9.png";
+const MACHINE_IMG = "/images/legacy-machine-original.png";
 
 export default function HeroSection() {
   const machineRef = useRef<HTMLDivElement>(null);
