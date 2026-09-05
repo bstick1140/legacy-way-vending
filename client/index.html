@@ -3,6 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <link rel="canonical" href="https://legacywayvending.com/" />
+
+    <!-- Single Page Apps for GitHub Pages: restore the real URL after the
+         404.html redirect encoded it in the query string. Must run before
+         the SPA's router reads window.location. -->
+    <script type="text/javascript">
+      (function (l) {
+        if (l.search[1] === '/') {
+          var decoded = l.search.slice(1).split('&').map(function (s) {
+            return s.replace(/~and~/g, '&');
+          }).join('?');
+          window.history.replaceState(null, null, l.pathname.slice(0, -1) + decoded + l.hash);
+        }
+      }(window.location));
+    </script>
 
     <!-- Google Search Console Verification -->
     <meta name="google-site-verification" content="fx0gDrM1ZLt533q8ryW_fRWphd3G2T85T5HKCfW-iR0" />

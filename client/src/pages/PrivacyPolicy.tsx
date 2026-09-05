@@ -5,8 +5,15 @@
 
 import { useEffect } from "react";
 import { Link } from "wouter";
+import { useSEO } from "@/hooks/useSEO";
 
 export default function PrivacyPolicy() {
+  useSEO({
+    title: "Privacy Policy | Legacy Way Vending",
+    description: "Privacy Policy for Legacy Way Vending, a Free Healthy Vending partner serving schools and facilities in Upstate South Carolina. Learn what information we collect and how we use it.",
+    canonical: "https://legacywayvending.com/privacy-policy/",
+  });
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

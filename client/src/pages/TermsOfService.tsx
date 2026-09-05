@@ -5,8 +5,15 @@
 
 import { useEffect } from "react";
 import { Link } from "wouter";
+import { useSEO } from "@/hooks/useSEO";
 
 export default function TermsOfService() {
+  useSEO({
+    title: "Terms of Service | Legacy Way Vending",
+    description: "Terms of Service for Legacy Way Vending, a Free Healthy Vending partner serving schools and facilities in Upstate South Carolina.",
+    canonical: "https://legacywayvending.com/terms-of-service/",
+  });
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
